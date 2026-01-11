@@ -1,0 +1,46 @@
+<section class="compare-options">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>Compare Your Options</h2>
+    </div>
+
+    <!-- COMPARISON -->
+    <div class="compare-layout">
+
+      <!-- LEFT LABELS -->
+      <div class="labels-column">
+        <div class="label-item" *ngFor="let row of rows">
+          {{ row.label }}
+        </div>
+      </div>
+
+      <!-- RIGHT CARD -->
+      <div class="compare-card">
+
+        <!-- HEADERS -->
+        <div class="compare-header">
+          <div style="font-size: 16px;">Secured Loan</div>
+          <div style="font-size: 16px;">Unsecured Loan</div>
+        </div>
+
+        <!-- ROWS -->
+        <div class="compare-row" *ngFor="let row of rows">
+          <div class="cell">
+            <span class="check">✔</span>
+            {{ row.secured }}
+          </div>
+          <div class="cell">
+            <span class="check">✔</span>
+            {{ row.unsecured }}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

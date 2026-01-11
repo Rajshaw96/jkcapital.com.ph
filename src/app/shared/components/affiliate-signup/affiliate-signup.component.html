@@ -1,0 +1,164 @@
+<section class="affiliate-section">
+  <div class="container affiliate-grid">
+
+    <!-- LEFT CONTENT -->
+    <div class="affiliate-info">
+      <span class="section-line"></span>
+      <h2>How to Refer</h2>
+
+      <p>
+        As an Affiliate Referrer, you can earn recurring commissions by connecting
+        business owners who need access to capital with JK Capital.
+      </p>
+
+      <p>
+        Your role is simple: share business details, track application status,
+        and earn commissions for every successful loan.
+      </p>
+
+      <h4>Ready to Start Earning?</h4>
+      <ol>
+        <li>Complete the referral form with business details.</li>
+        <li>Stay informed – we update you by email and phone.</li>
+        <li>Earn commissions credited directly to your bank account.</li>
+      </ol>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="affiliate-form-card">
+      <div class="form-header">
+        <span>AFFILIATE SIGNUP FORM</span>
+      </div>
+
+      <form
+        [formGroup]="affiliateForm" (ngSubmit)="submitAffiliate()"
+        novalidate>
+
+        <!-- ================= PERSONAL DETAILS ================= -->
+        <h5>Enter Your Details</h5>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input
+              type="text"
+              formControlName="firstName"
+              placeholder="Enter your first name (e.g. John)"
+            />
+            <p class="error-text" *ngIf="isInvalid('firstName')">Required (min 2 chars)</p>
+          </div>
+
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input
+              type="text"
+              formControlName="lastName"
+              placeholder="Enter your last name (e.g. Doe)"
+            />
+            <p class="error-text" *ngIf="isInvalid('lastName')">Required (min 2 chars)</p>
+          </div>
+
+          <div class="form-group">
+            <label>Mobile Number *</label>
+            <input
+              type="tel"
+              formControlName="phone"
+              placeholder="Enter mobile number (e.g. +63 909 087 6876)"
+            />
+            <p class="error-text" *ngIf="isInvalid('phone')">Valid phone required</p>
+          </div>
+
+          <div class="form-group">
+            <label>Email *</label>
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Enter email address (e.g. john@email.com)"
+            />
+            <p class="error-text" *ngIf="isInvalid('email')">Valid email required</p>
+          </div>
+        </div>
+
+        <!-- ================= ADDRESS ================= -->
+        <h5>Address Details</h5>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Address Line *</label>
+            <input
+              type="text"
+              formControlName="address"
+              placeholder="House / Building / Street"
+            />
+            <p class="error-text" *ngIf="isInvalid('address')">Required</p>
+          </div>
+
+          <div class="form-group">
+            <label>City *</label>
+            <input
+              type="text"
+              formControlName="city"
+              placeholder="Enter city (e.g. Angeles)"
+            />
+            <p class="error-text" *ngIf="isInvalid('city')">Required</p>
+          </div>
+
+          <div class="form-group">
+            <label>Province *</label>
+            <input
+              type="text"
+              formControlName="province"
+              placeholder="Enter province (e.g. Pampanga)"
+            />
+            <p class="error-text" *ngIf="isInvalid('province')">Required</p>
+          </div>
+
+          <div class="form-group">
+            <label>Country *</label>
+            <select formControlName="country">
+              <option value="">Select country</option>
+              <option value="Philippines">Philippines</option>
+            </select>
+            <p class="error-text" *ngIf="isInvalid('country')">Required</p>
+          </div>
+        </div>
+
+        <!-- ================= BUSINESS ================= -->
+        <h5>Business Information</h5>
+        <div class="form-grid">
+          <div class="form-group full">
+            <label>Business Name *</label>
+            <input
+              type="text"
+              formControlName="businessName"
+              placeholder="Business name (e.g. MLD Corporation)"
+            />
+            <p class="error-text" *ngIf="isInvalid('businessName')">Required</p>
+          </div>
+
+          <div class="form-group full">
+            <label>Business Type *</label>
+            <select formControlName="businessType">
+              <option value="">Select business type</option>
+              <option value="Sales Partnership">Sales Partnership</option>
+              <option value="Retail">Retail</option>
+              <option value="Manufacturing">Manufacturing</option>
+            </select>
+            <p class="error-text" *ngIf="isInvalid('businessType')">Required</p>
+          </div>
+        </div>
+
+        <!-- 🛑 Honeypot -->
+        <input
+          type="text"
+          formControlName="company"
+          class="hidden-field"
+          tabindex="-1"
+          autocomplete="off"
+        />
+
+        <button type="submit" class="submit-btn" [disabled]="loading">
+          {{ loading ? 'Submitting...' : 'Submit Application' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

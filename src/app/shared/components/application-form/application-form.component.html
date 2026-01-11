@@ -1,0 +1,207 @@
+<section class="recruitment-section">
+  <div class="container recruit-grid">
+
+    <!-- LEFT CONTENT -->
+    <div class="recruit-content">
+      <span class="section-line"></span>
+      <h2>We Are Recruiting</h2>
+
+      <p>
+        Are you detail-oriented, results-driven, and passionate about helping
+        businesses grow? JK Capital is looking for Loan Consultants to bring in
+        new business clients and match them with the right financing solutions.
+      </p>
+
+      <h4>Responsibilities:</h4>
+      <ul>
+        <li>Explain loan products and assist clients through applications.</li>
+        <li>Build and maintain strong client relationships.</li>
+        <li>Support renewals and underwriting coordination.</li>
+      </ul>
+
+      <h4>Benefits:</h4>
+      <ul>
+        <li>3% commission per successful loan.</li>
+        <li>1% commission on renewals.</li>
+        <li>No quotas. Performance-based income.</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="application-form">
+
+      <h3>APPLICATION FORM</h3>
+
+      <form
+        [formGroup]="applicationForm"
+        (ngSubmit)="submit()"
+        novalidate
+      >
+
+        <!-- TOP ERROR -->
+        <p class="error-text" *ngIf="submitted && applicationForm.invalid">
+          Please fill all required fields correctly.
+        </p>
+
+        <!-- BASIC DETAILS -->
+        <h5>Enter Your Details</h5>
+
+        <div class="form-row">
+          <input
+            type="text"
+            placeholder="First Name *"
+            formControlName="firstName"
+          />
+        </div>
+        <p class="error-text" *ngIf="isInvalid('firstName')">
+          First name is required (min 2 characters)
+        </p>
+
+        <div class="form-row">
+          <input
+            type="text"
+            placeholder="Last Name *"
+            formControlName="lastName"
+          />
+        </div>
+        <p class="error-text" *ngIf="isInvalid('lastName')">
+          Last name is required
+        </p>
+
+        <div class="form-row">
+          <input
+            type="number"
+            placeholder="Age *"
+            formControlName="age"
+          />
+
+          <select formControlName="gender">
+            <option value="">Gender *</option>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+        <p class="error-text" *ngIf="isInvalid('age') || isInvalid('gender')">
+          Valid age (18–65) and gender are required
+        </p>
+
+        <!-- EXPERIENCE -->
+        <h5>Your Industry Experience</h5>
+
+        <div formArrayName="experience" class="repeat-group">
+
+          <div
+            class="repeat-card"
+            *ngFor="let exp of experience.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <div class="form-row">
+              <input
+                type="text"
+                placeholder="Company *"
+                formControlName="company"
+              />
+              <input
+                type="text"
+                placeholder="Role *"
+                formControlName="role"
+              />
+            </div>
+
+            <div class="form-row">
+              <input type="date" formControlName="from" />
+              <input type="date" formControlName="to" />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="add-btn"
+            (click)="addExperience()"
+          >
+            + Add Experience
+          </button>
+        </div>
+
+        <!-- EDUCATION -->
+        <h5>Your Educational Background</h5>
+
+        <div formArrayName="education" class="repeat-group">
+
+          <div
+            class="repeat-card"
+            *ngFor="let edu of education.controls; let i = index"
+            [formGroupName]="i"
+          >
+            <div class="form-row">
+              <input
+                type="text"
+                placeholder="University *"
+                formControlName="university"
+              />
+              <input
+                type="text"
+                placeholder="Qualification *"
+                formControlName="qualification"
+              />
+            </div>
+
+            <div class="form-row">
+              <input type="date" formControlName="from" />
+              <input type="date" formControlName="to" />
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="add-btn"
+            (click)="addEducation()"
+          >
+            + Add Education
+          </button>
+        </div>
+
+        <!-- RESUME UPLOAD -->
+        <h5>Upload Resume</h5>
+
+        <div class="upload-box-modern">
+          <div class="upload-icon">📄</div>
+          <p class="upload-title">Drag & drop your resume here</p>
+          <span class="upload-sub">or</span>
+
+          <label class="upload-btn">
+            Browse File
+            <input
+              type="file"
+              hidden
+              (change)="onResumeSelect($event)"
+            />
+          </label>
+
+          <p class="upload-info">
+            PDF / DOCX · Max size 5MB
+          </p>
+
+          <p class="error-text" *ngIf="submitted && !resumeFile">
+            Resume upload is required
+          </p>
+        </div>
+
+        <!-- SUBMIT -->
+        <button
+          class="submit-btn"
+          type="submit"
+          [disabled]="loading"
+        >
+          {{ loading ? 'Submitting...' : 'Submit Application' }}
+        </button>
+
+        <p class="note">
+          Note: Check your email for your Loan Consultant Code.
+        </p>
+
+      </form>
+    </div>
+
+  </div>
+</section>

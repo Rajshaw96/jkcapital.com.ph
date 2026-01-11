@@ -1,0 +1,57 @@
+<section class="our-impact">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>Our Impact, Their Breakthrough.</h2>
+    </div>
+
+    <!-- Carousel -->
+    <div
+      class="carousel"
+      (touchstart)="onTouchStart($event)"
+      (touchend)="onTouchEnd($event)">
+      <div
+        class="impact-card"
+        *ngFor="let item of testimonials; let i = index"
+        [ngClass]="getPosition(i)">
+        <div class="image-box">
+          <img [src]="item.image" [alt]="item.name" />
+
+          <button
+            *ngIf="item.video"
+            class="play-btn"
+            (click)="openVideo(item.video)">
+            ▶
+          </button>
+        </div>
+
+        <div class="text-box">
+          <h4>{{ item.name }}</h4>
+          <span>{{ item.role }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button (click)="prev()">←</button>
+      <button (click)="next()">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" *ngIf="showVideo">
+  <div class="overlay" (click)="closeVideo()"></div>
+
+  <div class="video-box">
+    <button class="close-btn" (click)="closeVideo()">✕</button>
+    <iframe
+      [src]="activeVideoUrl"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+    ></iframe>
+  </div>
+</div>

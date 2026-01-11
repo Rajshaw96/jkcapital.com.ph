@@ -1,0 +1,129 @@
+<app-hero-section
+  title="Contact Us"
+  subtitle="Still have questions? We're here to support you. Reach out for personalized assistance anytime."
+  buttonText=""
+  buttonLink="/apply"
+  image="assets/img/banner/pro-loan-consultant.png">
+</app-hero-section>
+
+<section class="contact-wrapper">
+  <section class="contact-form-section">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <span class="section-badge">Contact Us</span>
+      <h3>Get In Touch With Us</h3>
+
+      <p class="info-text">
+        Have questions about our loans or services?<br>
+        Our team is ready to help you.
+      </p>
+
+      <div class="info-block">
+        <strong>Our Main Office:</strong>
+        <span>JK Capital Finance Inc. 3302-D Tektite Tower West
+          Exchange Road, Ortigas Pasig, Metro Manila 1605</span>
+      </div>
+
+      <div class="info-block">
+        <strong>Customer Service:</strong>
+        <span><a href="tel:+639171372847">+63 917 137 2847</a></span>
+      </div>
+
+      <div class="info-block">
+        <strong>Email ID:</strong>
+        <span><a href="mailto:info@jkcapital.com">info@jkcapital.com</a></span>
+      </div>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d123561.336185397!2d121.0616!3d14.582444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c86892ef8dc9%3A0xd39be02a1f82187a!2sJK%20Capital%20Finance%20Inc.!5e0!3m2!1sen!2sus!4v1768058697490!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+    <!-- ================= CONTACT FORM ================= -->
+    <div class="contact-form">
+      <span class="section-badge">Inquiry</span>
+      <h3>For Inquiries</h3>
+
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+
+        <!-- First & Last Name -->
+        <div class="form-row">
+          <div>
+            <input type="text" placeholder="First Name *" formControlName="firstName" autocomplete="off">
+            <p class="error-text" *ngIf="isInvalid('firstName')">
+              First name is required (min 2 characters)
+            </p>
+          </div>
+
+          <div>
+            <input type="text" placeholder="Last Name *" formControlName="lastName" autocomplete="off">
+            <p class="error-text" *ngIf="isInvalid('lastName')">
+              Last name is required (min 2 characters)
+            </p>
+          </div>
+        </div>
+
+        <!-- Email & Phone -->
+        <div class="form-row">
+          <div>
+            <input type="email" placeholder="Email Address *" formControlName="email" autocomplete="off">
+            <p class="error-text"
+              *ngIf="isInvalid('email') || emailDomainInvalid">
+              Please enter a valid email address (temporary emails are not allowed)
+            </p>
+          </div>
+
+          <div>
+            <input type="tel" placeholder="Phone Number *" formControlName="phone" autocomplete="off">
+            <p class="error-text" *ngIf="isInvalid('phone')">
+              Please enter a valid phone number
+            </p>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <input type="text" placeholder="Current Address" formControlName="address" autocomplete="off">
+
+        <!-- Loan Type -->
+        <select formControlName="loanType">
+          <option value="">Select an option *</option>
+          <option value="Business Loan">Business Loan</option>
+          <option value="Personal Loan">Personal Loan</option>
+        </select>
+        <p class="error-text" *ngIf="isInvalid('loanType')">
+          Please select a loan type
+        </p>
+
+        <!-- Message -->
+        <textarea
+          rows="4"
+          placeholder="Inquiry / Comment *"
+          formControlName="message" autocomplete="off">
+        </textarea>
+        <p class="error-text" *ngIf="isInvalid('message')">
+          Message must be at least 10 characters
+        </p>
+
+        <!-- Business Name -->
+        <input type="text" placeholder="Business Name" formControlName="businessName">
+
+        <!-- 🛑 Honeypot (anti-bot, hidden) -->
+        <input
+          type="text"
+          formControlName="company"
+          class="hidden-field"
+          autocomplete="off"
+        >
+
+        <!-- Submit -->
+        <button type="submit" [disabled]="loading">
+          {{ loading ? 'Submitting...' : 'Submit Inquiry' }}
+        </button>
+
+      </form>
+    </div>
+
+  </section>
+</section>
+
+<app-need-more-help></app-need-more-help>

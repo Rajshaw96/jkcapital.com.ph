@@ -1,0 +1,34 @@
+<section class="comparison-section">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>Project Financing vs. Standard Business Loan</h2>
+    </div>
+
+    <!-- Comparison Card -->
+    <div class="comparison-card">
+
+      <!-- Column Headers -->
+      <div class="comparison-header">
+        <div>{{ comparison.leftTitle }}</div>
+        <div>{{ comparison.rightTitle }}</div>
+      </div>
+
+      <!-- Rows -->
+      <div class="comparison-row" *ngFor="let item of comparison.leftPoints; let i = index">
+        <div class="cell">
+          <span class="check">✔</span>
+          {{ comparison.leftPoints[i] }}
+        </div>
+        <div class="cell">
+          <span class="check">✔</span>
+          {{ comparison.rightPoints[i] }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

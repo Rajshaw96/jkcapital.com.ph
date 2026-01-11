@@ -1,0 +1,28 @@
+<section class="partners-section">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>Our Team</h2>
+      <p>Meet our passionate professionals driving our success. Together, we turn ideas into impactful solutions.</p>
+    </div>
+
+    <!-- Carousel -->
+    <div
+      class="partners-carousel"
+      (mouseenter)="pause()"
+      (mouseleave)="resume()"
+    >
+      <div class="partners-track">
+        <div class="partner-card" *ngFor="let ourTeams of duplicatedOurTeams">
+          <img
+            [src]="ourTeams.teams"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

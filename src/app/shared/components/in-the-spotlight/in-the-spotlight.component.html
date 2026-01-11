@@ -1,0 +1,31 @@
+<section class="spotlight-section">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>In The Spotlight</h2>
+    </div>
+
+    <!-- GRID -->
+    <div class="spotlight-grid">
+      <article class="spotlight-card" *ngFor="let item of items">
+
+        <div class="image-wrap">
+          <img [src]="item.image" [alt]="item.category" loading="lazy" />
+        </div>
+
+        <div class="meta">
+          <span class="tag">{{ item.category }}</span>
+          <span class="date">| {{ item.date }}</span>
+        </div>
+
+        <p class="title">
+          {{ item.title }}
+        </p>
+
+      </article>
+    </div>
+
+  </div>
+</section>

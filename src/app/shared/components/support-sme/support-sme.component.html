@@ -1,0 +1,35 @@
+<section class="refer-earn">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>Support SMEs with Business Loans & Earn – 3 Ways</h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="earn-grid">
+      <div class="earn-card" *ngFor="let item of options">
+
+        <div class="icon">
+          <img [src]="item.icon" [alt]="item.title" />
+        </div>
+
+        <h3>{{ item.title }}</h3>
+        <div class="percent">{{ item.percent }}</div>
+
+        <ul>
+          <li *ngFor="let point of item.points">
+            {{ point }}
+          </li>
+        </ul>
+
+        <a [routerLink]="item.link" class="cta">
+          {{ item.ctaText }} →
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>

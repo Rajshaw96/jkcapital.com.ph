@@ -1,0 +1,48 @@
+<section class="info-section">
+  <div class="container">
+    <div class="info-grid">
+
+      <div class="info-card" *ngFor="let card of cards">
+
+        <!-- ICON -->
+        <div class="icon">
+          <img [src]="card.icon" [alt]="card.title" />
+        </div>
+
+        <!-- TITLE -->
+        <h3>{{ card.title }}</h3>
+
+        <!-- DESCRIPTION (STEPS / PARAGRAPH) -->
+        <p *ngIf="card.description">
+          <ng-container *ngFor="let line of card.description">
+            <strong *ngIf="line.startsWith('STEP')">
+              {{ line.split(':')[0] }}:
+            </strong>
+            {{ line.split(':')[1] || line }}
+            <br /><br />
+          </ng-container>
+        </p>
+
+        <!-- ORDERED LIST -->
+        <ol *ngIf="card.orderedList">
+          <li *ngFor="let item of card.orderedList">
+            {{ item }}
+          </li>
+        </ol>
+
+        <!-- OPTIONAL SECTION -->
+        <p class="optional" *ngIf="card.optionalTitle">
+          <strong>{{ card.optionalTitle }}</strong>
+        </p>
+
+        <ul *ngIf="card.optionalList">
+          <li *ngFor="let item of card.optionalList">
+            {{ item }}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</section>

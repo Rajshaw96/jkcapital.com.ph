@@ -1,0 +1,193 @@
+/* =============================
+   SECTION
+============================= */
+.compare-options {
+  background: #eaf3ff;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* =============================
+   HEADER
+============================= */
+.section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-line {
+  width: 24px;
+  height: 2px;
+  background: var(--Primary-Blue, #0166CC);
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.section-header h2 {
+  color: #353333;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  font-style: normal;
+}
+
+/* =============================
+   LAYOUT
+============================= */
+.compare-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* =============================
+   LEFT LABEL COLUMN
+============================= */
+.labels-column {
+  padding-top: 60px; /* aligns with table header */
+}
+
+.label-item {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 1px solid #dbe7f5;
+}
+
+/* =============================
+   TABLE CARD
+============================= */
+.compare-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* =============================
+   TABLE HEADER
+============================= */
+.compare-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.compare-header div {
+  padding: 18px 20px;
+}
+
+.compare-header div:first-child {
+  border-right: 1px solid #e5e7eb;
+}
+
+/* =============================
+   TABLE ROWS
+============================= */
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 64px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.compare-row:last-child {
+  border-bottom: none;
+}
+
+.compare-row .cell {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.compare-row .cell:first-child {
+  border-right: 1px solid #eef2f7;
+}
+
+/* =============================
+   CHECK ICON
+============================= */
+.check {
+  color: #22c55e;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* =============================
+   TABLET
+============================= */
+@media (max-width: 992px) {
+  .compare-layout {
+    grid-template-columns: 180px 1fr;
+  }
+}
+
+/* =============================
+   MOBILE
+============================= */
+@media (max-width: 768px) {
+  .compare-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .labels-column {
+    display: none; /* matches Figma mobile */
+  }
+
+  .compare-header {
+    grid-template-columns: 1fr;
+    font-size: 15px;
+  }
+
+  .compare-header div {
+    border-right: none !important;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-row .cell {
+    border-right: none !important;
+    border-bottom: 1px dashed #e5e7eb;
+  }
+
+  .compare-row .cell:last-child {
+    border-bottom: none;
+  }
+}
+
+/* =============================
+   SMALL MOBILE
+============================= */
+@media (max-width: 576px) {
+  .compare-options {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+}

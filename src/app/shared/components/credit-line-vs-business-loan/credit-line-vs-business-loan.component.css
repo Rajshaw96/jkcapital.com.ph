@@ -1,0 +1,98 @@
+.compare-section {
+  background: #eaf3ff;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-line {
+  width: 24px;
+  height: 2px;
+  background: #0166cc;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #353333;
+}
+
+/* CARD */
+.compare-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER ROW */
+.compare-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 18px 24px;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 1px solid #e6eef8;
+}
+
+/* ROW */
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.compare-row:last-child {
+  border-bottom: none;
+}
+
+.cell {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* CHECK ICON */
+.check {
+  color: #22c55e;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .compare-header,
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-header {
+    gap: 12px;
+  }
+
+  .cell {
+    border-bottom: 1px dashed #e5e7eb;
+  }
+
+  .cell:last-child {
+    border-bottom: none;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+}

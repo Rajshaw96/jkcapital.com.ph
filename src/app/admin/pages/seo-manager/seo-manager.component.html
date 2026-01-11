@@ -1,0 +1,14 @@
+ <h3>SEO Manager</h3>
+
+    <form (ngSubmit)="save()">
+      <input [(ngModel)]="seo.pageUrl" name="pageUrl" placeholder="Page URL" />
+      <input [(ngModel)]="seo.title" name="title" placeholder="Title" />
+      <input [(ngModel)]="seo.description" name="description" placeholder="Description" />
+      <button type="submit">Save</button>
+    </form>
+
+    <ul>
+      <li *ngFor="let s of list">
+        {{ s.pageUrl }} - {{ s.title }}
+      </li>
+    </ul>

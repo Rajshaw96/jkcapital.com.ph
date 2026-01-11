@@ -1,0 +1,78 @@
+<section class="faq-section">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="faq-header">
+      <div class="section-header">
+        <span class="section-line"></span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-box">
+        <input
+          type="text"
+          placeholder="Search your keyword..."
+          [(ngModel)]="searchText"
+          aria-label="Search FAQ"
+        />
+        <button aria-label="Search">
+          <img src="assets/img/icons/search.png" alt="search" />
+        </button>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="faq-tabs">
+      <button
+        *ngFor="let tab of tabs"
+        (click)="setActiveTab(tab)"
+        [class.active]="activeTab === tab"
+      >
+        {{ tab }}
+      </button>
+    </div>
+
+    <!-- FAQ LIST -->
+    <div class="faq-list">
+
+      <div
+        class="faq-item"
+        *ngFor="let item of filteredFaqs"
+        [class.active]="item.open"
+      >
+
+        <!-- QUESTION -->
+        <button
+          class="faq-question"
+          (click)="toggle(item)"
+          [attr.aria-expanded]="item.open"
+        >
+          {{ item.question }}
+          <span class="arrow" [class.open]="item.open">⌄</span>
+        </button>
+
+        <!-- ANSWER -->
+        <div class="faq-answer" [class.show]="item.open">
+
+          <ul *ngIf="isArray(item.answer)">
+            <li *ngFor="let ans of item.answer">
+              <strong *ngIf="ans.endsWith(':')">{{ ans }}</strong>
+              <span *ngIf="!ans.endsWith(':')">{{ ans }}</span>
+            </li>
+          </ul>
+
+          <p *ngIf="isString(item.answer)">
+            {{ item.answer }}
+          </p>
+
+        </div>
+      </div>
+
+      <p *ngIf="filteredFaqs.length === 0" class="no-result">
+        No results found.
+      </p>
+
+    </div>
+  </div>
+</section>

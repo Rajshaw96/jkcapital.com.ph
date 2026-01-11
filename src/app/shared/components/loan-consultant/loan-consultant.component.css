@@ -1,0 +1,68 @@
+.drive-support {
+  background: #ffffff;
+  padding: 70px 0 60px;
+}
+
+/* container */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* header */
+.section-header {
+  text-align: center;
+}
+
+/* blue line */
+.section-line {
+  width: 28px;
+  height: 2px;
+  background: #0166cc;
+  display: block;
+  margin: 0 auto 16px;
+}
+
+/* title */
+.section-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+/* subtitle */
+.subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #6b7280; /* soft gray like Figma */
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .section-header h2 {
+    font-size: 24px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .drive-support {
+    padding: 50px 0;
+  }
+
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+

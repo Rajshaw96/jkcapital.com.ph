@@ -1,0 +1,34 @@
+<section class="compare-section">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>How It Differs from a Standard Business Loan</h2>
+    </div>
+
+    <!-- COMPARISON CARD -->
+    <div class="compare-card">
+
+      <!-- TABLE HEADER -->
+      <div class="compare-header">
+        <div>Credit Line</div>
+        <div>Business Loan</div>
+      </div>
+
+      <!-- ROWS -->
+      <div class="compare-row" *ngFor="let row of rows">
+        <div class="cell">
+          <span class="check">✔</span>
+          {{ row.creditLine }}
+        </div>
+        <div class="cell">
+          <span class="check">✔</span>
+          {{ row.businessLoan }}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,37 @@
+<app-hero-section title="Affiliate Referrer" subtitle="Your Network, Your Rewards, Your Earnings." buttonText=""
+  buttonLink="/apply" image="assets/img/banner/affiliate-referrer.png">
+</app-hero-section>
+<div class="tab-wrapper">
+
+  <!-- TAB HEADER -->
+  <div class="tab-header">
+    <button class="tab-btn" [class.active]="activeTab === 'signup'" (click)="activeTab = 'signup'">
+      Signup Form
+    </button>
+
+    <button class="tab-btn" [class.active]="activeTab === 'refer'" (click)="activeTab = 'refer'">
+      Refer Now
+    </button>
+  </div>
+
+  <!-- TAB CONTENT -->
+  <div class="tab-content">
+
+    <div *ngIf="activeTab === 'signup'">
+      <!-- Signup Form Content -->
+      <app-affiliate-signup></app-affiliate-signup>
+    </div>
+
+    <div *ngIf="activeTab === 'refer'">
+      <!-- Refer Now Content -->
+      <app-affiliate-referrer-now></app-affiliate-referrer-now>
+    </div>
+
+  </div>
+
+</div>
+<app-faq></app-faq>
+<app-cta-banner title="Choose your loan application method." primaryText="Connect With Our Loan Experts"
+  secondaryText="Apply Online" primaryLink="/contact" secondaryLink="/apply"
+  backgroundImage="assets/img/banner/cta-banner.jpg"></app-cta-banner>
+<app-in-the-spotlight></app-in-the-spotlight>

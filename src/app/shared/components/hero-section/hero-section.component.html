@@ -1,0 +1,20 @@
+<section class="loan-hero">
+  <div class="hero-inner">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle }}</p>
+
+      <a *ngIf="buttonText?.trim()" [routerLink]="buttonLink" class="hero-btn">
+        {{ buttonText }}
+      </a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+      <img [src]="image" alt="Small business owner" />
+    </div>
+
+  </div>
+</section>

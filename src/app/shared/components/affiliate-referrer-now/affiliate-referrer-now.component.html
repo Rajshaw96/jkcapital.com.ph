@@ -1,0 +1,174 @@
+<section class="refer-section">
+  <div class="refer-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="refer-image">
+      <img src="assets/img/refer-now-img.png" alt="Refer Background" />
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="refer-form-card">
+      <div class="form-header">
+        <span>REFER NOW</span>
+      </div>
+
+      <form [formGroup]="referForm" (ngSubmit)="submitReferral()" novalidate>
+
+        <!-- ================= YOUR DETAILS ================= -->
+        <h4>Enter Your Details</h4>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name <span>*</span></label>
+            <input
+              type="text"
+              formControlName="yourFirstName"
+              placeholder="Enter your first name (e.g. John)"
+            />
+            <p class="error-text" *ngIf="isInvalid('yourFirstName')">
+              Required (min 2 characters)
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label>Last Name <span>*</span></label>
+            <input
+              type="text"
+              formControlName="yourLastName"
+              placeholder="Enter your last name (e.g. Doe)"
+            />
+            <p class="error-text" *ngIf="isInvalid('yourLastName')">
+              Required (min 2 characters)
+            </p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mobile Number <span>*</span></label>
+            <input
+              type="text"
+              formControlName="yourPhone"
+              placeholder="Enter your mobile number (e.g. +63 909 087 6876)"
+            />
+            <p class="error-text" *ngIf="isInvalid('yourPhone')">
+              Valid phone number required
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address <span>*</span></label>
+            <input
+              type="email"
+              formControlName="yourEmail"
+              placeholder="Enter your email address (e.g. john@email.com)"
+            />
+            <p class="error-text" *ngIf="isInvalid('yourEmail')">
+              Valid email address required
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Referrer Code <span>*</span></label>
+          <input
+            type="text"
+            formControlName="referrerCode"
+            placeholder="Enter your referrer code"
+          />
+          <p class="error-text" *ngIf="isInvalid('referrerCode')">
+            Referrer code is required
+          </p>
+        </div>
+
+        <!-- ================= REFERRAL DETAILS ================= -->
+        <h4>Enter Your Referral’s Details</h4>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Referral First Name <span>*</span></label>
+            <input
+              type="text"
+              formControlName="refFirstName"
+              placeholder="Enter referral’s first name"
+            />
+            <p class="error-text" *ngIf="isInvalid('refFirstName')">
+              Required
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label>Referral Last Name <span>*</span></label>
+            <input
+              type="text"
+              formControlName="refLastName"
+              placeholder="Enter referral’s last name"
+            />
+            <p class="error-text" *ngIf="isInvalid('refLastName')">
+              Required
+            </p>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Referral Phone Number <span>*</span></label>
+            <input
+              type="text"
+              formControlName="refPhone"
+              placeholder="Enter referral’s phone number (e.g. +63 909 087 6876)"
+            />
+            <p class="error-text" *ngIf="isInvalid('refPhone')">
+              Valid phone number required
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label>Referral Email Address <span>*</span></label>
+            <input
+              type="email"
+              formControlName="refEmail"
+              placeholder="Enter referral’s email address"
+            />
+            <p class="error-text" *ngIf="isInvalid('refEmail')">
+              Valid email address required
+            </p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Referral Business Name <span>*</span></label>
+          <input
+            type="text"
+            formControlName="businessName"
+            placeholder="Enter referral’s business name (e.g. ABC Corporation)"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Referral Business Type <span>*</span></label>
+          <select formControlName="businessType">
+            <option value="">Select business type</option>
+            <option value="Sales Partnership">Sales Partnership</option>
+            <option value="IT Services">IT Services</option>
+            <option value="Manufacturing">Manufacturing</option>
+          </select>
+        </div>
+
+        <!-- 🛑 Honeypot (anti-bot) -->
+        <input
+          type="text"
+          formControlName="company"
+          class="hidden-field"
+          autocomplete="off"
+          tabindex="-1"
+        />
+
+        <button type="submit" class="submit-btn" [disabled]="loading">
+          {{ loading ? 'Submitting...' : 'Submit Referral' }}
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>

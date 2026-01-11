@@ -1,0 +1,28 @@
+<section class="loan-solutions">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <span class="section-line"></span>
+      <h2>
+        JK Capital difference: We customize funding solutions
+        to help small to medium businesses thrive.
+      </h2>
+    </div>
+
+    <!-- GRID -->
+    <div class="solutions-grid">
+      <div class="solution-card" *ngFor="let item of solutions">
+        <div class="image-wrap">
+          <img [src]="item.image" [alt]="item.title" [title]="item.title" loading="lazy" [routerLink]="item.link" />
+        </div>
+        <div class="solution-content" [routerLink]="item.link">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+          <a [routerLink]="item.link" class="learn-more">Learn More → </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

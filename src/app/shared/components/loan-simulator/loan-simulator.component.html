@@ -1,0 +1,242 @@
+<div class="frame-104">
+  <div class="frame-21">
+    <div class="rectangle-1798"></div>
+    <div class="begin-your-business-loan-journey-with-us">
+      Begin your business loan journey with us
+    </div>
+  </div>
+
+  <div class="frame-46">
+    <div class="simulate-your-loan-terms">Simulate your loan terms</div>
+    <div class="frame-53">
+      <div class="frame-51">
+        <div class="frame-64">
+          <div class="loan-controls">Loan Controls</div>
+          <div class="frame-65">
+            <div class="frame-66">
+              <img class="info" src="info0.svg" />
+              <div class="for-guidance-only-not-a-loan-offer">
+                For guidance only; not a loan offer.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-57">
+          <div class="frame-54">
+            <div class="loan-amount">
+              <span>
+                <span class="loan-amount-span">Loan Amount</span>
+                <span class="loan-amount-span2">(₱)</span>
+              </span>
+            </div>
+
+            <div class="frame-55">
+              <div class="slider" #loanSlider (mousedown)="startDrag($event, 'loan')"
+                (touchstart)="startDrag($event, 'loan')">
+                <div class="frame-59" [style.width.%]="loanPercent"></div>
+              </div>
+
+              <div class="frame-56">
+                <div class="_1-000-000">{{ formatCurrency(loanAmount) }}</div>
+              </div>
+
+              <div class="handle-component" [style.left.%]="loanPercent">
+                <div class="point"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="frame-572">
+            <div class="terms-months">
+              <span>
+                <span class="terms-months-span">Terms</span>
+                <span class="terms-months-span2">(Months)</span>
+              </span>
+            </div>
+            <div class="frame-55">
+              <div class="slider" #monthSlider (mousedown)="startDrag($event, 'months')"
+                (touchstart)="startDrag($event, 'months')">
+                <div class="frame-592" [style.width.%]="monthPercent"></div>
+              </div>
+
+              <div class="frame-56">
+                <div class="_6-months">{{ months }} Months</div>
+              </div>
+
+              <div class="handle-component2" [style.left.%]="monthPercent">
+                <div class="point"></div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-58">
+            <div class="monthly-interest-rate-t-c-apply">
+              <span>
+                <span class="monthly-interest-rate-t-c-apply-span">
+                  Monthly Interest Rate
+                </span>
+                <span class="monthly-interest-rate-t-c-apply-span2">
+                  (T&amp;C Apply
+                </span>
+                <span class="monthly-interest-rate-t-c-apply-span3">*</span>
+                <span class="monthly-interest-rate-t-c-apply-span2">)</span>
+              </span>
+            </div>
+            <div class="frame-55">
+              <div class="slider" #interestSlider (mousedown)="startDrag($event, 'interest')"
+                (touchstart)="startDrag($event, 'interest')">
+                <div class="frame-593" [style.width.%]="interestPercent"></div>
+              </div>
+
+              <div class="frame-56">
+                <div class="_3-50">{{ interestRate }}%</div>
+              </div>
+
+              <div class="handle-component3" [style.left.%]="interestPercent">
+                <div class="point"></div>
+              </div>
+            </div>
+
+          </div>
+          <div class="frame-594">
+            <div class="payment-frequency">Payment Frequency</div>
+
+            <div class="frame-62">
+              <div
+                class="frame-60"
+                [class.active]="paymentFrequency === 'monthly'"
+                (click)="setPaymentFrequency('monthly')"
+              >
+                <div class="monthly">Monthly</div>
+              </div>
+
+              <div
+                class="frame-61"
+                [class.active]="paymentFrequency === 'semi-monthly'"
+                (click)="setPaymentFrequency('semi-monthly')"
+              >
+                <div class="semi-monthly">Semi-Monthly</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="frame-63">
+            <div class="frame-602">
+              <div class="checks-per-month">Checks Per Month</div>
+              <div class="frame-56">
+                <div class="_1">{{ checksPerMonth }}</div>
+              </div>
+            </div>
+
+            <div class="frame-612">
+              <div class="processing-fee">Processing Fee</div>
+              <div class="frame-56">
+                <div class="_5-0">{{ processingFee }}%</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="frame-52">
+        <div class="frame-114">
+          <div class="frame-64">
+            <div class="results">Results</div>
+            <div class="frame-662">
+              <div class="frame-66">
+                <!-- <img class="info2" src="info1.svg" /> -->
+                <div class="this-is-a-simulation-not-a-loan-offer">
+                  This is a simulation, not a loan offer.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="frame-67">
+          <div class="frame-63">
+            <div class="frame-602">
+              <div class="estimated-loan">Estimated Loan</div>
+              <div class="frame-68">
+                <div class="frame-56">
+                  <div class="_1-000-000-00">{{ formatCurrency(loanAmount) }}</div>
+                </div>
+                <!-- <img class="check-circle" src="check-circle0.svg" /> -->
+              </div>
+            </div>
+          </div>
+          <div class="line-2"></div>
+          <div class="frame-672">
+            <div class="frame-602">
+              <div class="months">Months</div>
+              <div class="frame-56">
+                <div class="_6-months">{{ months }} Months</div>
+              </div>
+            </div>
+            <div class="frame-612">
+              <div class="interest-rate-per-month">
+                Interest Rate (Per Month)
+              </div>
+              <div class="frame-56">
+                <div class="_3-50">{{ interestRate }}%</div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-652">
+            <div class="frame-602">
+              <div class="total-interest">Total Interest</div>
+              <div class="frame-56">
+                <div class="_210-000-00">{{ formatCurrency(totalInterest) }}</div>
+              </div>
+            </div>
+            <div class="frame-612">
+              <div class="per-month-monthly-amortisation">
+                Per Month (Monthly Amortisation)
+              </div>
+              <div class="frame-56">
+                <div class="_201-666-67">{{ formatCurrency(monthlyAmortisation) }}</div>
+              </div>
+            </div>
+          </div>
+          <div class="frame-663">
+            <div class="frame-602">
+              <div class="processing-fee-5-0">Processing Fee (5.0%)</div>
+              <div class="frame-56">
+                <div class="_50-000-00">{{ formatCurrency(processingFeeAmount) }}</div>
+              </div>
+            </div>
+            <div class="frame-612">
+              <div class="total-proceeds-you-will-receive">
+                Total Proceeds You Will Receive
+              </div>
+              <div class="frame-56">
+                <div class="_950-000-00">{{ formatCurrency(netProceeds) }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame-47">
+    <div class="frame-48">
+      <img class="event-available" src="assets/img/icons/event_available.png" />
+      <div class="same-day-application-pre-screening">
+        Same-day application
+        <br />
+        &amp; pre-screening.
+      </div>
+    </div>
+    <div class="frame-49">
+      <img class="checklist-rtl" src="assets/img/icons/checklist_rtl.png" />
+      <div class="minimal-requirements-maximum-convenience">
+        Minimal requirements.
+        <br />
+        Maximum convenience.
+      </div>
+    </div>
+    <div class="frame-50">
+      <img class="timer-5" src="assets/img/icons/timer_5.png" />
+      <div class="_5-to-7-day-fast-approval">5 to 7-day fast approval.</div>
+    </div>
+  </div>
+</div>

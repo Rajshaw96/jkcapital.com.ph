@@ -1,0 +1,215 @@
+.need-help {
+  background: #fef9f9;
+  padding: 60px 0;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+/* HEADER */
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.section-line {
+  width: 24px;
+  height: 2px;
+  background: var(--Primary-Blue, #0166CC);
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.section-header h2 {
+  color: #353333;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  font-style: normal;
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  color: #645F5F;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+
+.help-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD BASE */
+.help-card {
+  border-radius: 6px;
+  padding: 30px;
+  text-align: left;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.help-card h3 {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.help-card p {
+  margin: 10px 0 15px;
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* ICON */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* Hover Animation */
+.social-icons a:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  filter: brightness(1.1);
+}
+
+/* Active (Mobile Tap Feedback) */
+.social-icons a:active {
+  transform: scale(0.95);
+}
+
+/* Optional subtle ripple glow */
+.social-icons a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+}
+
+/* Brand Colors */
+.fb { background: #1877f2; }
+.in { background: #0a66c2; }
+.ig { background: #e1306c; }
+.tw { background: #000000; }
+
+
+/* COLORS */
+.articles {
+  background: #f2f6ff;
+}
+
+.tech {
+  background: #fdeef7;
+}
+
+.social {
+  background: #f9fafb;
+}
+
+/* HOVER */
+.help-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* BUTTON LINK */
+.btn-link {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.btn-link.purple {
+  color: #7c3aed;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.fb { background: #1877f2; }
+.in { background: #0a66c2; }
+.tw { background: #1da1f2; }
+.ig { background: #e1306c; }
+
+/* ============ MOBILE ============ */
+@media (max-width: 768px) {
+
+  .need-help h2 {
+    font-size: 28px;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-card {
+    text-align: center;
+  }
+
+  .icon-box {
+    margin: auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

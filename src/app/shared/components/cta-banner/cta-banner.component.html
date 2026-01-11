@@ -1,0 +1,31 @@
+<section
+  class="cta-section"
+  [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }">
+
+  <div class="cta-overlay"></div>
+
+  <div class="cta-content container">
+    <span class="cta-line"></span>
+
+    <h2>{{ title }}</h2>
+
+    <div class="cta-buttons">
+      <a class="btn primary" routerLink="/industries">
+        {{ primaryText }}
+      </a>
+
+      <a class="btn outline" routerLink="/loan-application">
+        {{ secondaryText }}
+      </a>
+    </div>
+
+    <div class="cta-icons">
+      <div class="icon-circle">
+        <img src="assets/img/icons/sms.png" alt="Chat with expert" />
+      </div>
+      <div class="icon-circle">
+        <img src="assets/img/icons/phone_in_talk.png" alt="Call us" />
+      </div>
+    </div>
+  </div>
+</section>

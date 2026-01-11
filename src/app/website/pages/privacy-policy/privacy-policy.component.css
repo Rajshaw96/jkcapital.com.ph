@@ -1,0 +1,95 @@
+.privacy-section {
+  background-color: #ffffff;
+  padding: 50px;
+}
+
+.privacy-container {
+  width: 100%;
+  margin: auto;
+  color: #1f2937;
+}
+
+.privacy-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.privacy-card.highlight {
+  border-left: 5px solid #002b55;
+}
+
+.privacy-card h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #002b55;
+}
+
+.privacy-card a {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.privacy-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #002b55;
+}
+
+.last-updated {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+  color: #002b55;
+}
+
+h3 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+ul {
+  padding-left: 18px;
+  margin-bottom: 16px;
+}
+
+li {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .privacy-title {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p,
+  li {
+    font-size: 14px;
+  }
+}

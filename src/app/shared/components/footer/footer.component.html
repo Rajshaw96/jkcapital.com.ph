@@ -1,0 +1,103 @@
+<footer class="site-footer">
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <!-- COMPANY -->
+      <div class="footer-col">
+        <h3 class="brand">JK Capital Finance, Inc.</h3>
+        <p class="desc">
+          Executing the vision of SME’s through our business loans.
+        </p>
+
+        <p class="follow-title">Follow Us on</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/jkcapitalloans" aria-label="Facebook" target="_blank" rel="noopener">
+            <img src="assets/img/icons/Facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://www.linkedin.com/company/jk-capital-finance/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <img src="assets/img/icons/Linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://www.instagram.com/JKCapitalFinance/" aria-label="Instagram" target="_blank" rel="noopener">
+            <img src="assets/img/icons/Instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://x.com/jkcapitalloans" aria-label="X" target="_blank" rel="noopener">
+            <img src="assets/img/icons/Viber.png" alt="X" />
+          </a>
+        </div>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a routerLink="/business-loans">Business Loans</a></li>
+          <li><a routerLink="/working-capital-loan">Working Capital Loan</a></li>
+          <li><a routerLink="/credit-line">Credit Line</a></li>
+          <li><a routerLink="/receivables-financing">Receivables Financing</a></li>
+          <li><a routerLink="/check-re-discounting">Check Re-Discounting</a></li>
+        </ul>
+      </div>
+
+      <!-- HELP CENTER -->
+      <div class="footer-col">
+        <h4>Help Center</h4>
+        <ul>
+          <li><a routerLink="/frequently-asked-questions">FAQs</a></li>
+          <li><a routerLink="/privacy-policy">Privacy Policy</a></li>
+          <li><a routerLink="/truth-in-lending-act">Truth in Lending Act</a></li>
+          <li><a routerLink="/contact-us">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- OFFICE -->
+      <div class="footer-col">
+        <h4>Our Main Office</h4>
+        <p>
+          JK Capital Finance, Inc.<br />
+          3302-D Tektite Tower West<br />
+          Exchange Road, Ortigas<br />
+          Pasig, Metro Manila 1605
+        </p>
+
+        <p class="contact-links">
+          <a href="tel:+639171372847">+63 917 137 2847</a><br />
+          <a href="mailto:info@jkcapital.com">info@jkcapital.com</a>
+        </p>
+      </div>
+
+      <!-- CENTERS -->
+      <div class="footer-col">
+        <h4>Our Centers</h4>
+        <ul>
+          <li>Malolos, Bulacan</li>
+          <li>Mexico, Pampanga</li>
+          <li>Batangas City, Batangas</li>
+          <li>Cabanatuan City</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- your existing footer content -->
+
+  <!-- BACK TO TOP -->
+  <button
+    class="back-to-top"
+    *ngIf="showBackToTop"
+    (click)="scrollToTop()"
+    aria-label="Back to top">
+    ↑
+  </button>
+  
+</footer>
+
+<!-- COPYRIGHT -->
+<div class="footer-bottom">
+  <div class="container">
+    <p>
+      © {{ currentYear }} <span><a href="https://jkcapital.com.ph/" target="_blank" rel="noopener noreferrer">JK Capital Finance Inc.</a></span> All Rights Reserved.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+.comparison-section {
+  background: #eaf3ff;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.section-line {
+  width: 24px;
+  height: 2px;
+  background: var(--Primary-Blue, #0166CC);
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.section-header h2 {
+  color: #353333;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  font-style: normal;
+  margin-bottom: 12px;
+}
+
+/* Card */
+.comparison-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header Row */
+.comparison-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Rows */
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.cell {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.check {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-header div:last-child {
+    display: none;
+  }
+
+  .comparison-row .cell {
+    border-bottom: 1px dashed #e5e7eb;
+  }
+}

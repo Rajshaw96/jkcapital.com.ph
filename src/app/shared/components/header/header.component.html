@@ -1,0 +1,126 @@
+<!-- ================= TOP HEADER ================= -->
+<div class="top-header">
+  <div class="container top-header-inner">
+    <input
+      type="text"
+      class="search-input"
+      placeholder="Search Your Keyword..."
+    />
+
+    <div class="top-links">
+      <a routerLink="/refer-and-earn-main" routerLinkActive="active">Refer & Earn</a>
+      <a routerLink="/affiliate-referrer" routerLinkActive="active">Sign In</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MAIN HEADER ================= -->
+<header class="main-header">
+  <div class="container header-inner">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <a routerLink="/">
+        <img src="assets/img/jkcapital-logo.png" alt="JK Capital" />
+      </a>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="desktop-nav">
+      <ul>
+
+        <!-- ABOUT -->
+        <!-- <li
+          class="nav-item"
+          routerLinkActive="active"
+          (mouseenter)="openDropdown('about')"
+          (mouseleave)="closeDropdown()"
+        >
+          About Us
+          <ul class="dropdown" *ngIf="activeDropdown === 'about'">
+            <li><a routerLink="/about-us">Who We Are</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item" routerLink="/about-us" routerLinkActive="active">
+          About Us
+        </li>
+
+        <!-- BUSINESS LOANS -->
+        <li
+          class="nav-item has-mega"
+          (mouseenter)="openDropdown('loans')"
+          (mouseleave)="closeDropdown()"
+        >
+          Business Loans
+
+          <div class="mega-dropdown full-width" *ngIf="activeDropdown === 'loans'">
+            <div class="mega-container">
+
+              <div class="mega-left">
+                <h4>Business Loans</h4>
+              </div>
+
+              <div class="mega-center">
+                <a routerLink="/business-loans">Business Loans</a>
+                <a routerLink="/working-capital-loan">Working Capital Loan</a>
+                <a routerLink="/credit-line">Credit Line</a>
+                <a routerLink="/project-financing">Project Financing</a>
+                <a routerLink="/receivables-financing">Receivables Financing</a>
+                <a routerLink="/check-re-discounting">Check Re-Discounting</a>
+              </div>
+
+              <div class="mega-right"></div>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item" routerLink="/industries" routerLinkActive="active">
+          Industries
+        </li>
+
+        <li class="nav-item" routerLink="/knowledge-hub" routerLinkActive="active">
+          Knowledge Hub
+        </li>
+
+        <li class="nav-item" routerLink="/help-center" routerLinkActive="active">
+          Help Center
+        </li>
+      </ul>
+    </nav>
+
+    <!-- CTA -->
+    <button class="apply-btn" routerLink="/loan-application">
+      Apply Now
+    </button>
+
+    <!-- MOBILE ICON -->
+    <div class="hamburger" (click)="toggleMobileMenu()">☰</div>
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" *ngIf="isMobileMenuOpen">
+  <ul>
+    <li><a routerLink="/about-us" (click)="toggleMobileMenu()">About Us</a></li>
+
+    <li>
+      Business Loans
+      <ul>
+        <li><a routerLink="/business-loans" (click)="toggleMobileMenu()">Business Loans</a></li>
+        <li><a routerLink="/working-capital-loan" (click)="toggleMobileMenu()">Working Capital Loan</a></li>
+        <li><a routerLink="/credit-line" (click)="toggleMobileMenu()">Credit Line</a></li>
+        <li><a routerLink="/project-financing" (click)="toggleMobileMenu()">Project Financing</a></li>
+        <li><a routerLink="/receivables-financing" (click)="toggleMobileMenu()">Receivables Financing</a></li>
+        <li><a routerLink="/check-re-discounting" (click)="toggleMobileMenu()">Check Re-Discounting</a></li>
+      </ul>
+    </li>
+
+    <li><a routerLink="/industries" (click)="toggleMobileMenu()">Industries</a></li>
+    <li><a routerLink="/knowledge-hub" (click)="toggleMobileMenu()">Knowledge Hub</a></li>
+    <li><a routerLink="/help-center" (click)="toggleMobileMenu()">Help Center</a></li>
+
+    <li class="mobile-cta">
+      <a routerLink="/loan-application" (click)="toggleMobileMenu()">Apply Now</a>
+    </li>
+  </ul>
+</div>

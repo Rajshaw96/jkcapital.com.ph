@@ -1,0 +1,946 @@
+.frame-104 {
+  background: var(--soft-white, #f8f9fb);
+  padding: 100px 0px 100px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 77px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 605px;
+  position: relative;
+  margin-bottom: 420px;
+}
+
+.frame-21 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.rectangle-1798 {
+  background: var(--primary-blue, #0166cc);
+  flex-shrink: 0;
+  width: 22px;
+  height: 2px;
+  position: relative;
+}
+
+.begin-your-business-loan-journey-with-us {
+  color: #353333;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  position: relative;
+  width: 640px;
+}
+
+.frame-46 {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 64px 0px 64px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 1200px;
+  position: absolute;
+  top: 355px;
+  box-shadow: 0px 4px 35.8px 11px rgba(191, 255, 252, 0.3);
+  overflow: hidden;
+}
+
+.slider {
+  cursor: pointer;
+  position: relative;
+}
+
+.handle-component,
+.handle-component2,
+.handle-component3 {
+  pointer-events: none;
+}
+
+.frame-60.active,
+.frame-61.active {
+  background: var(--primary-blue, #0166cc);
+}
+
+.frame-60.active .monthly,
+.frame-61.active .semi-monthly {
+  color: #fff;
+}
+
+/* DEFAULT (inactive) */
+.frame-60,
+.frame-61 {
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* DEFAULT text color */
+.frame-60 .monthly,
+.frame-61 .semi-monthly {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ACTIVE state */
+.frame-60.active,
+.frame-61.active {
+  background: var(--primary-blue, #0166cc);
+}
+
+/* ACTIVE text */
+.frame-60.active .monthly,
+.frame-61.active .semi-monthly {
+  color: #ffffff;
+}
+
+
+
+
+.simulate-your-loan-terms {
+  background: var(
+    --black,
+    linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(to left, #000000, #000000)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 0.44px;
+  font-weight: 600;
+  position: relative;
+  align-self: stretch;
+}
+
+.frame-53 {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.frame-51 {
+  background: #ffffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  width: 593.5px;
+}
+.frame-64 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.loan-controls {
+  color: var(--primary-blue, #0166cc);
+  text-align: left;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.frame-65 {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-66 {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.info {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.for-guidance-only-not-a-loan-offer {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: right;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+}
+
+.frame-57 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-54 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.loan-amount {
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.loan-amount-span {
+  color: rgba(0, 0, 0, 0.7);
+}
+.loan-amount-span2 {
+  color: #000000;
+}
+
+.frame-55 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  
+  position: relative;
+}
+.slider {
+  background: var(--neutral-gray, #d6d6d6);
+  border-radius: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-59 {
+  background: var(--primary-blue, #0166cc);
+  border-radius: 27px;
+  flex-shrink: 0;
+  width: 98px;
+  height: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-56 {
+  padding: 0px 0px 4px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+._1-000-000 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.handle-component {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 85px;
+  top: 0px;
+}
+.point {
+  background: var(--primary-blue, #0166cc);
+  border-radius: 50%;
+  border-style: solid;
+  border-color: var(--white, #ffffff);
+  border-width: 4px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  bottom: 0%;
+  top: 0%;
+  box-shadow: var(
+    --xxs-shadow-box-shadow,
+    0px 4px 4px -2px rgba(24, 39, 75, 0.08),
+    0px 2px 4px -2px rgba(24, 39, 75, 0.12)
+  );
+}
+
+.frame-572 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.terms-months {
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.terms-months-span {
+  color: rgba(0, 0, 0, 0.7);
+}
+.terms-months-span2 {
+  color: #000000;
+}
+.frame-592 {
+  background: var(--primary-blue, #0166cc);
+  border-radius: 27px;
+  flex-shrink: 0;
+  width: 52px;
+  height: 8px;
+  position: relative;
+  overflow: hidden;
+}
+._6-months {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.handle-component2 {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 39px;
+  top: 0px;
+}
+
+.frame-58 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.monthly-interest-rate-t-c-apply {
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.monthly-interest-rate-t-c-apply-span {
+  color: rgba(0, 0, 0, 0.7);
+  
+}
+.monthly-interest-rate-t-c-apply-span2 {
+  color: #000000;
+  
+}
+.monthly-interest-rate-t-c-apply-span3 {
+  color: #ff0000;
+  font-weight: 700;
+}
+.frame-593 {
+  background: var(--primary-blue, #0166cc);
+  border-radius: 27px;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 8px;
+  position: relative;
+  overflow: hidden;
+}
+._3-50 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.handle-component3 {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 380px;
+  top: 0px;
+}
+
+.frame-594 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.payment-frequency {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.frame-62 {
+  background: var(--soft-white, #f8f9fb);
+  border-radius: 4px;
+  border-style: solid;
+  border-color: var(--neutral-gray, #d6d6d6);
+  border-width: 1px;
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-60 {
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.check {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.monthly {
+  color: var(--white, #ffffff);
+  text-align: left;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  position: relative;
+}
+.frame-61 {
+  border-radius: 4px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.semi-monthly {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+}
+
+.frame-63 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-602 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.checks-per-month {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+._1 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.frame-612 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.processing-fee {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+._5-0 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+
+.frame-52 {
+  background: #fafcff;
+  border-radius: 4px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 593.5px;
+  position: relative;
+  overflow: hidden;
+}
+.frame-114 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.results {
+  color: var(--primary-blue, #0166cc);
+  text-align: left;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+.frame-662 {
+  background: var(--primary-blue, #0166cc);
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.info2 {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.this-is-a-simulation-not-a-loan-offer {
+  color: #ffffff;
+  text-align: right;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+}
+
+.frame-67 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.estimated-loan {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.frame-68 {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+._1-000-000-00 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 24px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  position: relative;
+}
+.check-circle {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.line-2 {
+  margin-top: -1px;
+  border-style: solid;
+  border-color: #addfff;
+  border-width: 1px 0 0 0;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 0px;
+  position: relative;
+}
+.frame-672 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.months {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.interest-rate-per-month {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+.frame-652 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.total-interest {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+._210-000-00 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.per-month-monthly-amortisation {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+._201-666-67 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.frame-663 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.processing-fee-5-0 {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+._50-000-00 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.total-proceeds-you-will-receive {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+}
+._950-000-00 {
+  color: var(--primary-blue, #0166cc);
+  text-align: right;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  position: relative;
+}
+.frame-47 {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 880px;
+  height: 128px;
+  position: relative;
+}
+.frame-48 {
+  background: #ccfffc;
+  border-radius: 12px 0px 0px 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.event-available {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+
+.same-day-application-pre-screening {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+.frame-49 {
+  background: #d5eefe;
+  border-radius: 12px 12px 0px 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  height: 164px;
+  position: relative;
+  overflow: hidden;
+}
+.checklist-rtl {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+.minimal-requirements-maximum-convenience {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+.frame-50 {
+  background: #c8e9ff;
+  border-radius: 0px 12px 0px 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  height: 128px;
+  position: relative;
+  overflow: hidden;
+}
+.timer-5 {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  overflow: visible;
+  aspect-ratio: 1;
+}
+._5-to-7-day-fast-approval {
+  color: #000000;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
