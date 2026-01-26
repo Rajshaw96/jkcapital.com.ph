@@ -47,12 +47,12 @@ const routes: Routes = [
       { path: 'faq', component: FrequentlyAskedQuestionsComponent },
       { path: 'landing', component: JkCapitalLandingPageComponent },
 
-      { path: 'product/business-loans', component: BusinessLoansComponent },
-      { path: 'product/working-capital-loan', component: WorkingCapitalLoanComponent },
-      { path: 'product/credit-line', component: CreditLineComponent },
-      { path: 'product/project-financing', component: ProjectFinancingComponent },
-      { path: 'product/receivables-financing', component: InvoiceAndReceivablesFinancingComponent },
-      { path: 'product/check-re-discounting', component: CheckRediscountingComponent },
+      { path: 'products/business-loans', component: BusinessLoansComponent },
+      { path: 'products/working-capital-loan', component: WorkingCapitalLoanComponent },
+      { path: 'products/credit-line', component: CreditLineComponent },
+      { path: 'products/project-financing', component: ProjectFinancingComponent },
+      { path: 'products/receivables-financing', component: InvoiceAndReceivablesFinancingComponent },
+      { path: 'products/check-re-discounting', component: CheckRediscountingComponent },
 
       { path: 'industries', component: IndustriesComponent },
       { path: 'industries/agriculture', component: AgricultureComponent },
