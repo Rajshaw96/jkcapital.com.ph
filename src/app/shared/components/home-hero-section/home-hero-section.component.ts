@@ -15,7 +15,7 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
       title: 'We diagnose. We solve. We customise.',
       desc: 'More than capital — we bring clarity to your business challenges, bridge financial gaps, and craft solutions that help you thrive in a changing world.',
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
-      btnLink: '/help-center',
+      btnLink: '/industries',
       image: 'assets/img/businesses/check-re-discounting.jpeg',
     },
     {
@@ -33,7 +33,7 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
       title: 'Non-collateral business loans from PHP300K to PHP50M.',
       desc: 'Same-day application & screening | 5-day loan approval',
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
-      btnLink: '/help-center',
+      btnLink: '/industries',
       image: 'assets/img/businesses/business-loans.jpeg',
     }
   ];

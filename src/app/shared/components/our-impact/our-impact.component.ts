@@ -29,8 +29,8 @@ export class OurImpactComponent implements OnInit, OnDestroy {
     {
       name: 'Kaity',
       role: 'Fashion Director',
-      image: 'assets/img/testimonials/testimonials-img (2).jpg',
-      video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      image: 'assets/img/pages/Our Impact/LC ERA TAPAR COVER.jpg',
+      video: 'https://www.youtube.com/watch?v=uV-lEbcPBUc'
     },
     {
       name: 'Rayan',

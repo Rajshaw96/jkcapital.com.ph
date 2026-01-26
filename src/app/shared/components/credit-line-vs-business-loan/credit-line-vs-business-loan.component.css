@@ -55,6 +55,7 @@
 
 /* Table Header */
 .compare-table th {
+  width: 50%;
   text-align: left;
   padding: 18px 20px;
   font-size: 20px;
@@ -65,10 +66,11 @@
 
 /* Table Cells */
 .compare-table td {
+  width: 50%;
   padding: 18px 20px;
   vertical-align: top;
+  font-size: 15px;
   border: 1px solid #e5e7eb;
-  line-height: 1.5;
 }
 
 /* =========================

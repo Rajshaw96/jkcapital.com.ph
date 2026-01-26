@@ -1,93 +1,110 @@
-.comparison-section {
+/* =========================
+   SECTION
+========================= */
+.compare-section {
   background: #eaf3ff;
-  padding: 50px 0;
+  padding: 60px 50px;
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
   margin: auto;
-  padding: 0 20px;
 }
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 .section-header {
-  max-width: 720px;
-  margin: 0 auto 40px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .section-line {
   width: 24px;
   height: 2px;
-  background: var(--Primary-Blue, #0166CC);
+  background: #0166cc;
   display: block;
   margin: 0 auto 12px;
 }
 
 .section-header h2 {
-  color: #353333;
-  text-align: center;
   font-size: 28px;
   font-weight: 600;
-  line-height: normal;
-  font-style: normal;
-  margin-bottom: 12px;
+  color: #353333;
 }
 
-/* Card */
-.comparison-card {
+/* =========================
+   CARD
+========================= */
+.compare-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
 }
 
-/* Header Row */
-.comparison-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 18px 20px;
-  font-weight: 700;
-  font-size: 15px;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-/* Rows */
-.comparison-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid #eef2f7;
-}
-
-.comparison-row:last-child {
-  border-bottom: none;
-}
-
-.cell {
-  padding: 14px 20px;
+/* =========================
+   TABLE
+========================= */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
   font-size: 14px;
-  color: #555;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  color: #1f2937;
 }
 
-.check {
-  color: #22c55e;
-  font-weight: bold;
+/* Table Header */
+.compare-table th {
+  width: 50%;
+  text-align: left;
+  padding: 18px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
 }
 
-/* ===== MOBILE ===== */
+/* Table Cells */
+.compare-table td {
+  width: 50%;
+  padding: 18px 20px;
+  vertical-align: top;
+  font-size: 15px;
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================
+   ICON + TEXT
+========================= */
+.compare-table .check {
+  display: inline-flex;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.compare-table .check img {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.compare-table strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
-  .comparison-header,
-  .comparison-row {
-    grid-template-columns: 1fr;
+
+  .section-header h2 {
+    font-size: 22px;
   }
 
-  .comparison-header div:last-child {
-    display: none;
-  }
-
-  .comparison-row .cell {
-    border-bottom: 1px dashed #e5e7eb;
+  .compare-table th,
+  .compare-table td {
+    padding: 14px;
+    font-size: 13px;
   }
 }

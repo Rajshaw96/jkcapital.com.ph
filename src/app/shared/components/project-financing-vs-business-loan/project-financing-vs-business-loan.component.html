@@ -1,34 +1,48 @@
-<section class="comparison-section">
+<section class="compare-section">
   <div class="container">
 
-    <!-- Header -->
+    <!-- HEADER -->
     <div class="section-header">
       <span class="section-line"></span>
       <h2>Project Financing vs. Standard Business Loan</h2>
     </div>
 
-    <!-- Comparison Card -->
-    <div class="comparison-card">
+    <!-- TABLE CARD -->
+    <div class="compare-card">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Project Financing</th>
+            <th>Standard Business Loan</th>
+          </tr>
+        </thead>
 
-      <!-- Column Headers -->
-      <div class="comparison-header">
-        <div>{{ comparison.leftTitle }}</div>
-        <div>{{ comparison.rightTitle }}</div>
-      </div>
+        <tbody>
+          <tr *ngFor="let row of rows">
+            <td>
+              <span class="check">
+                <img src="assets/img/icons/check_circle.png" />
+              </span>
 
-      <!-- Rows -->
-      <div class="comparison-row" *ngFor="let item of comparison.leftPoints; let i = index">
-        <div class="cell">
-          <span class="check">✔</span>
-          {{ comparison.leftPoints[i] }}
-        </div>
-        <div class="cell">
-          <span class="check">✔</span>
-          {{ comparison.rightPoints[i] }}
-        </div>
-      </div>
+              <ng-container *ngIf="formatSentence(row.projectFinancing) as txt">
+                <strong>{{ txt.first }}</strong>{{ txt.rest }}
+              </ng-container>
+            </td>
 
+            <td>
+              <span class="check">
+                <img src="assets/img/icons/check_circle.png" />
+              </span>
+
+              <ng-container *ngIf="formatSentence(row.standardBusinessLoan) as txt">
+                <strong>{{ txt.first }}</strong>{{ txt.rest }}
+              </ng-container>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
   </div>
 </section>
+
