@@ -18,12 +18,21 @@ import { HelpCenterComponent } from './pages/help-center/help-center.component';
 import { FrequentlyAskedQuestionsComponent } from './pages/frequently-asked-questions/frequently-asked-questions.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { TruthInLendingActComponent } from './pages/truth-in-lending-act/truth-in-lending-act.component';
-import { IndustriesComponent } from './pages/industries/industries.component';
+import { IndustriesComponent } from './pages/industries/industries/industries.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { OfflineComponent } from './pages/offline/offline.component';
 import { LoanApplicationComponent } from './pages/loan-application/loan-application.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { JkCapitalLandingPageComponent } from './pages/jk-capital-landing-page/jk-capital-landing-page.component';
+import { AgricultureComponent } from './pages/industries/agriculture/agriculture.component';
+import { ConstructionBuildingComponent } from './pages/industries/construction-building/construction-building.component';
+import { RenewableEnergyComponent } from './pages/industries/renewable-energy/renewable-energy.component';
+import { RetailComponent } from './pages/industries/retail/retail.component';
+import { ProfessionalServicesComponent } from './pages/industries/professional-services/professional-services.component';
+import { PharmaceuticalMedicalComponent } from './pages/industries/pharmaceutical-medical/pharmaceutical-medical.component';
+import { ManufacturingProductionComponent } from './pages/industries/manufacturing-production/manufacturing-production.component';
+import { InfrastructureIndustrialComponent } from './pages/industries/infrastructure-industrial/infrastructure-industrial.component';
+import { DistributionWholesaleSolutionsComponent } from './pages/industries/distribution-wholesale-solutions/distribution-wholesale-solutions.component';
 
 
 const routes: Routes = [
@@ -32,26 +41,40 @@ const routes: Routes = [
     component: WebsiteLayoutComponent,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'offline', component: OfflineComponent },
       { path: 'about-us', component: AboutUsComponent },
-      { path: 'business-loans', component: BusinessLoansComponent },
-      { path: 'working-capital-loan', component: WorkingCapitalLoanComponent },
-      { path: 'credit-line', component: CreditLineComponent },
-      { path: 'project-financing', component: ProjectFinancingComponent },
-      { path: 'receivables-financing', component: InvoiceAndReceivablesFinancingComponent },
-      { path: 'check-re-discounting', component: CheckRediscountingComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'help-center', component: HelpCenterComponent },
+      { path: 'faq', component: FrequentlyAskedQuestionsComponent },
+      { path: 'landing', component: JkCapitalLandingPageComponent },
+
+      { path: 'product/business-loans', component: BusinessLoansComponent },
+      { path: 'product/working-capital-loan', component: WorkingCapitalLoanComponent },
+      { path: 'product/credit-line', component: CreditLineComponent },
+      { path: 'product/project-financing', component: ProjectFinancingComponent },
+      { path: 'product/receivables-financing', component: InvoiceAndReceivablesFinancingComponent },
+      { path: 'product/check-re-discounting', component: CheckRediscountingComponent },
+
+      { path: 'industries', component: IndustriesComponent },
+      { path: 'industries/agriculture', component: AgricultureComponent },
+      { path: 'industries/construction-building', component: ConstructionBuildingComponent },
+      { path: 'industries/distribution-wholesale-solutions', component: DistributionWholesaleSolutionsComponent },
+      { path: 'industries/infrastructure-industrial', component: InfrastructureIndustrialComponent },
+      { path: 'industries/manufacturing-production', component: ManufacturingProductionComponent },
+      { path: 'industries/pharmaceutical-medical', component: PharmaceuticalMedicalComponent },
+      { path: 'industries/renewable-energy', component: RenewableEnergyComponent },
+      { path: 'industries/professional-services', component: ProfessionalServicesComponent },
+      { path: 'industries/retail', component: RetailComponent },
+
       { path: 'refer-and-earn-main', component: ReferAndEarnMainComponent },
       { path: 'starter-referrer', component: StarterReferrerComponent },
       { path: 'affiliate-referrer', component: AffiliateReferrerComponent },
       { path: 'pro-loan-consultant', component: ProLoanConsultantComponent },
-      { path: 'privacy-policy', component: PrivacyPolicyComponent },
-      { path: 'help-center', component: HelpCenterComponent },
-      { path: 'frequently-asked-questions', component: FrequentlyAskedQuestionsComponent },
-      { path: 'contact-us', component: ContactUsComponent },
-      { path: 'truth-in-lending-act', component: TruthInLendingActComponent },
-      { path: 'industries', component: IndustriesComponent },
       { path: 'loan-application', component: LoanApplicationComponent },
-      { path: 'jk-capital-landing-page', component: JkCapitalLandingPageComponent },
+
+      { path: 'privacy-policy', component: PrivacyPolicyComponent },
+      { path: 'truth-in-lending-act', component: TruthInLendingActComponent },
+
+      { path: 'offline', component: OfflineComponent },
       { path: '**', component: NotFoundComponent }
     ]
   }
