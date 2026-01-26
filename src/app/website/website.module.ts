@@ -29,6 +29,7 @@ import { OfflineComponent } from './pages/offline/offline.component';
 import { LoanApplicationComponent } from './pages/loan-application/loan-application.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { JkCapitalLandingPageComponent } from './pages/jk-capital-landing-page/jk-capital-landing-page.component';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     NotFoundComponent,
     OfflineComponent,
     LoanApplicationComponent,
+    JkCapitalLandingPageComponent,
   ],
   imports: [
     CommonModule,

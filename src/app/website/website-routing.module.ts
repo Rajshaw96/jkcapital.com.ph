@@ -23,6 +23,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { OfflineComponent } from './pages/offline/offline.component';
 import { LoanApplicationComponent } from './pages/loan-application/loan-application.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { JkCapitalLandingPageComponent } from './pages/jk-capital-landing-page/jk-capital-landing-page.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
       { path: 'truth-in-lending-act', component: TruthInLendingActComponent },
       { path: 'industries', component: IndustriesComponent },
       { path: 'loan-application', component: LoanApplicationComponent },
+      { path: 'jk-capital-landing-page', component: JkCapitalLandingPageComponent },
       { path: '**', component: NotFoundComponent }
     ]
   }

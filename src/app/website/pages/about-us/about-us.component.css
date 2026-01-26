@@ -1,21 +1,3 @@
-/* HERO */
-.about-hero {
-  background: #f1f7ff;
-  padding: 80px 50px;
-  text-align: center;
-}
-
-.about-hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.about-hero p {
-  color: #555;
-  max-width: 600px;
-  margin: auto;
-}
-
 /* CONTENT */
 .about-content {
   padding: 60px 50px;
@@ -118,6 +100,11 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+  .about-values {
+    background: #f9fbff;
+    padding: 40px 20px;
+    text-align: center;
+  }
   .grid {
     grid-template-columns: 1fr;
   }

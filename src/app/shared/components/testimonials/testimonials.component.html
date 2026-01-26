@@ -1,0 +1,58 @@
+<section class="testimonials-section">
+  <div class="container">
+
+    <!-- CENTER HEADER -->
+<div class="section-header">
+      <span class="section-line"></span>
+      <p class="subtitle">Testimonials</p>
+      <h2>What Our Clients Are Saying</h2>
+    </div>
+
+    <!-- MARQUEE -->
+    <div
+      class="testimonial-marquee"
+      (mouseenter)="pause()"
+      (mouseleave)="play()"
+    >
+      <div class="testimonial-track">
+
+        <!-- ORIGINAL -->
+        <div
+          class="testimonial-card"
+          *ngFor="let item of testimonials"
+        >
+          <ng-container *ngTemplateOutlet="card; context:{ $implicit: item }">
+          </ng-container>
+        </div>
+
+        <!-- DUPLICATE (for infinite loop) -->
+        <div
+          class="testimonial-card"
+          *ngFor="let item of testimonials"
+        >
+          <ng-container *ngTemplateOutlet="card; context:{ $implicit: item }">
+          </ng-container>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CARD TEMPLATE -->
+  <ng-template #card let-item>
+    <div class="profile">
+      <img [src]="item.image" />
+      <div>
+        <h4>{{ item.name }}</h4>
+        <span>{{ item.role }}</span>
+      </div>
+    </div>
+
+    <p class="message">{{ item.message }}</p>
+
+    <div class="stars">
+      <span *ngFor="let star of [].constructor(item.rating)">★</span>
+    </div>
+  </ng-template>
+</section>

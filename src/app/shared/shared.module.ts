@@ -29,6 +29,8 @@ import { OurTeamComponent } from './components/our-team/our-team.component';
 import { LoanApplicationFormComponent } from './components/loan-application-form/loan-application-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConsultationPopupComponent } from './components/consultation-popup/consultation-popup.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { FinancingOptionsComponent } from './components/financing-options/financing-options.component';
 
 const SHARED_COMPONENTS = [
   FaqComponent,
@@ -55,7 +57,9 @@ const SHARED_COMPONENTS = [
   NeedMoreHelpComponent,
   OurTeamComponent,
   LoanApplicationFormComponent,
-  ConsultationPopupComponent
+  ConsultationPopupComponent,
+  TestimonialsComponent,
+  FinancingOptionsComponent
 ];
 
 @NgModule({

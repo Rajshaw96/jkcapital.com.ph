@@ -1,0 +1,49 @@
+<section class="financing-section">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="section-header">
+      <h2>Unique Solutions for Unique Businesses</h2>
+      <p class="subtitle">Options at <strong>2.5% – 3.5% IR</strong></p>
+    </div>
+
+    <!-- DESKTOP TABLE -->
+    <div class="table-wrapper">
+      <table class="finance-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Short-term Financing Best For</th>
+            <th>Stand-out Feature</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of options">
+            <td class="product">{{ item.name }}</td>
+            <td>{{ item.bestFor }}</td>
+            <td class="feature">{{ item.feature }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MOBILE CARDS -->
+    <div class="card-wrapper">
+      <div class="finance-card" *ngFor="let item of options">
+        <h3>{{ item.name }}</h3>
+
+        <div class="card-row">
+          <span>Best For</span>
+          <p>{{ item.bestFor }}</p>
+        </div>
+
+        <div class="card-row highlight">
+          <span>Stand-out Feature</span>
+          <p>{{ item.feature }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

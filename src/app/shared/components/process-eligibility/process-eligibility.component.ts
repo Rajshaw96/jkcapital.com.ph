@@ -39,14 +39,14 @@ export class ProcessEligibilityComponent {
       icon: 'assets/img/icons/Our_Requirements.png',
       title: 'Our Requirements',
       orderedList: [
-        'Business DTI & Mayor’s permit',
-        'Financial Statement - audited and internal',
-        'Past 3-month bank statement'
+        'Business permit: DTI | SEC | Mayor/LGU permits',
+        'Audited & Internal Financial Statement & ITR',
+        'Last 3-month bank statement & certification'
       ],
-      optionalTitle: 'To strengthen terms (optional):',
+      optionalTitle: 'To strengthen terms (optional)',
       optionalList: [
-        'Income statement',
-        'Partner contracts'
+        'Proof of projects (customer contracts)',
+        'Proof of sales (POs, invoices, PDCs, etc.)'
       ]
     }
   ];
