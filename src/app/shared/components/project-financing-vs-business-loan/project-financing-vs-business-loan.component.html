@@ -25,7 +25,7 @@
               </span>
 
               <ng-container *ngIf="formatSentence(row.projectFinancing) as txt">
-                <strong>{{ txt.first }}</strong>{{ txt.rest }}
+                {{ txt.first }}
               </ng-container>
             </td>
 
@@ -35,7 +35,7 @@
               </span>
 
               <ng-container *ngIf="formatSentence(row.standardBusinessLoan) as txt">
-                <strong>{{ txt.first }}</strong>{{ txt.rest }}
+                {{ txt.first }}
               </ng-container>
             </td>
           </tr>

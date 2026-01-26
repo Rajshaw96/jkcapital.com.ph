@@ -1,6 +1,6 @@
 .frame-104 {
   background: var(--soft-white, #f8f9fb);
-  padding: 100px 0px 100px 0px;
+  padding: 60px 0px 60px 0px;
   display: flex;
   flex-direction: column;
   gap: 77px;
@@ -259,13 +259,13 @@
   border-radius: 27px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 400px;
+  width: 380px;
   position: relative;
-  overflow: hidden;
+  height: 8px;
 }
 .frame-59 {
   background: var(--primary-blue, #0166cc);
@@ -322,6 +322,34 @@
     0px 2px 4px -2px rgba(24, 39, 75, 0.12)
   );
 }
+
+.frame-63 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+/* Each row */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between label & value */
+}
+
+/* Label */
+.label {
+  font-size: 16px;
+  color: #444;
+}
+
+/* Value */
+.value {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0a5bd7;
+}
+
 
 .frame-572 {
   display: flex;
@@ -412,9 +440,12 @@
   border-radius: 27px;
   align-self: stretch;
   flex-shrink: 0;
-  height: 8px;
   position: relative;
   overflow: hidden;
+
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 ._3-50 {
   color: var(--primary-blue, #0166cc);
@@ -431,7 +462,22 @@
   height: 20px;
   position: absolute;
   left: 380px;
-  top: 0px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.handle-component3 {
+  min-left: 0%;
+  max-left: 100%;
+}
+
+.handle-component3 .point {
+  width: 18px;
+  height: 18px;
+  background: #0a5bd7;
+  border: 4px solid #fff;
+  border-radius: 50%;
 }
 
 .frame-594 {

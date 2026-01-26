@@ -9,8 +9,8 @@ export class ProjectFinancingVsBusinessLoanComponent {
 
   rows = [
     {
-      projectFinancing: 'One-time funding for a specific project – released upfront to cover planned project costs.',
-      standardBusinessLoan: 'One-time funding – typically for general business needs or operational expenses.'
+      projectFinancing: 'One-time funding for a specific project released upfront to cover planned project costs.',
+      standardBusinessLoan: 'One-time funding typically for general business needs or operational expenses.'
     },
     {
       projectFinancing: 'Milestone-based structure aligned with project revenue.',

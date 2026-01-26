@@ -32,6 +32,8 @@ import { ConsultationPopupComponent } from './components/consultation-popup/cons
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { FinancingOptionsComponent } from './components/financing-options/financing-options.component';
 import { WhyChooseCheckRediscountingComponent } from './components/why-choose-check-rediscounting/why-choose-check-rediscounting.component';
+import { ReceivablesFinancingCompareComponent } from './components/receivables-financing-compare/receivables-financing-compare.component';
+import { WorkingCapitalCompareComponent } from './components/working-capital-compare/working-capital-compare.component';
 
 const SHARED_COMPONENTS = [
   FaqComponent,
@@ -61,7 +63,9 @@ const SHARED_COMPONENTS = [
   ConsultationPopupComponent,
   TestimonialsComponent,
   FinancingOptionsComponent,
-  WhyChooseCheckRediscountingComponent
+  WhyChooseCheckRediscountingComponent,
+  ReceivablesFinancingCompareComponent,
+  WorkingCapitalCompareComponent
 ];
 
 @NgModule({

@@ -8,16 +8,16 @@ import { Component, HostListener } from '@angular/core';
 export class LoanSimulatorComponent {
 
   // VALUES
-  loanAmount = 1000000;
-  months = 6;
+  loanAmount = 300000;
+  months = 3;
   interestRate = 2.5;
 
   // LIMITS
-  loanMin = 50000;
-  loanMax = 5000000;
+  loanMin = 300000;
+  loanMax = 50000000;
 
   monthMin = 3;
-  monthMax = 36;
+  monthMax = 12;
 
   interestMin = 2.5;
   interestMax = 3.5;

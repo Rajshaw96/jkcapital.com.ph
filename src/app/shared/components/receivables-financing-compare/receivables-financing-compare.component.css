@@ -1,0 +1,110 @@
+/* =============================
+   SECTION
+============================= */
+.compare-options.dark {
+  background: #ffffff;
+  padding: 60px 50px;
+}
+
+.dark-header h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.section-line {
+  width: 24px;
+  height: 2px;
+  background: var(--Primary-Blue, #0166CC);
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* =============================
+   TABLE WRAPPER
+============================= */
+.compare-table {
+  background: #1f1f1f;
+  border-radius: 6px;
+  overflow: hidden;
+  color: #e5e7eb;
+}
+
+/* =============================
+   ROWS
+============================= */
+.compare-row {
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr;
+  border-bottom: 1px solid #333;
+}
+
+.compare-row:last-child {
+  border-bottom: none;
+}
+
+/* =============================
+   HEADER ROW
+============================= */
+.compare-row.header {
+  background: #111;
+  font-weight: 600;
+}
+
+.compare-row.header div {
+  padding: 16px 20px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+/* =============================
+   CELLS
+============================= */
+.compare-row div {
+  padding: 18px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Label column */
+.compare-row .label {
+  font-weight: 600;
+  color: #ffffff;
+  border-right: 1px solid #333;
+}
+
+/* Value cells */
+.compare-row .cell {
+  color: #d1d5db;
+  border-right: 1px solid #333;
+}
+
+.compare-row .cell:last-child {
+  border-right: none;
+}
+
+/* =============================
+   MOBILE
+============================= */
+@media (max-width: 768px) {
+  .compare-options.dark {
+    background: #ffffff;
+    padding: 40px 20px;
+  }
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-row.header {
+    display: none;
+  }
+
+  .compare-row div {
+    border-right: none !important;
+  }
+
+  .compare-row .label {
+    background: #111;
+  }
+}

@@ -1,0 +1,30 @@
+<section class="compare-options dark">
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="section-header dark-header">
+      <span class="section-line"></span>
+      <h2>How it Differs from a Business Loan</h2>
+    </div>
+
+    <!-- TABLE -->
+    <div class="compare-table">
+
+      <!-- TABLE HEADER -->
+      <div class="compare-row header">
+        <div></div>
+        <div>Business Loan</div>
+        <div>Receivables Financing</div>
+      </div>
+
+      <!-- TABLE ROWS -->
+      <div class="compare-row" *ngFor="let row of rows">
+        <div class="label">{{ row.label }}</div>
+        <div class="cell">{{ row.businessLoan }}</div>
+        <div class="cell">{{ row.receivablesFinancing }}</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
