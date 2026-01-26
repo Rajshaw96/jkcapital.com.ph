@@ -7,27 +7,40 @@
       <h2>How It Differs from a Standard Business Loan</h2>
     </div>
 
-    <!-- COMPARISON CARD -->
+    <!-- TABLE CARD -->
     <div class="compare-card">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Credit Line</th>
+            <th>Business Loan</th>
+          </tr>
+        </thead>
 
-      <!-- TABLE HEADER -->
-      <div class="compare-header">
-        <div>Credit Line</div>
-        <div>Business Loan</div>
-      </div>
+        <tbody>
+          <tr *ngFor="let row of rows">
+            <td>
+              <span class="check">
+                <img src="assets/img/icons/check_circle.png" />
+              </span>
 
-      <!-- ROWS -->
-      <div class="compare-row" *ngFor="let row of rows">
-        <div class="cell">
-          <span class="check">✔</span>
-          {{ row.creditLine }}
-        </div>
-        <div class="cell">
-          <span class="check">✔</span>
-          {{ row.businessLoan }}
-        </div>
-      </div>
+              <ng-container *ngIf="formatSentence(row.creditLine) as txt">
+                <strong>{{ txt.first }}</strong>{{ txt.rest }}
+              </ng-container>
+            </td>
 
+            <td>
+              <span class="check">
+                <img src="assets/img/icons/check_circle.png" />
+              </span>
+
+              <ng-container *ngIf="formatSentence(row.businessLoan) as txt">
+                <strong>{{ txt.first }}</strong>{{ txt.rest }}
+              </ng-container>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
   </div>

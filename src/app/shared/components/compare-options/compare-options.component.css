@@ -3,13 +3,12 @@
 ============================= */
 .compare-options {
   background: #eaf3ff;
-  padding: 50px 0;
+  padding: 50px 50px;
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
   margin: auto;
-  padding: 0 20px;
 }
 
 /* =============================
@@ -112,9 +111,9 @@
 
 .compare-row .cell {
   padding: 16px 20px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   color: #4b5563;
-  line-height: 1.6;
   display: flex;
   align-items: flex-start;
   gap: 8px;

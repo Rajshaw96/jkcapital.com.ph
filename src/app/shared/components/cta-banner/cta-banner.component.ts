@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cta-banner.component.css']
 })
 export class CtaBannerComponent {
+  showConsultationPopup = false;
+
 
   @Input() title: string = 'Choose your loan application method.';
   @Input() primaryText: string = 'Connect With Our Loan Experts';
@@ -14,6 +16,14 @@ export class CtaBannerComponent {
   @Input() primaryLink: string = '/industries';
   @Input() secondaryLink: string = '/loan-application';
 
-  @Input() backgroundImage: string =
-    'assets/images/cta-bg.jpg';
+  @Input() backgroundImage: string = 'assets/img/banner/cta-banner.jpg';
+
+  openConsultationPopup() {
+    this.showConsultationPopup = true;
+  }
+
+  openChat() {
+    window.open('https://wa.me/18005724580', '_blank');
+  }
+
 }

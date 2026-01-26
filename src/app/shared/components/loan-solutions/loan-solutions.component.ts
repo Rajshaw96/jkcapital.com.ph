@@ -43,7 +43,7 @@ export class LoanSolutionsComponent {
       link: '/receivables-financing'
     },
     {
-      title: 'Check Re-Discounting',
+      title: 'Check Rediscounting',
       image: 'assets/img/businesses/check-re-discounting.jpeg',
       desc:
         'Turn post-dated checks into immediate funds to bridge liquidity gaps and stabilize operations.',

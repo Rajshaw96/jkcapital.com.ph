@@ -1,14 +1,11 @@
 .partners-section {
   background: #F6F6F6;
-  padding: 60px 0;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 60px 50px;
 }
 
 .container {
   width: 100%;
   margin: auto;
-  padding: 0 16px;
 }
 
 /* Header */

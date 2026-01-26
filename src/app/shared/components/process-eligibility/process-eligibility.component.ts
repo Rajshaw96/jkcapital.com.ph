@@ -32,7 +32,7 @@ export class ProcessEligibilityComponent {
       orderedList: [
         'Business operational for at least 1 year',
         'Bank account active for at least 1 year',
-        'Age: 20–70 years old (co-maker/co-borrower may be required)'
+        'Age: 20-70 years old (co-borrower required)'
       ]
     },
     {
@@ -40,7 +40,7 @@ export class ProcessEligibilityComponent {
       title: 'Our Requirements',
       orderedList: [
         'Business DTI & Mayor’s permit',
-        'Financial statement',
+        'Financial Statement - audited and internal',
         'Past 3-month bank statement'
       ],
       optionalTitle: 'To strengthen terms (optional):',

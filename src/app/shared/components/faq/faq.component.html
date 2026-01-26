@@ -17,7 +17,7 @@
           aria-label="Search FAQ"
         />
         <button aria-label="Search">
-          <img src="assets/img/icons/search.png" alt="search" />
+          <i class="fa-solid  fa-search"></i>
         </button>
       </div>
     </div>
@@ -49,7 +49,7 @@
           [attr.aria-expanded]="item.open"
         >
           {{ item.question }}
-          <span class="arrow" [class.open]="item.open">⌄</span>
+          <span class="arrow" [class.open]="item.open"><i class="fa-solid fa-chevron-down"></i></span>
         </button>
 
         <!-- ANSWER -->
@@ -69,10 +69,22 @@
         </div>
       </div>
 
+      <!-- NO RESULT -->
       <p *ngIf="filteredFaqs.length === 0" class="no-result">
         No results found.
       </p>
 
     </div>
+
+    <!-- LEARN MORE / SHOW LESS -->
+    <div class="faq-more" *ngIf="hasMoreFaqs">
+      <button
+        type="button"
+        class="learn-more-btn"
+        (click)="showAll = !showAll">
+        <span>{{ showAll ? 'Show Less' : 'Learn More' }} <i class="fa-solid fa-angle-double-right"></i></span>
+      </button>
+    </div>
+
   </div>
 </section>

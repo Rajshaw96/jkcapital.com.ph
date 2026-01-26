@@ -59,12 +59,15 @@
 }
 
 .btn.primary {
-  background: #0d6efd;
+  background: #0166cc;
   color: #fff;
 }
 
 .btn.primary:hover {
-  background: #084db5;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .btn.outline {
@@ -74,14 +77,16 @@
 }
 
 .btn.outline:hover {
-  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #0166cc;
+  color: #ffffff;
+  background: #0166cc;
 }
 
 /* ICONS */
 .cta-icons {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 30px;
 }
 
 .icon-circle {
@@ -92,11 +97,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+
+.icon-circle:hover {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #0166cc;
+  background-color: #0166cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .icon-circle img {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 /* ===== TABLET ===== */

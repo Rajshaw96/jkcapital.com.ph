@@ -23,6 +23,10 @@
   margin: 0 auto 12px;
 }
 
+.fa-search{
+  color: #fff;
+}
+
 .section-header h2 {
   font-size: 28px;
   font-weight: 600;
@@ -167,7 +171,7 @@
 /* NO RESULT */
 .no-result {
   text-align: center;
-  color: #888;
+  color: #0166cc;
   margin-top: 20px;
 }
 
@@ -188,6 +192,47 @@
 .faq-item.active .arrow {
   color: #fff;
 }
+
+.faq-more {
+  text-align: right;
+  margin-top: 16px;
+}
+
+.learn-more-btn {
+  background-color: #0166cc;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* hover effect */
+.learn-more-btn:hover {
+  background-color: #014ea2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(11, 94, 215, 0.25);
+}
+
+/* click effect */
+.learn-more-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(11, 94, 215, 0.2);
+}
+
+/* focus (keyboard accessibility) */
+.learn-more-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.35);
+}
+
+
 
 
 /* MOBILE */

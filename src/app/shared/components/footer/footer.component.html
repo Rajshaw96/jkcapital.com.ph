@@ -5,7 +5,7 @@
 
       <!-- COMPANY -->
       <div class="footer-col">
-        <h3 class="brand">JK Capital Finance, Inc.</h3>
+        <h4 class="brand">JK Capital Finance, Inc.</h4>
         <p class="desc">
           Executing the vision of SME’s through our business loans.
         </p>
@@ -70,11 +70,15 @@
       <div class="footer-col">
         <h4>Our Centers</h4>
         <ul>
-          <li>Malolos, Bulacan</li>
-          <li>Mexico, Pampanga</li>
-          <li>Batangas City, Batangas</li>
-          <li>Cabanatuan City</li>
+          <li><a routerLink="/help-center">Ortigas, Pasig City</a></li>
+          <li><a routerLink="/help-center">Cebu City</a></li>
+          <li><a routerLink="/help-center">Davao City</a></li>
+          <li><a routerLink="/help-center">Malolos, Bulacan</a></li>
         </ul>
+      </div>
+      
+      <div class="footer-col footer-logo">
+        <img src="assets/img/dpo-pds-logo.png" alt="DPO & PDS Logo">
       </div>
 
     </div>
@@ -88,7 +92,7 @@
     *ngIf="showBackToTop"
     (click)="scrollToTop()"
     aria-label="Back to top">
-    ↑
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
   
 </footer>
@@ -97,7 +101,7 @@
 <div class="footer-bottom">
   <div class="container">
     <p>
-      © {{ currentYear }} <span><a href="https://jkcapital.com.ph/" target="_blank" rel="noopener noreferrer">JK Capital Finance Inc.</a></span> All Rights Reserved.
+      Copyright © {{ currentYear }} <span><a href="https://jkcapital.com.ph/" target="_blank" rel="noopener noreferrer">JK Capital.</a></span> All rights reserved.
     </p>
   </div>
 </div>

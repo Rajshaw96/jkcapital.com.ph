@@ -10,7 +10,7 @@ export class LoanSimulatorComponent {
   // VALUES
   loanAmount = 1000000;
   months = 6;
-  interestRate = 3.5;
+  interestRate = 2.5;
 
   // LIMITS
   loanMin = 50000;
@@ -19,13 +19,13 @@ export class LoanSimulatorComponent {
   monthMin = 3;
   monthMax = 36;
 
-  interestMin = 1;
-  interestMax = 10;
+  interestMin = 2.5;
+  interestMax = 3.5;
 
   // PERCENT POSITIONS
-  loanPercent = 20;
-  monthPercent = 15;
-  interestPercent = 35;
+  loanPercent = 0;
+  monthPercent = 0;
+  interestPercent = 0;
 
   activeSlider: 'loan' | 'months' | 'interest' | null = null;
   paymentFrequency: 'monthly' | 'semi-monthly' = 'monthly';
@@ -125,4 +125,3 @@ export class LoanSimulatorComponent {
   }
 
 }
-

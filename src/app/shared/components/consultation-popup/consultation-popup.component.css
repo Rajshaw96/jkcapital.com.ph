@@ -1,0 +1,178 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(136, 181, 240, 0.4);
+  z-index: 1000;
+}
+
+/* Popup Card */
+.popup-card {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 470px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 4px;
+  z-index: 1001;
+}
+
+/* Close */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: 1px solid #999;
+  background: #fff;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  border: 1px solid #0166CC;
+  background: #0166CC;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* Required field error */
+.popup-card input.ng-touched.ng-invalid,
+.popup-card select.ng-touched.ng-invalid {
+  border: 1.5px solid #e53935;
+  background: #fff;
+}
+
+/* Optional: subtle red glow */
+.popup-card input.ng-touched.ng-invalid:focus,
+.popup-card select.ng-touched.ng-invalid:focus {
+  box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.15);
+}
+
+
+/* Title */
+h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #000;
+  text-align: left;
+}
+
+.label-required {
+  color: red;
+}
+
+/* Inputs */
+input, select {
+  width: 100%;
+  padding: 10px;
+  background: #f1f1f1;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  margin-bottom: 18px;
+}
+
+/* Focus effect for inputs & dropdowns */
+.popup-card input:focus,
+.popup-card select:focus {
+  border-color: #0166CC;      /* Blue border */
+  background: #f8f8f8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(31, 95, 214, 0.15);
+}
+
+
+/* Rows */
+.row {
+  display: flex;
+  gap: 16px;
+}
+.row > div {
+  flex: 1;
+}
+.row.three > div {
+  flex: 1;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: #0166CC;
+  color: #fff;
+  padding: 12px 55px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #002244;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-link {
+  text-align: right;
+  color: #0166CC;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Focus */
+.popup-card input:focus,
+.popup-card select:focus {
+  border-color: #1f5fd6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(31, 95, 214, 0.15);
+}
+
+/* Error border */
+.popup-card input.ng-touched.ng-invalid,
+.popup-card select.ng-touched.ng-invalid {
+  border: 1.5px solid #e53935;
+}
+
+/* Error text */
+.error {
+  color: #e53935;
+  font-size: 12px;
+  margin-top: -12px;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .popup-card {
+    width: 90%;
+  }
+  .row {
+    flex-direction: column;
+  }
+}

@@ -12,6 +12,8 @@ interface FaqItem {
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent {
+  visibleCount = 3;
+  showAll = false;
   searchText = '';
   activeTab = 'General Information';
 
@@ -35,7 +37,7 @@ export class FaqComponent {
         question: 'Who is JK Capital financing for?',
         answer:[
           'Our short-term business loans and financing solutions are designed for small and medium enterprises (SMEs) — from growing family businesses to established companies that need working capital to manage cash flow, fund projects, or seize new opportunities.', 
-          'Disclosing the nature of your business and purpose of application help us provide the best structure for loans and financing. '
+          'Disclosing the nature of your business and purpose of application helps us provide the best structure for loans and financing. '
         ]
       },
       {
@@ -69,6 +71,7 @@ export class FaqComponent {
           '- Managing payment delays',
           '- Bridging cash flow gaps',
           '- Business expansion',
+          '- Supply chain financing',
           'There are no rigid restrictions as long as the funds support your business operations.'
         ]
       },
@@ -93,7 +96,7 @@ export class FaqComponent {
       },
       {
         question: 'What if my business was declined by a bank? Can I still apply at JK Capital?',
-        answer: 'Being declined by a bank does not mean you have no options. Many SMEs come to us after a bank “no.” We specialize in alternative financing built around how your business actually runs, not just how it looks on paper.'
+        answer: 'Being declined by a bank does not mean you have no options. Many SMEs come to us after a bank says, “no.” We specialize in alternative financing built around how your business actually runs, not just how it looks on paper.'
       },
       {
         question: 'Where is JK Capital located?',
@@ -156,14 +159,14 @@ export class FaqComponent {
           'These requirements for application should be completely submitted to begin pre-qualification assessment and processing.',
           '- Audited and internal financial statement; the latest ITR.',
           '- Past 3-month bank statement and express/written consent for JK Capital to conduct a bank verification.',
-          '- Business, DTI and mayors permits to operate in the Philippines.',
+          '- Business, DTI and Mayor’s permit to operate in the Philippines.',
           'To strengthen your eligibility, you may present documentation of existing or prospective projects or contracts.', 
           'The processing period of 5 to 7 days begin from the time all requirements are submitted.',
         ]
       },
       {
         question: 'What is the minimum and maximum loan amount?',
-        answer: 'Loanable amount ranges from P300,000 to P50,000,000. The final loan offer depends on the evaluaion of the business and the approval of the Credit Committee.'
+        answer: 'Loanable amount ranges from P300,000 to P50,000,000. The final loan offer depends on the evaluation of your business and the approval of the Credit Committee.'
       },
       {
         question: 'How do I know if I am eligible?',
@@ -171,7 +174,7 @@ export class FaqComponent {
       },
       {
         question: 'How much can I borrow?',
-        answer: 'You may access financing from P300K up to ₱50 million, depending on your business profile, financials, and structure of the facility. The final loan offer is subject to the Credit Committees assessment and approval.'
+        answer: 'You may access financing from P300K up to ₱50 million, depending on your business profile, financials, and structure of the facility. The final loan offer is subject to the Credit Committee’s assessment and approval.'
       },
       {
         question: 'How long is the processing time for a business loan?',
@@ -195,7 +198,7 @@ export class FaqComponent {
       {
         question: 'What are the common reasons a loan application is disapproved?',
         answer: [
-          'Loan applications may not be approved for several reasons, including:',
+          'Loan applications may not be approved for several reasons, Including but not limited to the following conditions:',
           '1. Incomplete or missing documents required to properly assess the application.',
           '2. Loan amount requested exceeds current cash flow capacity.',
           '3. Financial records are inconsistent or insufficient for the requested facility.',
@@ -312,7 +315,7 @@ export class FaqComponent {
       },
       {
         question: 'How will my approved business loan be released to me?',
-        answer: 'Loan proceeds are released via check, handed face to face at our office. During the release, we also complete the required documentation and secure post-dated checks based on your agreed repayment schedule.'
+        answer: 'Loan proceeds are released via check, handed face-to-face at our office. During the release, we also complete the required documentation and secure post-dated checks based on your agreed repayment schedule.'
       },
       {
         question: 'What are the requirements to claim my business loan release?',
@@ -327,11 +330,11 @@ export class FaqComponent {
     'Renewal & Referral': [
       {
         question: 'Will I enjoy better interest rates and overall terms when I renew?',
-        answer: 'In general, it is our intent to provide preferential terms to highly valued renewing customers.  Renewal however, doesnt guarantee this. Final terms are subject to the approvl of the Credit Committee.  The basis for loan approval terms apply.'
+        answer: 'In general, it is our intent to provide preferential terms to highly valued renewing customers.  Renewal however, doesnt guarantee this. Final terms are subject to the approval of the Credit Committee.  The basis for loan approval terms apply.'
       },
       {
         question: 'If I refer a friend or family for a business loan, do I get a commission?',
-        answer: 'A successful loan release resulting from your referral will earn you 1% commission on the loans principal amount. Please scan our Q&A under Refer & Earn.'
+        answer: 'A successful loan release resulting from your referral will earn you 1% commission on the loan principal amount. Please visit our Refer & Earn page.'
       },
       {
         question: 'If I refer a friend or family for a business loan, will the terms of my next loan improve?',
@@ -346,15 +349,16 @@ export class FaqComponent {
           'You can choose the best referral scheme according to your goals.',
           '- Become a One-time Referrer by supplying JK Capital with the name and contact details of a potential borrower. We do the work of securing the application requirements and processing the application. If the referral materializes into a loan released, you receive a 1% commission.',
           '- Become an Affiliate Referrer by registering on this website. You will be given a unique Affiliate Referrer code. This ensures that we track and credit the successful loan to you. Everytime your referral materializes into a loan released, you get 1% commission.  When your direct clients refer another client, your direct clients renew, you get 1% commission.',
-          '- Become a Loan Consultant by registering on this website. You will be given a unique Loan Consultant code to ensure that we track and credit the successful loan to you. Every successful loan released entitles you to a full 3% agent commission. Referrals and renewals by your direct customers will earn you additional commission; 1% for referrals up to the second degree, and 2% for renewal.',
-          'Visit our Refer & Earn page for more information. Click here.'
+          '- Become a Loan Consultant by registering on this website. You will be given a unique Loan Consultant code to ensure that we track and credit the successful loan to you. Every successful loan released entitles you to a full 3% agent commission. Referrals and renewals by your direct customers will earn you additional commission; 1% for 1st degree referrals, 0.5% for 2nd degree referrals, and 2% renewal.',
+          'Visit our Refer & Earn page for more information.'
         ]
       },
       {
         question: 'How are the referral commissions paid out?',
         answer: [
           'Commissions are awarded only if the application materializes into a loan released. The commissions will be deposited in your bank acccount after the loan has been released and received by the borrower.',
-          'Unlike others, JK Capital releases the full commission without waiting for the borrower to complete his repayment.'
+          'Unlike others, JK Capital releases the full commission without waiting for the borrower to complete his repayment.',
+          'Visit our Refer & Earn page.'
         ]
       },
     ]
@@ -364,22 +368,24 @@ export class FaqComponent {
   get filteredFaqs(): FaqItem[] {
     const list = this.faqs[this.activeTab] || [];
 
-    if (!this.searchText.trim()) {
-      return list;
+    // SEARCH MODE → show all matching
+    if (this.searchText.trim()) {
+      const keyword = this.searchText.toLowerCase();
+
+      return list.filter(faq => {
+        const answerText = Array.isArray(faq.answer)
+          ? faq.answer.join(' ')
+          : faq.answer;
+
+        return (
+          faq.question.toLowerCase().includes(keyword) ||
+          answerText.toLowerCase().includes(keyword)
+        );
+      });
     }
 
-    const keyword = this.searchText.toLowerCase();
-
-    return list.filter(faq => {
-      const answerText = Array.isArray(faq.answer)
-        ? faq.answer.join(' ')
-        : faq.answer;
-
-      return (
-        faq.question.toLowerCase().includes(keyword) ||
-        answerText.toLowerCase().includes(keyword)
-      );
-    });
+    // NORMAL MODE → limit to 3 unless "More" clicked
+    return this.showAll ? list : list.slice(0, this.visibleCount);
   }
 
   /** ACCORDION TOGGLE */
@@ -396,7 +402,16 @@ export class FaqComponent {
   setActiveTab(tab: string): void {
     this.activeTab = tab;
     this.searchText = '';
+    this.showAll = false;
     this.faqs[tab]?.forEach(faq => (faq.open = false));
+  }
+
+  get hasMoreFaqs(): boolean {
+    return (
+      !this.searchText &&
+      !!this.faqs[this.activeTab] &&
+      this.faqs[this.activeTab].length > this.visibleCount
+    );
   }
 
   /** TEMPLATE HELPERS (Angular-safe) */

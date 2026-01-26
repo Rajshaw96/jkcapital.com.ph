@@ -1,0 +1,72 @@
+<div class="overlay" (click)="close()"></div>
+
+<div class="popup-card">
+  <button class="close-btn" (click)="close()">✕</button>
+
+  <h2>SCHEDULE FREE CONSULTATION<br>WITH A LOAN EXPERT</h2>
+
+  <form [formGroup]="consultationForm" (ngSubmit)="submit()">
+
+    <!-- Full Name -->
+    <label>Your full name <span class="label-required">*</span></label>
+    <input type="text" placeholder="Enter your full name" formControlName="name" autocomplete="off">
+
+    <!-- Email + Mobile -->
+    <div class="row">
+      <div>
+        <label>Your email <span class="label-required">*</span></label>
+        <input type="email" formControlName="email" placeholder="juan@gmail.com">
+        <small class="error"
+        *ngIf="consultationForm.get('email')?.touched &&
+                consultationForm.get('email')?.errors?.['disposableEmail']">
+          Disposable email addresses are not allowed
+        </small>
+      </div>
+      <div>
+        <label>Your mobile number <span class="label-required">*</span></label>
+        <input
+          type="tel"
+          formControlName="mobile"
+          placeholder="09XXXXXXXXX"
+          maxlength="11"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          (keypress)="allowNumbersOnly($event)"
+          (paste)="onPasteNumberOnly($event)"
+        />
+        <small class="error"
+        *ngIf="consultationForm.get('mobile')?.touched &&
+          consultationForm.get('mobile')?.errors?.['invalidPHPhone']">
+          Enter a valid mobile number
+        </small>
+      </div>
+    </div>
+
+    <!-- Date & Time -->
+    <div class="row three">
+      <div>
+        <label>Date <span class="label-required">*</span></label>
+        <input type="date" formControlName="date" [min]="minDate">
+      </div>
+      <div>
+        <label>Time / Hour <span class="label-required">*</span></label>
+        <select formControlName="hour">
+          <option *ngFor="let h of hours" [value]="h">{{ h }}</option>
+        </select>
+      </div>
+      <div>
+        <label>Time / Minutes <span class="label-required">*</span></label>
+        <select formControlName="minute">
+          <option *ngFor="let m of minutes" [value]="m">{{ m }}</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button class="btn-primary" type="submit">Book Now</button>
+      <a class="chat-link" (click)="chatFirst()">Not yet, Let’s chat first.</a>
+    </div>
+
+  </form>
+</div>

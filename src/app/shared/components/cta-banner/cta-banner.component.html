@@ -20,12 +20,23 @@
     </div>
 
     <div class="cta-icons">
-      <div class="icon-circle">
+      <!-- Chat -->
+      <div class="icon-circle" (click)="openChat()">
         <img src="assets/img/icons/sms.png" alt="Chat with expert" />
       </div>
-      <div class="icon-circle">
+
+      <!-- Call Us → OPEN POPUP -->
+      <div class="icon-circle" (click)="openConsultationPopup()">
         <img src="assets/img/icons/phone_in_talk.png" alt="Call us" />
       </div>
+
     </div>
+
+    <!-- POPUP COMPONENT -->
+    <app-consultation-popup
+      *ngIf="showConsultationPopup"
+      (closed)="showConsultationPopup = false">
+    </app-consultation-popup>
+
   </div>
 </section>
