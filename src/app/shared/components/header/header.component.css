@@ -128,9 +128,12 @@
   top: 73px;
   left: 0;
   width: 100%;
-  background: #fff;
+    background-size: cover;
+  background-position: center;
+  background-image: url('/assets/img/mega-menu-bg.png');
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 }
+
 
 .mega-container {
   max-width: 1200px;
@@ -141,7 +144,6 @@
 
 /* LEFT */
 .mega-left {
-  background: #052b4f;
   color: #fff;
   padding: 30px;
 }
@@ -158,13 +160,13 @@
   grid-template-columns: repeat(1, 4fr);
   gap: 12px;
   align-self: stretch;
-  border: 1px solid #eaeaea;
 }
 
 
 .mega-center a {
   color: #0b5ed7;
   font-weight: 500;
+  padding-left: 50px;
   text-decoration: none;
 
 }
@@ -175,7 +177,6 @@
 
 /* RIGHT */
 .mega-right {
-  background-image: url('/assets/img/mega-bg.png');
   background-size: cover;
   background-position: center;
 }
