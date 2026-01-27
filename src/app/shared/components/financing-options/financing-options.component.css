@@ -1,5 +1,5 @@
 .financing-section {
-  padding: 90px 0;
+  padding: 60px 0;
   background: #ffffff;
 }
 
@@ -11,12 +11,25 @@
 /* HEADER */
 .section-header {
   text-align: center;
-  margin-bottom: 50px;
+  max-width: 762px;
+  margin: 0 auto 60px;
+}
+
+.section-line {
+  width: 24px;
+  height: 2px;
+  background: var(--Primary-Blue, #0166CC);
+  display: block;
+  margin: 0 auto 12px;
 }
 
 .section-header h2 {
-  font-size: 36px;
-  font-weight: 700;
+  color: #353333;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: normal;
+  font-style: normal;
 }
 
 .subtitle {
