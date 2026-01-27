@@ -17,7 +17,7 @@
       >
         <div class="location-header" (click)="toggleLocation(i)">
           <span class="title">{{ loc.name }}</span>
-          <span class="arrow" [class.rotate]="loc.open">⌄</span>
+          <span class="arrow" [class.rotate]="loc.open"><i class="fa-solid fa-chevron-down"></i></span>
         </div>
 
         <div class="location-body" [class.show]="loc.open">
