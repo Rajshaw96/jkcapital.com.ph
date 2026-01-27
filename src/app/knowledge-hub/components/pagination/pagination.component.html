@@ -1,0 +1,11 @@
+<div class="pagination">
+  <button (click)="pageChange.emit(page - 1)" [disabled]="page === 1">
+    Prev
+  </button>
+
+  <span>Page {{ page }}</span>
+
+  <button (click)="pageChange.emit(page + 1)">
+    Next
+  </button>
+</div>

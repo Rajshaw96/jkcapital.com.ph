@@ -75,7 +75,14 @@ const routes: Routes = [
       { path: 'truth-in-lending-act', component: TruthInLendingActComponent },
 
       { path: 'offline', component: OfflineComponent },
-      { path: '**', component: NotFoundComponent }
+
+      {
+        path: 'knowledge-hub',
+        loadChildren: () => import('../knowledge-hub/knowledge-hub.module').then(m => m.KnowledgeHubModule)
+      },
+      
+      { path: '**', component: NotFoundComponent },
+
     ]
   }
 ];

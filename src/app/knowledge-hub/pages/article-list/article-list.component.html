@@ -1,1 +1,32 @@
-<p>article-list works!</p>
+<app-hero-section
+  title="Defined by our vision"
+  subtitle="Delivering world-class solutions tailored to you. Driven by integrity and a passion for results."
+  buttonText="EXPLORE OUR LOAN SOLUTIONS"
+  buttonLink="/industries"
+  image="assets/img/banner/about-us.jpeg">
+</app-hero-section>
+
+<section class="hub-container">
+
+  <div class="header">
+    <h1>Knowledge Hub</h1>
+
+    <select [(ngModel)]="sort" (change)="loadArticles()">
+      <option value="latest">Latest</option>
+      <option value="popular">Popular</option>
+    </select>
+  </div>
+
+  <div class="grid">
+    <app-article-card
+      *ngFor="let article of articles"
+      [article]="article">
+    </app-article-card>
+  </div>
+
+  <app-pagination
+    [page]="page"
+    (pageChange)="page = $event; loadArticles()">
+  </app-pagination>
+
+</section>

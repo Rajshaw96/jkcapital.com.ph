@@ -1,1 +1,14 @@
-<p>article-card works!</p>
+<a [routerLink]="['/knowledge-hub', article.slug]" class="card">
+  <img [src]="article.image" alt="article" />
+
+  <div class="content">
+    <h3>{{ article.title }}</h3>
+    <!-- <p>{{ article.excerpt.length > 120 ? (article.excerpt | slice:0:120) + '...' : article.excerpt }}</p> -->
+    <p>{{ article.excerpt }}</p>
+
+    <div class="meta">
+      <span>{{ article.author }}</span>
+      <span>{{ article.createdAt | date }}</span>
+    </div>
+  </div>
+</a>

@@ -39,6 +39,7 @@ import { PharmaceuticalMedicalComponent } from './pages/industries/pharmaceutica
 import { RenewableEnergyComponent } from './pages/industries/renewable-energy/renewable-energy.component';
 import { ProfessionalServicesComponent } from './pages/industries/professional-services/professional-services.component';
 import { RetailComponent } from './pages/industries/retail/retail.component';
+import { KnowledgeHubRoutingModule } from '../knowledge-hub/knowledge-hub-routing.module';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,8 @@ import { RetailComponent } from './pages/industries/retail/retail.component';
     ReactiveFormsModule,
     HttpClientModule,
     WebsiteRoutingModule,
+    KnowledgeHubModule,
+    KnowledgeHubRoutingModule
   ],
   exports: [WebsiteLayoutComponent]
 })

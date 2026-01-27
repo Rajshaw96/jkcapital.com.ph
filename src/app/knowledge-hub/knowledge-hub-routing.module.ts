@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { BlogListComponent } from './pages/blog-list/blog-list.component';
-// import { BlogDetailComponent } from './pages/blog-detail/blog-detail.component';
+import { ArticleListComponent } from './pages/article-list/article-list.component';
+import { ArticleDetailComponent } from './pages/article-detail/article-detail.component';
+
 
 const routes: Routes = [
-  // { path: 'knowledge-hub', component: BlogListComponent },
-  // { path: ':slug', component: BlogDetailComponent }
+  {
+    path: '',
+    component: ArticleListComponent
+  },
+  { path: 'artical', component: ArticleListComponent },
+  { path: ':slug', component: ArticleDetailComponent }
 ];
 
 @NgModule({

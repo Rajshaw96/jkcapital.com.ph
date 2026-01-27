@@ -3,16 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () =>
-      import('./website/website.module').then(m => m.WebsiteModule)
+    path: '', loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
   },
   {
-    path: 'admin',
-    loadChildren: () =>
-      import('./admin/admin.module').then(m => m.AdminModule)
+    path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
-  { path: 'knowledge-hub', loadChildren: () => import('./knowledge-hub/knowledge-hub.module').then(m => m.KnowledgeHubModule) }
+  { 
+    path: 'knowledge-hub', loadChildren: () => import('./knowledge-hub/knowledge-hub.module').then(m => m.KnowledgeHubModule) 
+  }
 ];
 
 

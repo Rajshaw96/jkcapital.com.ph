@@ -1,1 +1,18 @@
-<p>article-detail works!</p>
+<article class="detail">
+
+  <h1>{{ article.title }}</h1>
+
+  <div class="meta">
+    {{ article.author }} • {{ article.createdAt | date }}
+  </div>
+
+  <img [src]="article.image" />
+
+  <div class="content" [innerHTML]="article.content"></div>
+
+  <div class="actions">
+    <button (click)="like()">👍 {{ article.likes }}</button>
+    <button>🔗 Share</button>
+  </div>
+
+</article>
