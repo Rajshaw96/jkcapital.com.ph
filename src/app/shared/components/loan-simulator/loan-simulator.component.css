@@ -990,3 +990,17 @@
   font-weight: 500;
   position: relative;
 }
+
+.apply-btn {
+  background: #0166CC;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+.apply-btn:hover {
+  background: #0b5ed7;
+}
