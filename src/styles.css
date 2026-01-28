@@ -1,12 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* html {
-  scroll-behavior: smooth;
-} */
+@import "normalize.css";
+html {
+  /* scroll-behavior: smooth; */
+  -webkit-text-size-adjust: 100%;
+}
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+/* Full screen background */
+body {
+  margin: 0;
+  background-color: #f4f6f8; /* empty area color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+
+/* Centered website */
+.page-wrapper {
+  max-width: 1320px;   /* laptop / desktop standard */
+  margin: 0 auto;      /* center horizontally */
+  background-color: #ffffff; /* website bg */
+  min-height: 100vh;
+}
+
+.section {
+  width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+
