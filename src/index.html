@@ -6,11 +6,23 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 </head>
 <body>
   <div class="page-wrapper">
     <app-root></app-root>
   </div>
+
+  <!-- ✅ Lazy-load Font Awesome AFTER page load -->
+  <script>
+    window.addEventListener('load', () => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href =
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.x/css/all.min.css';
+      document.head.appendChild(link);
+    });
+  </script>
+
 </body>
 </html>
