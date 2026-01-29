@@ -1,32 +1,118 @@
-<app-hero-section
-  title="Defined by our vision"
-  subtitle="Delivering world-class solutions tailored to you. Driven by integrity and a passion for results."
-  buttonText="EXPLORE OUR LOAN SOLUTIONS"
-  buttonLink="/industries"
-  image="assets/img/banner/about-us.jpeg">
-</app-hero-section>
+<app-featured-articles></app-featured-articles>
+<div class="container">
 
-<section class="hub-container">
+    <!-- SECTION 3: DON'T MISS + SIDEBAR -->
+    <div class="main-layout">
+        <main>
+            <div class="section-header-wrap">
+                <div class="section-title">Don't miss these</div>
+            </div>
+            
+            <div class="dont-miss-grid">
+                <article>
+                    <div class="hero-img-wrap">
+                        <span class="badge" style="background:#000">Business</span>
+                        <div class="play-btn"></div>
+                        <img src="https://picsum.photos/id/301/500/320" alt="">
+                    </div>
+                    <h2>Remembering the 1972 Olympics: Mark Spitz talks of tragic games</h2>
+                    <p style="margin-top:10px">Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem Donec vehicula luctus nunc in laoreet Aliquam erat volutpat....</p>
+                    <div class="meta">BY <span>KELLY • JULY 26, 2022</span></div>
+                </article>
+                <article>
+                    <div class="hero-img-wrap">
+                        <span class="badge" style="background:#2ecc71">Health</span>
+                        <img src="https://picsum.photos/id/302/500/320" alt="">
+                    </div>
+                    <h2 style="text-decoration:underline">Greece tennis resort hopes to develop the next generation of champions</h2>
+                    <p style="margin-top:10px">Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem Donec vehicula luctus nunc in laoreet Aliquam erat volutpat....</p>
+                    <div class="meta">BY <span>KELLY • JULY 26, 2022</span></div>
+                </article>
+            </div>
 
-  <div class="header">
-    <h1>Knowledge Hub</h1>
+            <!-- LATEST STORIES SECTION -->
+            <div class="section-header-wrap red" style="margin-top:60px">
+                <div class="section-title">Latest Stories</div>
+            </div>
 
-    <select [(ngModel)]="sort" (change)="loadArticles()">
-      <option value="latest">Latest</option>
-      <option value="popular">Popular</option>
-    </select>
-  </div>
+            <article class="latest-story-item">
+                <div class="img-box">
+                    <span class="badge">Active</span>
+                    <div class="play-btn"></div>
+                    <img src="https://picsum.photos/id/401/400/250" alt="">
+                </div>
+                <div class="content">
+                    <h3>The Eagles were called for a rarely seen defensive delay of game penalty</h3>
+                    <p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem Donec vehicula luctus nunc in laoreet Aliquam erat volutpat....</p>
+                    <div class="meta">BY <span>KELLY • JULY 23, 2022</span></div>
+                </div>
+            </article>
 
-  <div class="grid">
-    <app-article-card
-      *ngFor="let article of articles"
-      [article]="article">
-    </app-article-card>
-  </div>
+            <article class="latest-story-item">
+                <div class="img-box">
+                    <span class="badge" style="background:#000">Business</span>
+                    <img src="https://picsum.photos/id/402/400/250" alt="">
+                </div>
+                <div class="content">
+                    <h3>French ski resorts may slow down gondolas to cut their energy bills</h3>
+                    <p>Mauris mattis auctor cursus. Phasellus tellus tellus, imperdiet ut imperdiet eu, iaculis a sem Donec vehicula luctus nunc in laoreet Aliquam erat volutpat....</p>
+                    <div class="meta">BY <span>KELLY • JULY 23, 2022</span></div>
+                </div>
+            </article>
+        </main>
 
-  <app-pagination
-    [page]="page"
-    (pageChange)="page = $event; loadArticles()">
-  </app-pagination>
+        <aside class="sidebar">
+            <ul class="social-list">
+                <li class="social-item">
+                    <div class="social-icon">f</div>
+                    <span class="social-name">Facebook</span>
+                    <span class="social-count">23k <span class="social-label">Likes</span></span>
+                </li>
+                <li class="social-item">
+                    <div class="social-icon" style="background:#00acee">𝕏</div>
+                    <span class="social-name">Twitter</span>
+                    <span class="social-count">93k <span class="social-label">Followers</span></span>
+                </li>
+                <li class="social-item">
+                    <div class="social-icon" style="background:#ff0000">▶</div>
+                    <span class="social-name">Youtube</span>
+                    <span class="social-count">100k <span class="social-label">Subscribers</span></span>
+                </li>
+            </ul>
 
-</section>
+            <div class="section-header-wrap red">
+                <div class="section-title">Trending Now</div>
+            </div>
+            <div class="hero-img-wrap">
+                <img src="https://picsum.photos/id/501/340/220" alt="">
+                <div style="position:absolute; bottom:15px; left:15px; right:15px; color:#fff">
+                    <span class="badge">Sports</span>
+                    <h4 style="font-size:16px">NFL trade deadline 2022 winners and losers: Bears finally...</h4>
+                    <div class="meta" style="color:#eee">BY <span>KELLY • JULY 24, 2022</span></div>
+                </div>
+            </div>
+
+            <div class="sidebar-item" style="margin-top:20px">
+                <img src="https://picsum.photos/id/502/100/100">
+                <div>
+                    <span class="badge">Active</span>
+                    <h4>Russian athletes 'could be allowed back in Olympics' say...</h4>
+                    <p class="meta" style="margin:0"><span>JULY 29, 2022</span></p>
+                </div>
+            </div>
+
+            <div class="section-header-wrap" style="margin-top:40px; border-bottom-color:#3498db">
+                <div class="section-title" style="background:#3498db; color:#fff">Explore More</div>
+            </div>
+            <div class="sidebar-item">
+                <img src="https://picsum.photos/id/601/100/100">
+                <div>
+                    <span class="badge" style="background:#9b59b6">Inspiration</span>
+                    <h4>England's Lionesses celebrate their Euro 2022 triumph</h4>
+                    <p class="meta" style="margin:0"><span>JULY 24, 2022</span></p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</div>

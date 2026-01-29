@@ -74,17 +74,23 @@ const routes: Routes = [
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'truth-in-lending-act', component: TruthInLendingActComponent },
 
-      { path: 'offline', component: OfflineComponent },
+
 
       {
         path: 'knowledge-hub',
         loadChildren: () => import('../knowledge-hub/knowledge-hub.module').then(m => m.KnowledgeHubModule)
       },
       
-      { path: '**', component: NotFoundComponent },
+    ],
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('../admin/admin.module').then(m => m.AdminModule)
+  },
 
-    ]
-  }
+  { path: 'offline', component: OfflineComponent },
+  { path: '**', component: NotFoundComponent },
+
 ];
 
 @NgModule({

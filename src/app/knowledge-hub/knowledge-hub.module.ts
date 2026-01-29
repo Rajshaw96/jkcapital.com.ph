@@ -10,6 +10,8 @@ import { ArticleCardComponent } from './components/article-card/article-card.com
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { FeaturedArticlesComponent } from './components/featured-articles/featured-articles.component';
+import { ArticleListItemComponent } from './components/article-list-item/article-list-item.component';
 
 
 const SHARED_COMPONENTS = [
@@ -19,7 +21,7 @@ const SHARED_COMPONENTS = [
     PaginationComponent,
 ];
 @NgModule({
-  declarations: [...SHARED_COMPONENTS,],
+  declarations: [...SHARED_COMPONENTS, FeaturedArticlesComponent, ArticleListItemComponent,],
   imports: [
     CommonModule,
     FormsModule,

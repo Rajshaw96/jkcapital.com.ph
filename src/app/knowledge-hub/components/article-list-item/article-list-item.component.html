@@ -1,0 +1,9 @@
+<a class="list-item" [routerLink]="['/knowledge-hub', article.slug]">
+  <img [src]="article.image">
+
+  <div class="text">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.excerpt }}</p>
+    <span class="meta">{{ article.createdAt | date }}</span>
+  </div>
+</a>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Article } from '../../models/article.model';
 import { KnowledgeHubService } from '../../services/knowledge-hub.service';
 
@@ -8,19 +8,10 @@ import { KnowledgeHubService } from '../../services/knowledge-hub.service';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent {
-  
-  articles: Article[] = [];
-  sort = 'latest';
-  page = 1;
+  @Input() article!: Article;
+featuredArticles: Article | undefined;
+sideArticles: Article[] | undefined;
+editorPicks: any;
+latestArticles: any;
 
-  constructor(private hub: KnowledgeHubService) {}
-
-  ngOnInit() {
-    this.loadArticles();
-  }
-
-  loadArticles() {
-    this.hub.getArticles({ sort: this.sort, page: this.page })
-      .subscribe(res => this.articles = res);
-  }
 }
