@@ -16,7 +16,7 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
       desc: 'More than capital — we bring clarity to your business challenges, bridge financial gaps, and craft solutions that help you thrive in a changing world.',
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
       btnLink: '/industries',
-      image: 'assets/img/businesses/check-re-discounting.jpeg',
+      image: 'assets/img/banner/jk-home-banner.png',
     },
     {
       title: 'Beyond capital, behind your next breakthrough.',
@@ -27,14 +27,14 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
       ],
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
       btnLink: '/industries',
-      image: 'assets/img/businesses/credit-line.jpeg',
+      image: 'assets/img/banner/jk-home-banner (1).jpg',
     },
     {
       title: 'Non-collateral business loans from PHP300K to PHP50M.',
       desc: 'Same-day application & screening | 5-day loan approval',
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
       btnLink: '/industries',
-      image: 'assets/img/businesses/business-loans.jpeg',
+      image: 'assets/img/banner/jk-home-banner (2).jpg',
     }
   ];
 

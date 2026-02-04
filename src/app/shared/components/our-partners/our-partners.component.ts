@@ -32,7 +32,7 @@ export class OurPartnersComponent implements OnInit, OnDestroy {
       const track = document.querySelector('.partners-track') as HTMLElement;
       if (!track) return;
 
-      track.style.transition = 'transform 0.6s linear';
+      track.style.transition = 'transform 0.8s linear';
       track.style.transform = `translateX(-200px)`;
 
       setTimeout(() => {

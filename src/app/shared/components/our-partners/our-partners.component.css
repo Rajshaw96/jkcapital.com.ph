@@ -1,8 +1,6 @@
 .partners-section {
   background: #F6F6F6;
-  padding: 60px 0;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 100px 60px;
 }
 
 .container {
@@ -40,14 +38,13 @@
 
 .partners-track {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
 }
 
 /* Card */
 .partner-card {
   min-width: 180px;
-  height: 90px;
   background: #ffffff;
   border-radius: 8px;
   display: flex;
@@ -58,7 +55,6 @@
 
 .partner-card img {
   max-width: 140px;
-  max-height: 60px;
   object-fit: contain;
 }
 
