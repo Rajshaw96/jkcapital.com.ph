@@ -44,10 +44,10 @@ export class LoanSolutionsComponent {
     },
     {
       title: 'Check Rediscounting',
-      image: 'assets/img/businesses/check-re-discounting.jpeg',
+      image: 'assets/img/businesses/check-rediscounting.jpeg',
       desc:
         'Turn post-dated checks into immediate funds to bridge liquidity gaps and stabilize operations.',
-      link: 'products/check-re-discounting'
+      link: 'products/check-rediscounting'
     }
   ];
 }

@@ -10,16 +10,16 @@ export class LoanSimulatorComponent {
   // VALUES
   loanAmount = 300000;
   months = 3;
-  interestRate = 2.5;
+  interestRate = 2;
 
   // LIMITS
   loanMin = 300000;
   loanMax = 50000000;
 
   monthMin = 3;
-  monthMax = 12;
+  monthMax = 24;
 
-  interestMin = 2.5;
+  interestMin = 2;
   interestMax = 3.5;
 
   // PERCENT POSITIONS

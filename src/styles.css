@@ -101,12 +101,46 @@ h6 { font-size: 16px; } */
 ================================ */
 .section {
   width: 100%;
-  padding: 100px 60px;
+  padding: 60px 60px;
 }
 
 .container {
   max-width: 1320px;
   margin: 0px;
+}
+
+/* Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-line {
+  width: 22px;
+  height: 2px;
+  background: var(--Primary-Blue, #0166CC);
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.section-header h2 {
+  color: #353333;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+/* ===============================
+  COMP. STYLES
+================================ */
+
+.partners-section {
+  background: #F6F6F6;
 }
 
 /* ===============================
@@ -278,11 +312,11 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 12px 60px;
+  height: 70px;
   box-shadow: 0 12px 24px 0 rgba(9, 7, 37, 0.07);
 }
 
 .logo img {
-  width: 140px;
   height: 40px;
 }
 

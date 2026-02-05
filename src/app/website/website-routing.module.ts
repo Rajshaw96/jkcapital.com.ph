@@ -52,7 +52,7 @@ const routes: Routes = [
       { path: 'products/credit-line', component: CreditLineComponent },
       { path: 'products/project-financing', component: ProjectFinancingComponent },
       { path: 'products/receivables-financing', component: InvoiceAndReceivablesFinancingComponent },
-      { path: 'products/check-re-discounting', component: CheckRediscountingComponent },
+      { path: 'products/check-rediscounting', component: CheckRediscountingComponent },
 
       { path: 'industries', component: IndustriesComponent },
       { path: 'industries/agriculture', component: AgricultureComponent },
