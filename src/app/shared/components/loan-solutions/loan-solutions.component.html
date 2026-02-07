@@ -1,28 +1,35 @@
 <section class="loan-solutions">
   <div class="container">
-
-    <!-- HEADER -->
     <div class="section-header">
       <span class="section-line"></span>
-      <h2>
-        JK Capital difference: We customize funding solutions
-        to help small to medium businesses thrive.
-      </h2>
+      <h2>JK Capital difference: We customize funding solutions<br> to help small to medium businesses thrive.</h2>
     </div>
 
-    <!-- GRID -->
     <div class="solutions-grid">
       <div class="solution-card" *ngFor="let item of solutions">
-        <div class="image-wrap">
-          <img [src]="item.image" [alt]="item.title" [title]="item.title" loading="lazy" [routerLink]="item.link" />
+        <!-- Image with Overlay -->
+        <div class="image-wrap" [routerLink]="item.link">
+          <img [src]="item.image" [alt]="item.title" />
+          <div class="image-overlay"></div>
         </div>
-        <div class="solution-content" [routerLink]="item.link">
-          <h3>{{ item.title }}</h3>
+
+        <!-- Content -->
+        <div class="solution-content">
+          <h3 [routerLink]="item.link">{{ item.title }}</h3>
           <p>{{ item.desc }}</p>
-          <a [routerLink]="item.link" class="learn-more">Learn More <i class="fa-solid fa-arrow-right"></i> </a>
+          
+          <!-- Animated Button -->
+          <div class="btn-container">
+            <a [routerLink]="item.link" class="learn-more-btn">
+              <span>Learn More</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
+        
+        <!-- Decorative Bottom Accent -->
+        <div class="card-accent"></div>
       </div>
     </div>
-
   </div>
 </section>

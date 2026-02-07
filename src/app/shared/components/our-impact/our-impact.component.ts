@@ -1,5 +1,5 @@
-import {Component, OnInit, OnDestroy } from '@angular/core';
-import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-our-impact',
@@ -7,52 +7,50 @@ import { SafeUrlPipe } from '../../pipes/safe-url.pipe';
   styleUrls: ['./our-impact.component.css']
 })
 export class OurImpactComponent implements OnInit, OnDestroy {
-
   activeIndex = 1;
-  intervalId!: any;
+  intervalId: any;
 
-  // swipe
+  // Swipe gesture tracking
   touchStartX = 0;
   touchEndX = 0;
 
-  // modal
+  // Modal control
   showVideo = false;
-  activeVideoUrl = '';
+  activeVideoUrl: SafeResourceUrl | null = null;
 
   testimonials = [
     {
-      name: 'Samite',
+      name: 'SAMITE',
       role: 'Business Owner',
       image: 'assets/img/testimonials/testimonials-img (1).jpg',
-      video: ''
+      video: 'https://www.youtube.com/embed/dQw4w9WgXcQ' 
     },
     {
-      name: 'Kaity',
+      name: 'KAITY',
       role: 'Fashion Director',
       image: 'assets/img/pages/Our Impact/LC ERA TAPAR COVER.jpg',
-      video: 'https://www.youtube.com/watch?v=uV-lEbcPBUc'
+      video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
-      name: 'Rayan',
+      name: 'RAYAN',
       role: 'Photographer',
       image: 'assets/img/testimonials/testimonials-img (3).jpg',
-      video: ''
+      video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     }
   ];
+
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
     this.startAutoSlide();
   }
 
   ngOnDestroy(): void {
-    clearInterval(this.intervalId);
+    if (this.intervalId) clearInterval(this.intervalId);
   }
 
-  /* ---------- Carousel ---------- */
   startAutoSlide(): void {
-    this.intervalId = setInterval(() => {
-      this.next();
-    }, 4000);
+    this.intervalId = setInterval(() => this.next(), 5000);
   }
 
   resetAutoSlide(): void {
@@ -61,69 +59,48 @@ export class OurImpactComponent implements OnInit, OnDestroy {
   }
 
   prev(): void {
-    this.activeIndex =
-      (this.activeIndex - 1 + this.testimonials.length) %
-      this.testimonials.length;
+    this.activeIndex = (this.activeIndex - 1 + this.testimonials.length) % this.testimonials.length;
     this.resetAutoSlide();
   }
 
   next(): void {
-    this.activeIndex =
-      (this.activeIndex + 1) % this.testimonials.length;
+    this.activeIndex = (this.activeIndex + 1) % this.testimonials.length;
     this.resetAutoSlide();
   }
 
   getPosition(index: number): string {
     if (index === this.activeIndex) return 'active';
-
-    if (
-      index ===
-      (this.activeIndex - 1 + this.testimonials.length) %
-        this.testimonials.length
-    )
-      return 'left';
-
-    if (
-      index ===
-      (this.activeIndex + 1) %
-        this.testimonials.length
-    )
-      return 'right';
-
+    if (index === (this.activeIndex - 1 + this.testimonials.length) % this.testimonials.length) return 'left';
+    if (index === (this.activeIndex + 1) % this.testimonials.length) return 'right';
     return 'hidden';
   }
 
-  /* ---------- Swipe ---------- */
+  // FIXED VIDEO LOGIC
+  openVideo(url: string) {
+    if (!url) {
+      console.error("No video URL provided!");
+      return;
+    }
+    // This allows Angular to trust the URL
+    this.activeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.showVideo = true;
+    clearInterval(this.intervalId); // Stop carousel when watching
+  }
+
+  closeVideo() {
+    this.showVideo = false;
+    this.activeVideoUrl = null;
+    this.startAutoSlide();
+  }
+
+  /* Swipe Support */
   onTouchStart(event: TouchEvent): void {
     this.touchStartX = event.changedTouches[0].screenX;
   }
 
   onTouchEnd(event: TouchEvent): void {
     this.touchEndX = event.changedTouches[0].screenX;
-    this.handleSwipe();
-  }
-
-  handleSwipe(): void {
-    if (this.touchEndX < this.touchStartX - 50) {
-      this.next();
-    }
-    if (this.touchEndX > this.touchStartX + 50) {
-      this.prev();
-    }
-  }
-
-  /* ---------- Video Modal ---------- */
-  openVideo(url: string): void {
-    if (!url) return;
-    this.activeVideoUrl = url;
-    this.showVideo = true;
-    clearInterval(this.intervalId);
-  }
-
-  closeVideo(): void {
-    this.showVideo = false;
-    this.activeVideoUrl = '';
-    this.startAutoSlide();
+    if (this.touchEndX < this.touchStartX - 50) this.next();
+    if (this.touchEndX > this.touchStartX + 50) this.prev();
   }
 }
-

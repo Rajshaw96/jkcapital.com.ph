@@ -4,54 +4,74 @@
     <!-- Header -->
     <div class="section-header">
       <span class="section-line"></span>
-      <h2> Insights and Impact</h2>
+      <h2>Our Impact, Their Breakthrough.</h2>
     </div>
 
     <!-- Carousel -->
-    <div
-      class="carousel"
-      (touchstart)="onTouchStart($event)"
-      (touchend)="onTouchEnd($event)">
-      <div
-        class="impact-card"
-        *ngFor="let item of testimonials; let i = index"
-        [ngClass]="getPosition(i)">
-        <div class="image-box">
+    <div class="carousel-wrapper" 
+         (touchstart)="onTouchStart($event)" 
+         (touchend)="onTouchEnd($event)">
+      
+      <div class="impact-card" 
+           *ngFor="let item of testimonials; let i = index" 
+           [ngClass]="getPosition(i)">
+        
+        <!-- Active / Center Card Layout -->
+        <div class="image-box" *ngIf="getPosition(i) === 'active'">
           <img [src]="item.image" [alt]="item.name" />
+          
+          <div class="overlay-text">
+            <h4>{{ item.name }}</h4>
+            <p>{{ item.role }}</p>
+          </div>
 
-          <button
-            *ngIf="item.video"
-            class="play-btn"
-            (click)="openVideo(item.video)">
-            ▶
+          <button *ngIf="item.video" class="play-btn" (click)="openVideo(item.video)">
+            <i class="fa-solid fa-play"></i>
           </button>
         </div>
 
-        <div class="text-box">
-          <h4>{{ item.name }}</h4>
-          <span>{{ item.role }}</span>
-        </div>
+        <!-- Side Card Layout (Grey bottom text - hidden on mobile via CSS) -->
+        <ng-container *ngIf="getPosition(i) !== 'active'">
+          <div class="image-box">
+            <img [src]="item.image" [alt]="item.name" />
+          </div>
+          <div class="side-text-box">
+            <h4>{{ item.name }}</h4>
+            <p>{{ item.role }}</p>
+          </div>
+        </ng-container>
+
       </div>
     </div>
 
     <!-- Controls -->
     <div class="controls">
-      <button (click)="prev()"><i class="fa-solid fa-arrow-left"></i></button>
-      <button (click)="next()"><i class="fa-solid fa-arrow-right"></i></button>
+      <button class="nav-btn" (click)="prev()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button class="nav-btn" (click)="next()">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- VIDEO MODAL -->
+<!-- FIXED MODAL STRUCTURE -->
 <div class="video-modal" *ngIf="showVideo">
-  <div class="overlay" (click)="closeVideo()"></div>
-
-  <div class="video-box">
-    <button class="close-btn" (click)="closeVideo()">✕</button>
-    <iframe
-      [src]="activeVideoUrl"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-    ></iframe>
+  <div class="modal-backdrop" (click)="closeVideo()"></div>
+  
+  <div class="modal-content">
+    <button class="modal-close" (click)="closeVideo()">&times;</button>
+    
+    <div class="video-container">
+        <!-- The iframe will only render if activeVideoUrl exists -->
+        <iframe 
+            *ngIf="activeVideoUrl"
+            [src]="activeVideoUrl" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media; fullscreen" 
+            allowfullscreen>
+        </iframe>
+    </div>
   </div>
 </div>
