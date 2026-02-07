@@ -1,4 +1,4 @@
-<section class="faq-section">
+<section class="section faq-section">
   <div class="container">
 
     <!-- HEADER -->
@@ -20,7 +20,14 @@
         />
 
         <button aria-label="Search">
-          <i class="fa-solid fa-search"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none">
+          <mask id="mask0_1_3125" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <rect width="24" height="24" fill="#D9D9D9"/>
+          </mask>
+          <g mask="url(#mask0_1_3125)">
+            <path d="M19.4839 20.154L13.2224 13.8925C12.7224 14.3182 12.1474 14.6477 11.4974 14.881C10.8474 15.1144 10.1942 15.231 9.53788 15.231C7.93621 15.231 6.58063 14.6766 5.47113 13.5678C4.3618 12.4589 3.80713 11.1042 3.80713 9.50353C3.80713 7.9027 4.36155 6.54678 5.47038 5.43578C6.57921 4.32495 7.93396 3.76953 9.53463 3.76953C11.1355 3.76953 12.4914 4.3242 13.6024 5.43353C14.7132 6.54303 15.2686 7.89861 15.2686 9.50028C15.2686 10.1951 15.1455 10.8675 14.8994 11.5175C14.6532 12.1675 14.3301 12.7233 13.9301 13.1848L20.1916 19.4465L19.4839 20.154ZM9.53788 14.231C10.8647 14.231 11.9849 13.7743 12.8984 12.8608C13.8119 11.9474 14.2686 10.8273 14.2686 9.50028C14.2686 8.17328 13.8119 7.05311 12.8984 6.13978C11.9849 5.22628 10.8647 4.76953 9.53788 4.76953C8.21088 4.76953 7.09071 5.22628 6.17738 6.13978C5.26388 7.05311 4.80713 8.17328 4.80713 9.50028C4.80713 10.8273 5.26388 11.9474 6.17738 12.8608C7.09071 13.7743 8.21088 14.231 9.53788 14.231Z" fill="white"/>
+          </g>
+        </svg>
         </button>
       </div>
 
@@ -53,7 +60,16 @@
           [attr.aria-expanded]="item.open"
         >
           {{ item.question }}
-          <span class="arrow" [class.open]="item.open"><i class="fa-solid fa-chevron-down"></i></span>
+          <span class="arrow" [class.open]="item.open">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <mask id="mask0_404_1475" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                <rect x="1.04907e-06" y="24" width="24" height="24" transform="rotate(-90 1.04907e-06 24)" fill="#D9D9D9"/>
+              </mask>
+              <g mask="url(#mask0_404_1475)">
+                <path d="M14.7079 12.0008L9.40013 17.3086L8.69238 16.6008L13.2924 12.0008L8.69238 7.40084L9.40013 6.69309L14.7079 12.0008Z" fill="#1C1B1F"/>
+              </g>
+            </svg>
+          </span>
         </button>
 
         <!-- ANSWER -->

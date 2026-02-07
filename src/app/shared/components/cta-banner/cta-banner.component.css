@@ -2,15 +2,15 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
   color: #fff;
+  padding: 100px 60px;
 }
 
 /* Overlay */
 .cta-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(6, 35, 66, 0.85);
+  background:  linear-gradient(0deg, rgba(0, 34, 68, 0.75) 0%, rgba(0, 34, 68, 0.75) 100%);
 }
 
 .container {
@@ -28,34 +28,45 @@
 
 .cta-line {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
-  background: #ffffff;
-  margin: 0 auto 14px;
+  background: var(--White, #FFF);
+  margin: 0 auto 12px;
 }
 
 .cta-content h2 {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 30px;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0px;
 }
 
 /* BUTTONS */
 .cta-buttons {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 40px;
+  gap: 12px;
+  margin: 32px 0px ;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 22px;
-  font-size: 14px;
-  border-radius: 6px;
-  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 4px;
   text-decoration: none;
   transition: all 0.25s ease;
+  color: var(--White, #FFF);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px; /* 100% */
 }
 
 .btn.primary {
@@ -71,8 +82,14 @@
 }
 
 .btn.outline {
-  border: 1px solid #ffffff;
+  border-radius: 4px;
+  border: 1px solid var(--White, #FFF);
   color: #ffffff;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   background: transparent;
 }
 
@@ -86,7 +103,7 @@
 .cta-icons {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
 }
 
 .icon-circle {
@@ -136,11 +153,12 @@
   }
 
   .cta-content h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .cta-buttons {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     gap: 12px;
   }
 
