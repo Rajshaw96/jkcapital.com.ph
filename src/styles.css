@@ -457,22 +457,41 @@ img {
 
 @media (max-width: 768px) {
   .section {
-  width: 100%;
-  padding: 40px 20px;
-}
-
-.container {
-  max-width: 100%;
-  margin: 0px;
-}
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 40px 20px;
   }
 
-  h1 { font-size: 28px; }
-  h2 { font-size: 24px; }
+  .container {
+    max-width: 100%;
+    margin: 0px;
+  }
+
+  /* Header */
+  .section-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .section-line {
+    width: 22px;
+    height: 2px;
+    background: var(--Primary-Blue, #0166CC);
+    display: block;
+    margin: 0 auto 6px;
+  }
+
+  .section-header h2 {
+    color: #353333;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px;
+  }
+
 }
 
 

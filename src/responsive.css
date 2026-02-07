@@ -1,7 +1,3 @@
-/* ===============================
-   FOOTER – MOBILE ONLY (1 COLUMN)
-   =============================== */
-
 /* ALL MOBILES */
 @media (max-width: 767px) {
 
@@ -25,24 +21,9 @@
     font-size: 14px;
   }
 
-}
-
-/* SMALL MOBILE */
-@media (max-width: 576px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-bottom p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-}
-
-/* BACK TO TOP – MOBILE */
-@media (max-width: 768px) {
   .back-to-top {
     right: 14px;
     bottom: 20px;
   }
+
 }
