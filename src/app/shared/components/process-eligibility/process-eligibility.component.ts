@@ -30,18 +30,18 @@ export class ProcessEligibilityComponent {
       icon: 'assets/img/icons/Our_Eligibility_Criteria.png',
       title: 'Our Eligibility Criteria',
       orderedList: [
-        'Business operational for at least 1 year',
-        'Bank account active for at least 1 year',
-        'Age: 20-70 years old (co-borrower required)'
+        'Business operational for at least 1 year.',
+        'Bank account active for at least 1 year.',
+        'Age: 20-70 years old (co-borrower required).'
       ]
     },
     {
       icon: 'assets/img/icons/Our_Requirements.png',
       title: 'Our Requirements',
       orderedList: [
-        'Business permit: DTI | SEC | Mayor/LGU permits',
-        'Audited & Internal Financial Statement & ITR',
-        'Last 3-month bank statement & certification'
+        'Business permit: DTI | SEC | Mayor/LGU permits.',
+        'Audited Financial Statement and ITR.',
+        'Last 3-month bank statement & certification.'
       ],
       optionalTitle: 'To strengthen terms (optional)',
       optionalList: [

@@ -12,8 +12,6 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /* ===============================
@@ -170,7 +168,6 @@ h6 { font-size: 16px; } */
   gap: 20px;
 }
 
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
@@ -456,13 +453,18 @@ img {
 /* ===============================
   RESPONSIVE
 ================================ */
-@media (max-width: 992px) {
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 
 @media (max-width: 768px) {
+  .section {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0px;
+}
   .grid-2,
   .grid-3,
   .grid-4 {
@@ -474,3 +476,12 @@ img {
 }
 
 
+
+
+
+/* ========== Footer =================== */
+
+.site-footer {
+  background: #062342;
+  color: #ffffff;
+}

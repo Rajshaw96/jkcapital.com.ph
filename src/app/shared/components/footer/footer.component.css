@@ -1,13 +1,6 @@
-.site-footer {
-  background: #062342;
-  color: #ffffff;
-  padding: 60px 50px 40px 50px;
-}
-
-.container {
-  max-width: 100%;
-  margin: auto;
-}
+/* ===============================
+   FOOTER – DESKTOP & TABLET CSS
+   =============================== */
 
 /* GRID */
 .footer-grid {
@@ -23,11 +16,11 @@
 }
 
 .brand {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .footer-col h4 {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .desc {
@@ -55,12 +48,12 @@
 
 .footer-col a:hover {
   color: #ffffff;
-  text-decoration: underline;
 }
 
 /* SOCIAL */
 .follow-title {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -90,12 +83,12 @@
   opacity: 0.85;
 }
 
+/* FOOTER BOTTOM */
 .footer-bottom {
   width: 100%;
-  background: #062342;        
-  padding: 16px 0;   
-  stroke-width: 1px;
-  border-top: rgb(212, 202, 202) 1px solid;  
+  background: #062342;
+  padding: 16px 0;
+  border-top: rgb(212, 202, 202) 1px solid;
 }
 
 .footer-bottom .container {
@@ -104,11 +97,6 @@
   align-items: center;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .footer-logo img {
   max-width: 140px;
@@ -132,71 +120,22 @@
 }
 
 .footer-bottom a:hover {
-  text-decoration: underline;
   opacity: 0.9;
 }
 
+/* TABLET ONLY */
 @media (max-width: 992px) {
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (max-width: 576px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-@media (max-width: 576px) {
-  .footer-bottom p {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-}
-
-@media (max-width: 576px) {
-  .footer-logo {
-    justify-content: flex-start;
-  }
-}
-
-
-
-
-
-/* ===== TABLET ===== */
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 576px) {
-  .site-footer {
-    padding: 50px 0;
-    padding-bottom: 0px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .brand {
-    font-size: 16px;
-  }
-}
-
-
+/* SITE FOOTER */
 .site-footer {
   position: relative;
 }
 
-/* BACK TO TOP BUTTON */
+/* BACK TO TOP – DESKTOP & TABLET */
 .back-to-top {
   position: fixed;
   right: 20px;
@@ -215,12 +154,4 @@
 
 .back-to-top:hover {
   background: #014ea2;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .back-to-top {
-    right: 14px;
-    bottom: 20px;
-  }
 }

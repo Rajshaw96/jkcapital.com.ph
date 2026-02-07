@@ -26,7 +26,8 @@
               "src/_redirects"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/responsive.css"
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [
@@ -92,7 +93,8 @@
               "src/_redirects"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/responsive.css"
             ],
             "scripts": []
           }

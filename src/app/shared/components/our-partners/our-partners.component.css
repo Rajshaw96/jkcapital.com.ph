@@ -12,7 +12,7 @@
 
 /* Card */
 .partner-card {
-  min-width: 260px;
+  width: 100%;
   background: #ffffff;
   border-radius: 8px;
   display: flex;

@@ -1,6 +1,6 @@
 .loan-structure {
   background: #ffffff;
-  padding: 50px 50px;
+  padding: 100px 60px;
 }
 
 .container {
@@ -11,7 +11,7 @@
 /* HEADER */
 .section-header {
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto 48px;
   text-align: center;
 }
 
@@ -26,11 +26,13 @@
 .section-header h2 {
   color: #353333;
   text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Manrope;
   font-size: 28px;
-  font-weight: 600;
-  line-height: normal;
   font-style: normal;
-  margin-bottom: 12px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 10px;
 }
 
 .section-header p {

@@ -1,0 +1,48 @@
+/* ===============================
+   FOOTER – MOBILE ONLY (1 COLUMN)
+   =============================== */
+
+/* ALL MOBILES */
+@media (max-width: 767px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .footer-col h3,
+  .footer-col h4 {
+    margin-bottom: 10px;
+  }
+
+  .brand {
+    font-size: 16px;
+    margin: 0px;
+  }
+
+  .footer-col p,
+  .footer-col ul li {
+    font-size: 14px;
+  }
+
+}
+
+/* SMALL MOBILE */
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+
+/* BACK TO TOP – MOBILE */
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 14px;
+    bottom: 20px;
+  }
+}
