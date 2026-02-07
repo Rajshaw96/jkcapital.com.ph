@@ -130,6 +130,21 @@ h6 { font-size: 16px; } */
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin: 0px;
+}
+
+.section-header h4 {
+  color: var(--Primary-Blue, #0166CC);
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-bottom: 6px;
 }
 
 
