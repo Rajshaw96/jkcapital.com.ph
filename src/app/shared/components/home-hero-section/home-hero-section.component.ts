@@ -31,7 +31,10 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
     },
     {
       title: 'Non-collateral business loans from PHP300K to PHP50M.',
-      desc: 'Same-day application & screening | 5-day loan approval',
+      desclist: [
+        { value: 'Same-day application & screening' },
+        { value: '5-day loan approval' }
+      ],
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
       btnLink: '/industries',
       image: 'assets/img/banner/jk-home-banner (2).jpg',
@@ -51,7 +54,7 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
     this.intervalId = setInterval(() => {
       this.activeIndex =
         (this.activeIndex + 1) % this.slides.length;
-    }, 4000);
+    }, 6000);
   }
 
   setSlide(index: number): void {

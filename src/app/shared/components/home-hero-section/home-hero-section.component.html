@@ -1,11 +1,9 @@
 <section class="hero">
   <div class="container hero-viewport">
 
-    <div
-      class="hero-wrapper"
+    <div class="hero-wrapper"
       *ngFor="let slide of slides; let i = index"
-      [class.active]="i === activeIndex"
-    >
+      [class.active]="i === activeIndex">
       <!-- LEFT -->
       <div class="hero-content">
         <h1>{{ slide.title }}</h1>
@@ -14,6 +12,13 @@
           <div class="stat" *ngFor="let stat of slide.stats">
             <strong>{{ stat.value }}</strong>
             <span>{{ stat.label }}</span>
+          </div>
+        </div>
+        <div class="desclist" *ngIf="slide.desclist">
+          <div class="stat" *ngFor="let stat of slide.desclist">
+            <ul style="margin: 0px;">
+              <li style="padding-bottom: 5px;">{{ stat.value }}</li>
+            </ul>
           </div>
         </div>
 
