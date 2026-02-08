@@ -24,6 +24,16 @@ html {
   --danger: #dc3545;
   --warning: #ffc107;
 
+  --primary-blue: #0166CC;
+  --hover-blue: #004ba0;
+  --text-dark: #1A1A1A;
+  --text-muted: #666666;
+  --card-bg: #ffffff;
+
+  --brand-blue: #0166CC;
+  --text-blue: #0166CC;
+  --bg-light-blue: #f4f9ff;
+
   --text-dark: #000000;
   --text-light: #D6D6D6;
   --border-color: #e5e7eb;
