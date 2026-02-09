@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./hero-section.component.css']
 })
 export class HeroSectionComponent {
+    showConsultationPopup = false;
+    
     @Input() title =
     'Explore loans up to ₱ 1,000,000.00 to meet the needs of your small business.';
     @Input() subtitle =
@@ -13,5 +15,9 @@ export class HeroSectionComponent {
     @Input() buttonText = 'Apply Now';
     @Input() buttonLink = '/industries';
     @Input() image = 'assets/images/loan-hero.jpg';
+
+  openConsultationPopup() {
+    this.showConsultationPopup = true;
+  }
 }
 

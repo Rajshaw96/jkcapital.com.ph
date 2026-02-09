@@ -6,7 +6,7 @@
       <h1>{{ title }}</h1>
       <p>{{ subtitle }}</p>
 
-      <a *ngIf="buttonText?.trim()" [routerLink]="buttonLink" class="hero-btn">
+      <a *ngIf="buttonText?.trim()" (click)="openConsultationPopup()" class="hero-btn">
         {{ buttonText }}
       </a>
     </div>
@@ -18,3 +18,9 @@
 
   </div>
 </section>
+
+<!-- POPUP COMPONENT -->
+<app-consultation-popup
+  *ngIf="showConsultationPopup"
+  (closed)="showConsultationPopup = false">
+</app-consultation-popup>

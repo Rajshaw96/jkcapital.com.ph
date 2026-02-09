@@ -33,6 +33,10 @@
   margin-right: 40px;
 }
 
+.sidebar-item:last-child {
+  border-bottom: none;
+}
+
 
 .sidebar-item.no-border {
   border-bottom: none;
@@ -85,7 +89,7 @@
 
 .item-wrap p {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
   color: var(--text-muted);
 }

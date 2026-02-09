@@ -54,7 +54,7 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
     this.intervalId = setInterval(() => {
       this.activeIndex =
         (this.activeIndex + 1) % this.slides.length;
-    }, 6000);
+    }, 10000);
   }
 
   setSlide(index: number): void {

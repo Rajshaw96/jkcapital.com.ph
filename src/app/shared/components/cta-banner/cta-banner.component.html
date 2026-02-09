@@ -9,7 +9,7 @@
     <h2>{{ title }}</h2>
 
     <div class="cta-buttons">
-      <a class="btn primary" routerLink="/industries">
+      <a class="btn primary" (click)="openConsultationPopup()">
         {{ primaryText }}
       </a>
 
@@ -25,8 +25,10 @@
       </div>
 
       <!-- Call Us → OPEN POPUP -->
-      <div class="icon-circle" (click)="openConsultationPopup()">
+      <div class="icon-circle" >
+        <a href="https://wa.me/639171372847" target="_blank">
         <img src="assets/img/icons/phone_in_talk.png" alt="Call us" />
+        </a>
       </div>
 
     </div>
