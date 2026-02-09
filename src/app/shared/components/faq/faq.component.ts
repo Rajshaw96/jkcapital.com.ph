@@ -42,7 +42,7 @@ export class FaqComponent {
       },
       {
         question: 'What SME industries does JK Capital support?',
-        answer: 'JK Capital supports a wide range of SME industries, including agriculture and agribusiness, technology and IT services, trading and distribution/wholesale, manufacturing, construction, logistics and transportation, retail, healthcare, professional services, energy, pharmaceuticals, and other operating SMEs. Applications are assessed individually based on business model, cash flow, and financing needs—regardless of industry.'
+        answer: 'JK Capital supports a wide range of SME industries, including agriculture and agribusiness, technology and IT services, trading and wholesale/distribution, manufacturing, construction, logistics and transportation, retail, healthcare, professional services, energy, pharmaceuticals, and other operating SMEs. Each application is assessed individually based on the business model, cash flow, and financing needs, regardless of industry.'
       },
       {
         question: 'What types of financing do you offer?',
@@ -77,7 +77,7 @@ export class FaqComponent {
       },
       {
         question: 'What is short-term financing or a short-term loan?',
-        answer: 'Short-term financing is a loan designed to meet immediate business needs, such as working capital, inventory purchases, or bridging cash flow gaps. These loans typically have shorter repayment periods, usually within 3 to 12 months.'
+        answer: 'Short-term financing is a loan designed to meet immediate business needs, such as working capital, inventory purchases, or bridging cash flow gaps. These loans typically have shorter repayment periods, usually within 3 to 12 months. The Credit Line facility has a 12 to 24 months repayment term.'
       },
       {
         question: 'What is the benefit of short-term financing?',
@@ -97,6 +97,18 @@ export class FaqComponent {
       {
         question: 'What if my business was declined by a bank? Can I still apply at JK Capital?',
         answer: 'Being declined by a bank does not mean you have no options. Many SMEs come to us after a bank says, “no.” We specialize in alternative financing built around how your business actually runs, not just how it looks on paper.'
+      },
+      {
+        question: 'What are the common reasons financial institutions disapprove loan applications?',
+        answer: [
+          'Loan applications may not be approved for several reasons, including:',
+          '1. Loan amount requested exceeds current cash flow capacity.',
+          '2. Financial records are inconsistent or insufficient for the requested facility.',
+          '3. Collateral value or structure does not meet requirements.',
+          '4. Overall risk assessment does not align with responsible lending guidelines.',
+          'While institutions aim to be transparent and fair, disclosing the specific details behind a loan disapproval is not mandatory.',
+          'A disapproval does not reflect the value or potential of your business; it often means the application needs adjustment or better timing. If you have been disapproved elsewhere, JK Capital is open to entertain your application.'
+        ]
       },
       {
         question: 'Where is JK Capital located?',

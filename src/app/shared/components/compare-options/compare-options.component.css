@@ -1,164 +1,98 @@
-/* =============================
-   SECTION
-============================= */
-.compare-options {
-  background: #eaf3ff;
+:root {
+  --bg-blue: #eff5ff;      /* Light blue background */
+  --accent-blue: #2c80ff;  /* Title dash color */
+  --teal-icon: #43b5a1;    /* Icon color */
+  --text-dark: #1a1d1f;    /* Headers/Titles */
+  --text-muted: #4b525a;   /* Description text */
+  --border-color: #e2eaf4; /* Divider lines */
+}
+
+.comparison-section {
+  background: #E7F0FF;
 }
 
 
-/* =============================
-   LAYOUT
-============================= */
-.compare-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 24px;
-  align-items: stretch;
+.comparison-container {
+  display: flex;
+  align-items: flex-start;
 }
 
-/* =============================
-   LEFT LABEL COLUMN
-============================= */
-.labels-column {
-  max-height: auto;
-  padding-top: 60px; /* aligns with table header */
+/* Sidebar Styling */
+.feature-sidebar {
+  width: 200px;
 }
 
-.label-item {
-  height: 64px;
+.sidebar-item {
+  height: 70px;
   display: flex;
   align-items: center;
-  padding-left: 8px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #222;
-  border-bottom: 1px solid #dbe7f5;
-}
-
-/* =============================
-   TABLE CARD
-============================= */
-.compare-card {
-  max-height: auto;
-  background: #ffffff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-}
-
-/* =============================
-   TABLE HEADER
-============================= */
-.compare-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: #ffffff;
-  font-size: 14px;
   font-weight: 700;
-  color: #111;
-  border-bottom: 1px solid #e5e7eb;
+  font-size: 16px;
+  color: var(--text-dark);
+  border-bottom: 1px solid #D3D3D3;
+  margin-right: 40px;
 }
 
-.compare-header div {
-  padding: 18px 20px;
-}
 
-.compare-header div:first-child {
-  border-right: 1px solid #e5e7eb;
-}
-
-/* =============================
-   TABLE ROWS
-============================= */
-.compare-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 64px;
-  border-bottom: 1px solid #eef2f7;
-}
-
-.compare-row:last-child {
+.sidebar-item.no-border {
   border-bottom: none;
 }
 
-.compare-row .cell {
-  padding: 16px 20px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #4b5563;
+/* Card Styling */
+.data-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.card-row {
+  display: flex;
+  border-bottom: 1px solid #D1D1D1;
+  min-height: 70px;
+}
+
+.table-header {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card-row.no-border {
+  border-bottom: none;
+}
+
+.card-cell {
+  flex: 1;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.item-wrap {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 12px;
 }
 
-.compare-row .cell:first-child {
-  border-right: 1px solid #eef2f7;
-}
-
-/* =============================
-   CHECK ICON
-============================= */
-.check {
-  color: #22c55e;
-  font-weight: 700;
-  font-size: 14px;
+.check-svg {
+  width: 22px;
+  height: 22px;
+  color: var(--teal-icon);
+  flex-shrink: 0;
   margin-top: 2px;
 }
 
-/* =============================
-   TABLET
-============================= */
-@media (max-width: 992px) {
-  .compare-layout {
-    grid-template-columns: 180px 1fr;
-  }
+.item-wrap p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
 }
 
-/* =============================
-   MOBILE
-============================= */
-@media (max-width: 768px) {
-  .compare-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .labels-column {
-    display: none; /* matches Figma mobile */
-  }
-
-  .compare-header {
-    grid-template-columns: 1fr;
-    font-size: 15px;
-  }
-
-  .compare-header div {
-    border-right: none !important;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .compare-row {
-    grid-template-columns: 1fr;
-  }
-
-  .compare-row .cell {
-    border-right: none !important;
-    border-bottom: 1px dashed #e5e7eb;
-  }
-
-  .compare-row .cell:last-child {
-    border-bottom: none;
-  }
-}
-
-/* =============================
-   SMALL MOBILE
-============================= */
-@media (max-width: 576px) {
-  .compare-options {
-    padding: 60px 0;
-  }
-
-  .section-header h2 {
-    font-size: 22px;
-  }
+/* Responsive Mobile View */
+@media (max-width: 900px) {
+  .comparison-container { flex-direction: column; }
+  .feature-sidebar { display: none; }
+  .card-row { flex-direction: column; height: auto; }
 }
