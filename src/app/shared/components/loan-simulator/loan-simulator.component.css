@@ -183,7 +183,17 @@ background: linear-gradient(
 .info-icon { border: 1.5px solid white; border-radius: 50%; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-size: 10px; }
 
 .est-loan-section label { font-size: 14px; color: #777; font-weight: 600; }
-.big-value { font-size: 32px; font-weight: 800; color: var(--text-blue); display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.big-value { 
+  display: flex;  gap: 12px; margin-top: 8px; 
+  color: var(--Primary-Blue, #0166CC);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 16px; /* 66.667% */
+  letter-spacing: 1px;
+}
 .green-check { background: #28a745; color: white; font-size: 12px; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
 .divider { height: 1px; background: #e1e8f0; margin: 30px 0; }

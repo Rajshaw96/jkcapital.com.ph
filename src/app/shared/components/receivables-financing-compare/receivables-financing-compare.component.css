@@ -1,110 +1,98 @@
-/* =============================
-   SECTION
-============================= */
-.compare-options.dark {
-  background: #ffffff;
-  padding: 60px 50px;
+:root {
+  --bg-blue: #eff5ff;      /* Light blue background */
+  --accent-blue: #2c80ff;  /* Title dash color */
+  --teal-icon: #43b5a1;    /* Icon color */
+  --text-dark: #1a1d1f;    /* Headers/Titles */
+  --text-muted: #4b525a;   /* Description text */
+  --border-color: #e2eaf4; /* Divider lines */
 }
 
-.dark-header h2 {
-  text-align: center;
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 24px;
+.comparison-section {
+  background: #E7F0FF;
 }
 
-.section-line {
-  width: 24px;
-  height: 2px;
-  background: var(--Primary-Blue, #0166CC);
-  display: block;
-  margin: 0 auto 12px;
+
+.comparison-container {
+  display: flex;
+  align-items: flex-start;
 }
 
-/* =============================
-   TABLE WRAPPER
-============================= */
-.compare-table {
-  background: #1f1f1f;
-  border-radius: 6px;
-  overflow: hidden;
-  color: #e5e7eb;
+/* Sidebar Styling */
+.feature-sidebar {
+  width: 200px;
 }
 
-/* =============================
-   ROWS
-============================= */
-.compare-row {
-  display: grid;
-  grid-template-columns: 220px 1fr 1fr;
-  border-bottom: 1px solid #333;
+.sidebar-item {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-dark);
+  border-bottom: 1px solid #D3D3D3;
+  margin-right: 40px;
 }
 
-.compare-row:last-child {
+
+.sidebar-item.no-border {
   border-bottom: none;
 }
 
-/* =============================
-   HEADER ROW
-============================= */
-.compare-row.header {
-  background: #111;
-  font-weight: 600;
+/* Card Styling */
+.data-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
 }
 
-.compare-row.header div {
-  padding: 16px 20px;
-  font-size: 15px;
-  color: #ffffff;
+.card-row {
+  display: flex;
+  border-bottom: 1px solid #D1D1D1;
+  min-height: 70px;
 }
 
-/* =============================
-   CELLS
-============================= */
-.compare-row div {
-  padding: 18px 20px;
-  font-size: 15px;
-  line-height: 1.6;
+.table-header {
+  font-weight: 700;
+  font-size: 18px;
 }
 
-/* Label column */
-.compare-row .label {
-  font-weight: 600;
-  color: #ffffff;
-  border-right: 1px solid #333;
+.card-row.no-border {
+  border-bottom: none;
 }
 
-/* Value cells */
-.compare-row .cell {
-  color: #d1d5db;
-  border-right: 1px solid #333;
+.card-cell {
+  flex: 1;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
 }
 
-.compare-row .cell:last-child {
-  border-right: none;
+.item-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-/* =============================
-   MOBILE
-============================= */
-@media (max-width: 768px) {
-  .compare-options.dark {
-    background: #ffffff;
-    padding: 40px 20px;
-  }
-  .compare-row {
-    grid-template-columns: 1fr;
-  }
+.check-svg {
+  width: 22px;
+  height: 22px;
+  color: var(--teal-icon);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
 
-  .compare-row.header {
-    display: none;
-  }
+.item-wrap p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
 
-  .compare-row div {
-    border-right: none !important;
-  }
-
-  .compare-row .label {
-    background: #111;
-  }
+/* Responsive Mobile View */
+@media (max-width: 900px) {
+  .comparison-container { flex-direction: column; }
+  .feature-sidebar { display: none; }
+  .card-row { flex-direction: column; height: auto; }
 }
