@@ -8,7 +8,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class LoanSimulatorComponent implements OnInit {
 
   // INITIAL VALUES
-  loanAmount = 1000000;
+  loanAmount = 300000;
   months = 6;
   interestRate = 3.5;
 
