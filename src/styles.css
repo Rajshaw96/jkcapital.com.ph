@@ -142,8 +142,8 @@ h6 { font-size: 16px; } */
   margin: 0px;
 }
 
-section-header p {
-  width: 722px;
+.section-header p {
+  padding-top: 10px;
   color: #645F5F;
   text-align: center;
   font-feature-settings: 'liga' off, 'clig' off;
@@ -152,6 +152,7 @@ section-header p {
   font-style: normal;
   font-weight: 500;
   line-height: 25px; /* 156.25% */
+  margin: 0px;
 }
 .section-header h4 {
   color: var(--Primary-Blue, #0166CC);

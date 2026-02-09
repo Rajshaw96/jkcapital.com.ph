@@ -5,10 +5,8 @@
   buttonLink="/industries"
   image="assets/img/pages/Check Rediscounting/check rediscounting banner.jpg">
 </app-hero-section>
-<section class="loan-structure">
-  <div class="container">
-
-    <!-- HEADER -->
+<section class="loan-solutions">
+  <div class="container section">
     <div class="section-header">
       <span class="section-line"></span>
       <h2>Check Rediscounting for SMEs: Get Funds<br>Before Checks Clear.</h2>
@@ -17,43 +15,24 @@
       </p>
     </div>
 
-    <!-- CARDS -->
-    <div class="structure-grid">
+    <div class="solutions-grid">
+      <div class="solution-card" *ngFor="let item of solutions">
+        <!-- Image with Overlay -->
+        <div class="image-wrap">
+          <img [src]="item.image" [alt]="item.alt" />
+          <div class="image-overlay"></div>
+        </div>
 
-      <!-- SECURED -->
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Check Rediscounting/what is check rediscounting.jpg"
-          alt="What Is Check Rediscounting for SMEs"
-          loading="lazy"/>
-
-        <h3>What Is Check Rediscounting for SMEs</h3>
-        <p>Check Rediscounting allows businesses to advance cash from post-dated or deposited checks. It accelerates access to funds already expected, giving you quicker liquidity.</p>
+        <!-- Content -->
+        <div class="solution-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+        
+        <!-- Decorative Bottom Accent -->
+        <div class="card-accent"></div>
       </div>
-
-      <!-- UNSECURED -->
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Check Rediscounting/how this helps with cashflow gaps.jpg"
-          alt="How This Helps with Cashflow Gaps"
-          loading="lazy"/>
-
-        <h3>How This Helps with Cashflow Gaps</h3>
-        <p>Bridge timing gaps between payouts and incoming collections. Use the advanced funds to cover payroll, purchase inventory, or manage unexpected operational needs.</p>
-      </div>
-
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Check Rediscounting/similarities with invoice.jpg"
-          alt="Similarities with Invoice or PO Financing"
-          loading="lazy"/>
-
-        <h3>Similarities with Invoice or PO Financing</h3>
-        <p>Like Invoice and PO Financing, Check Rediscounting converts expected payments into working capital. The difference? It’s based on issued checks, making it ideal when receivables are already formalized and dated.</p>
-      </div>
-
     </div>
-
   </div>
 </section>
 <app-why-choose-check-rediscounting></app-why-choose-check-rediscounting>
