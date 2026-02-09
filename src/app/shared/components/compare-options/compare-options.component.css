@@ -3,38 +3,8 @@
 ============================= */
 .compare-options {
   background: #eaf3ff;
-  padding: 50px 50px;
 }
 
-.container {
-  width: 100%;
-  margin: auto;
-}
-
-/* =============================
-   HEADER
-============================= */
-.section-header {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.section-line {
-  width: 24px;
-  height: 2px;
-  background: var(--Primary-Blue, #0166CC);
-  display: block;
-  margin: 0 auto 12px;
-}
-
-.section-header h2 {
-  color: #353333;
-  text-align: center;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: normal;
-  font-style: normal;
-}
 
 /* =============================
    LAYOUT
@@ -50,6 +20,7 @@
    LEFT LABEL COLUMN
 ============================= */
 .labels-column {
+  max-height: auto;
   padding-top: 60px; /* aligns with table header */
 }
 
@@ -68,8 +39,9 @@
    TABLE CARD
 ============================= */
 .compare-card {
+  max-height: auto;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }

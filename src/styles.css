@@ -38,7 +38,7 @@ html {
   --text-light: #D6D6D6;
   --border-color: #e5e7eb;
 
-  --bg-light: #E7F0FF;
+  --bg-light: #eff5ff;
   --white: #ffffff;
 }
 
@@ -142,6 +142,17 @@ h6 { font-size: 16px; } */
   margin: 0px;
 }
 
+section-header p {
+  width: 722px;
+  color: #645F5F;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 156.25% */
+}
 .section-header h4 {
   color: var(--Primary-Blue, #0166CC);
   text-align: center;

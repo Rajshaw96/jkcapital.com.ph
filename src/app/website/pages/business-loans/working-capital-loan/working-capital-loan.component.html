@@ -5,10 +5,8 @@
   buttonLink="/industries"
   image="assets/img/banner/working-capital-loan.png">
 </app-hero-section>
-<section class="loan-structure">
-  <div class="container">
-
-    <!-- HEADER -->
+<section class="loan-solutions">
+  <div class="container section">
     <div class="section-header">
       <span class="section-line"></span>
       <h2>Short-Term Cash Support to Keep Your Day-to-Day<br>Operations Running Smoothly</h2>
@@ -17,43 +15,24 @@
       </p>
     </div>
 
-    <!-- CARDS -->
-    <div class="structure-grid">
+    <div class="solutions-grid">
+      <div class="solution-card" *ngFor="let item of solutions">
+        <!-- Image with Overlay -->
+        <div class="image-wrap">
+          <img [src]="item.image" [alt]="item.alt" />
+          <div class="image-overlay"></div>
+        </div>
 
-      <!-- SECURED -->
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Working Capital/Why SMEs Need This.jpg"
-          alt="Why SMEs Need This"
-          loading="lazy"/>
-
-        <h3>Why SMEs Need This</h3>
-        <p>Unexpected bills, seasonal slowdowns, and delayed payments can strain operations; this loan keeps you prepared for anything.</p>
+        <!-- Content -->
+        <div class="solution-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+        
+        <!-- Decorative Bottom Accent -->
+        <div class="card-accent"></div>
       </div>
-
-      <!-- UNSECURED -->
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Working Capital/How it helps with cashflow gaps.jpg"
-          alt="How It Helps with Cash Flow Gaps"
-          loading="lazy"/>
-
-        <h3>How It Helps with Cash Flow Gaps</h3>
-        <p>Flexible funds cover urgent costs, from payroll to inventory, bridging gaps and smoothing out cash flow fluctuations.</p>
-      </div>
-
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Working Capital/Quick Access in 5-7 Days.jpg"
-          alt="Quick Access in 5–7 Days"
-          loading="lazy"/>
-
-        <h3>Quick Access in 5–7 Days</h3>
-        <p>Get approved in as little as a week and access funds fast, so your business never misses a beat.</p>
-      </div>
-
     </div>
-
   </div>
 </section>
 <app-working-capital-compare></app-working-capital-compare>
