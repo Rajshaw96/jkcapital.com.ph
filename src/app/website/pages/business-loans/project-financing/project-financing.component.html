@@ -5,55 +5,34 @@
   buttonLink="/industries"
   image="assets/img/pages/Project Financing/Project Financing Banner.jpg">
 </app-hero-section>
-<section class="loan-structure">
-  <div class="container">
-
-    <!-- HEADER -->
+<section class="loan-solutions">
+  <div class="container section">
     <div class="section-header">
       <span class="section-line"></span>
       <h2>Tailored financing for projects that transform<br>your business.</h2>
       <p>
-        Project Financing differs from standard business or working capital loans. It is best suited for high value, long-horizon projects where repayment depends on the project’s own success not just your existing balance sheet.
+        Project Financing differs from standard business or working capital loans. It is best suited for high value, long-<br>horizon projects where repayment depends on the project’s own success not just your existing balance sheet.
       </p>
     </div>
 
-    <!-- CARDS -->
-    <div class="structure-grid">
+    <div class="solutions-grid">
+      <div class="solution-card" *ngFor="let item of solutions">
+        <!-- Image with Overlay -->
+        <div class="image-wrap">
+          <img [src]="item.image" [alt]="item.alt" />
+          <div class="image-overlay"></div>
+        </div>
 
-      <!-- SECURED -->
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Project Financing/expansion and development.jpg"
-          alt="Expansion and Development"
-          loading="lazy"/>
-
-        <h3>Expansion and Development.</h3>
-        <p>For major initiatives like facility construction, equipment acquisition, or multi-branch rollouts that push your business to the next level.</p>
+        <!-- Content -->
+        <div class="solution-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.desc }}</p>
+        </div>
+        
+        <!-- Decorative Bottom Accent -->
+        <div class="card-accent"></div>
       </div>
-
-      <!-- UNSECURED -->
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Project Financing/high growth sectors.jpg"
-          alt="High-Growth Sectors"
-          loading="lazy"/>
-
-        <h3>High-Growth Sectors.</h3>
-        <p>Tailored for industries such as construction, manufacturing, logistics, and real estate where bold investment drives results.</p>
-      </div>
-
-      <div class="structure-card">
-        <img
-          src="assets/img/pages/Project Financing/strategic growth plans.jpg"
-          alt="Strategic Growth Plans"
-          loading="lazy"/>
-
-        <h3>Strategic Growth Plans.</h3>
-        <p>Structured, milestone-based funding that moves with your project from blueprint to breakthrough.</p>
-      </div>
-
     </div>
-
   </div>
 </section>
 <app-project-financing-vs-business-loan></app-project-financing-vs-business-loan>
