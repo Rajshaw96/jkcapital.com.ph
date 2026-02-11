@@ -152,8 +152,10 @@ export class FaqComponent {
       {
         question: 'How do I apply for a business loan or financing?',
         answer: [
-          'Submit an inquiry through our website by filling out the Application Form or calling our Loan Account Officer. You pre-qualify for financing if you are at least 20 years old, with a registered business that\'s been operational for at least a year, and have a bank account that\'s been active for at least 1 year.',
-          'Our Loan Account Officer will reach out to you to guide you through the application process, requirements, and help structure a loan or financial solution that fits your business.'
+          '1. Complete the Application Form on our website with your business details. We will contact you via email, mobile, Viber, WhatsApp, or Messenger to guide you through the process.',
+          '2. A Customer Service (CS) representative will collect your documents via email. Required documents include: (a) business permit (SEC/DTI/Mayor/LGU-issued), (b) latest financial statement, and (c) past 3-month business bank statement.',
+          '3. Our CS will provide status updates and request additional information as needed.',
+          '4. Once approved, you will receive the schedule and venue for fund release at the nearest JK Capital office.'
         ]
       },
       {
@@ -169,10 +171,10 @@ export class FaqComponent {
         question: 'What are the requirements for application?',
         answer: [
           'These requirements for application should be completely submitted to begin pre-qualification assessment and processing.',
-          '- Audited and internal financial statement; the latest ITR.',
+          '- Latest financial statement.',
           '- Past 3-month bank statement and express/written consent for JK Capital to conduct a bank verification.',
-          '- Business, DTI and Mayor’s permit to operate in the Philippines.',
-          'To strengthen your eligibility, you may present documentation of existing or prospective projects or contracts.', 
+          '- Business, DTI and mayor’s permit to operate in the Philippines, and express written consent to conduct verification.',
+          'To strengthen your eligibility and improve your loan terms, you may pledge collateral and present proof of revenue and income i.e., existing or new project contracts, POs, and invoices.', 
           'The processing period of 5 to 7 days begin from the time all requirements are submitted.',
         ]
       },
@@ -280,7 +282,7 @@ export class FaqComponent {
     'Interest Rates & Fees': [
       {
         question: 'What is the interest rate of JK Capital loans?',
-        answer: 'Interest rates range from 2.5% to 3.5% added on monthly. New customers start with 3.5%. The rate gets better depending on the improving risk profile of customers, the size of the loan, and availability of collateral.'
+        answer: 'nterest rates range from 2% to 3.5% added on monthly. New customers start with 3.5%. The rate is determined by the borrower’s credit profile, financial standing, credit history, availability of collateral, and amount of the loan.'
       },
       {
         question: 'How is the interest rate computed?',
@@ -292,11 +294,11 @@ export class FaqComponent {
       },
       {
         question: 'What is the 5% processing fee for?',
-        answer: 'This is a one-time fee collected upfront, deducted from the loan released.  It covers the cost of evaluating, structuring, and administering your loan. This includes credit assessment, documentation, legal and compliance checks, and account setup. The fee ensures your financing is processed efficiently, responsibly, and with full regulatory compliance.'
+        answer: 'This is a one-time fee collected upfront, deducted from the loan released. It covers doc stamps and notarial fee.'
       },
       {
         question: 'What are the terms of a standard business loan?',
-        answer: 'The business loan terms will vary based on the approval of your loan. We have a minimum of 3 months to a maximum of 1 year repayment terms depending on the approval of our Credit Committee.'
+        answer: 'The business loan terms will vary based on the approval of your loan. We have a minimum of 3 months to a maximum of 2-year repayment terms depending on the approval of our Credit Committee.'
       }
 
     ],
@@ -305,8 +307,8 @@ export class FaqComponent {
       {
         question: 'How are repayments structured?',
         answer: [
-          'Because JK Capital financing is short-term, we offer repayment from 3 to 12 months, with payments monthly or bi-monthly.',
-          'Repayment terms are designed to align with your cash flow cycle, with tenors typically ranging from 3 to 12 months. You only pay interest based on what you use, depending on the facility.'
+          'Because JK Capital financing is short-term, we offer repayment from 3 to 24 months, with payments monthly or bi-monthly.',
+          'Repayment terms are designed to align with your cash flow cycle, with tenors typically ranging from 3 to 24 months. You only pay interest based on what you use, depending on the facility.'
         ]
       },
       {
@@ -342,7 +344,7 @@ export class FaqComponent {
     'Renewal & Referral': [
       {
         question: 'Will I enjoy better interest rates and overall terms when I renew?',
-        answer: 'In general, it is our intent to provide preferential terms to highly valued renewing customers.  Renewal however, doesnt guarantee this. Final terms are subject to the approval of the Credit Committee.  The basis for loan approval terms apply.'
+        answer: 'In general, it is our intent to provide preferential terms to highly valued renewing customers.  Renewal however, doesn’t guarantee this. Final terms are subject to the approval of the Credit Committee.  The basis for loan approval terms apply.'
       },
       {
         question: 'If I refer a friend or family for a business loan, do I get a commission?',

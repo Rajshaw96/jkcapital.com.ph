@@ -106,6 +106,25 @@
           <div class="display-value">{{ interestRate | number:'1.2-2' }}%</div>
         </div>
 
+        <!-- Processing Fee -->
+        <div class="input-row">
+          <div class="slider-box">
+            <label>Processing Fee</label>
+            <div class="slider-wrapper"
+                (mousedown)="startDrag($event, 'processing')"
+                (touchstart)="startDrag($event, 'processing')">
+              <div class="custom-slider">
+                <div class="track"></div>
+                <div class="progress" [style.width.%]="processingPercent"></div>
+                <div class="thumb" [style.left.%]="processingPercent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="display-value">
+            {{ processingFee | number:'1.2-2' }}%
+          </div>
+        </div>
+
         <!-- Frequency -->
         <div class="frequency-wrap">
           <label>Payment Frequency</label>

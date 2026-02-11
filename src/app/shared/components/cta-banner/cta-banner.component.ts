@@ -9,7 +9,7 @@ export class CtaBannerComponent {
   showConsultationPopup = false;
 
 
-  @Input() title: string = 'Choose your loan application method.';
+  @Input() title: string = 'Choose your loan application method';
   @Input() primaryText: string = 'Connect With Our Loan Experts';
   @Input() secondaryText: string = 'Apply Online';
 

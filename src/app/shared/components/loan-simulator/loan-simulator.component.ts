@@ -11,6 +11,7 @@ export class LoanSimulatorComponent implements OnInit {
   loanAmount = 300000;
   months = 6;
   interestRate = 3.5;
+  processingFee = 2.5;
 
   // LIMITS
   loanMin = 300000;
@@ -19,15 +20,19 @@ export class LoanSimulatorComponent implements OnInit {
   monthMin = 3;
   monthMax = 24;
 
-  interestMin = 2;
+  processingMin = 2;
+  processingMax = 5;
+
+  interestMin = 1;
   interestMax = 3.5;
 
   // PERCENT POSITIONS (For UI rendering)
   loanPercent = 0;
   monthPercent = 0;
   interestPercent = 0;
+  processingPercent = 0;
 
-  activeSlider: 'loan' | 'months' | 'interest' | null = null;
+  activeSlider: 'loan' | 'months' | 'interest' | 'processing' | null = null;
   paymentFrequency: 'monthly' | 'semi-monthly' = 'monthly';
 
   // CALCULATION PROPERTIES
@@ -36,7 +41,6 @@ export class LoanSimulatorComponent implements OnInit {
   processingFeeAmount = 0;
   netProceeds = 0;
   checksPerMonth = 1;
-  processingFee = 5.0;
 
   constructor() {}
 
@@ -48,7 +52,7 @@ export class LoanSimulatorComponent implements OnInit {
 
   // ================= DRAG LOGIC =================
 
-  startDrag(event: MouseEvent | TouchEvent, type: 'loan' | 'months' | 'interest') {
+  startDrag(event: MouseEvent | TouchEvent, type: 'loan' | 'months' | 'interest' | 'processing') {
     // Prevent text selection while dragging
     if (event instanceof MouseEvent) {
        // event.preventDefault(); 
@@ -72,6 +76,7 @@ export class LoanSimulatorComponent implements OnInit {
     let targetIdx = 0;
     if (this.activeSlider === 'months') targetIdx = 1;
     if (this.activeSlider === 'interest') targetIdx = 2;
+    if (this.activeSlider === 'processing') targetIdx = 3;
 
     const sliderElement = sliders[targetIdx] as HTMLElement;
     if (!sliderElement) return;
@@ -104,6 +109,17 @@ export class LoanSimulatorComponent implements OnInit {
       this.interestRate = parseFloat(rawInterest.toFixed(2));
     }
 
+    if (this.activeSlider === 'processing') {
+      this.processingPercent = percent;
+
+      const rawProcessing =
+        this.processingMin +
+        (percent / 100) * (this.processingMax - this.processingMin);
+
+      this.processingFee = parseFloat(rawProcessing.toFixed(2));
+    }
+
+
     this.calculateLoan();
   }
 
@@ -135,6 +151,7 @@ export class LoanSimulatorComponent implements OnInit {
     this.loanPercent = ((this.loanAmount - this.loanMin) / (this.loanMax - this.loanMin)) * 100;
     this.monthPercent = ((this.months - this.monthMin) / (this.monthMax - this.monthMin)) * 100;
     this.interestPercent = ((this.interestRate - this.interestMin) / (this.interestMax - this.interestMin)) * 100;
+    this.processingPercent =   ((this.processingFee - this.processingMin) / (this.processingMax - this.processingMin)) * 100;
   }
 
   // ================= ACTIONS =================

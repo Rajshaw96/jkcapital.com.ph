@@ -40,7 +40,7 @@ export class LoanSolutionsComponent {
     {
       title: 'Check Rediscounting',
       image: 'assets/img/businesses/check-re-discounting.jpeg',
-      desc: 'Turn post-dated checks into immediate funds to bridge liquidity gaps, stabilize your cash flow, and operations, while waiting for checks to clear.',
+      desc: 'Turn post-dated checks into immediate funds to bridge liquidity gaps, stabilize your cash flow and operations, while waiting for checks to clear.',
       link: 'products/check-rediscounting'
     }
   ];

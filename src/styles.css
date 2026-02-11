@@ -305,7 +305,7 @@ img {
   font-size: 14px;
   color: #ffffff;
   outline: none;
-  height: 34px;
+  height: 30px;
 }
 
 .search-input:focus {
@@ -572,9 +572,9 @@ img {
   border-bottom: none;
 }
 
-/* .card-cell:first-child {
+.card-cell:first-child {
   border-right: 1px solid #D3D3D3;
-} */
+}
 
 /* Card Styling */
 .data-card {
