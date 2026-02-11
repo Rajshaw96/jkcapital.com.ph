@@ -1,0 +1,66 @@
+[
+  {
+    "office": "Head Office",
+    "baseCity": "Ortigas, Pasig",
+    "address": "Unit 3302-D, West Tower, Tektite Towers, Exchange Road, Ortigas Center 1605",
+    "phone": "(02) 5328-2192 loc 117 (Sales)",
+    "customerService": "+639171372847 / +639989632457",
+    "emails": {
+      "general": "info@jkcapital.com.ph",
+      "loans": "loans@jkcapital.com.ph"
+    },
+    "cities": [
+      "Caloocan","Las Piñas","Makati","Malabon","Mandaluyong","Manila",
+      "Marikina","Muntinlupa","Navotas","Parañaque","Pasay","Pasig",
+      "Quezon City","San Juan","Taguig","Valenzuela","Antipolo",
+      "Bacoor","Biñan","Batangas City","Cabuyao","Calamba","Cavite City",
+      "Dasmariñas","General Trias","Imus","Lipa","San Pablo","San Pedro",
+      "Santa Rosa","Santo Tomas","Tagaytay","Tayabas","Trece Martires",
+      "Calapan","Tanauan","Legazpi","Naga","Iriga","Masbate City"
+    ]
+  },
+  {
+    "office": "Malolos Branch",
+    "baseCity": "Malolos, Bulacan",
+    "address": "Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan",
+    "phone": "(044) 7910241",
+    "mobile": "0916-3150874 (Globe) | 0998-9632461 (Smart)",
+    "cities": [
+      "Malolos","Meycauayan","San Jose del Monte","Balagtas","Bocaue",
+      "Guiguinto","Calumpit","Cabanatuan","Palayan","San Jose","Muñoz",
+      "Gapan","Dagupan","Alaminos","Urdaneta","San Carlos",
+      "Tarlac City","Mabalacat","San Fernando","Angeles","Olongapo",
+      "Tuguegarao","Santiago","Ilagan","Laoag","Batac","Candon"
+    ]
+  },
+  {
+    "office": "Cebu Branch",
+    "baseCity": "Cebu City",
+    "address": "Room 207, Manros Plaza bldg. General Maxilom Avenue Cebu City",
+    "mobile": "0919-6571035 (Smart) | 0966-2188379 (Globe)",
+    "cities": [
+      "Cebu City","Lapu-Lapu","Mandaue","Danao","Carcar","Talisay",
+      "Toledo","Bogo","Bacolod","Bago","Cadiz","Escalante",
+      "Himamaylan","Kabankalan","La Carlota","Silay","Sagay",
+      "Bayawan","Bais","Canlaon","Dumaguete","Guihulngan",
+      "Tanjay","Passi","Victorias","Sipalay","Ormoc",
+      "Baybay","Tacloban","Borongan","Catbalogan","Calbayog",
+      "Maasin","Tagbilaran","Puerto Princesa"
+    ]
+  },
+  {
+    "office": "Davao Branch",
+    "baseCity": "Davao City",
+    "address": "Door 2A JRDC Building Pink Street Spring Village, Ma-a, Davao City",
+    "phone": "(082) 236-9097",
+    "mobile": "09352020568",
+    "cities": [
+      "Davao City","Digos","Panabo","Tagum","Mati","Samal",
+      "Cotabato City","Kidapawan","Koronadal","General Santos",
+      "Tacurong","Surigao City","Bislig","Bayugan","Butuan",
+      "Cabadbaran","Iligan","Marawi","Dipolog","Dapitan",
+      "Ozamiz","Oroquieta","Zamboanga City","Pagadian",
+      "Valencia","Lamitan","Isabela City","Malaybalay"
+    ]
+  }
+]

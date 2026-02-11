@@ -35,6 +35,7 @@ import { WhyChooseCheckRediscountingComponent } from './components/why-choose-ch
 import { ReceivablesFinancingCompareComponent } from './components/receivables-financing-compare/receivables-financing-compare.component';
 import { WorkingCapitalCompareComponent } from './components/working-capital-compare/working-capital-compare.component';
 import { AllIndustriesComponent } from './components/all-industries/all-industries.component';
+import { OfficeLocationPopupComponent } from './components/office-location-popup/office-location-popup.component';
 
 const SHARED_COMPONENTS = [
   FaqComponent,
@@ -68,6 +69,7 @@ const SHARED_COMPONENTS = [
   ReceivablesFinancingCompareComponent,
   WorkingCapitalCompareComponent,
   AllIndustriesComponent,
+  OfficeLocationPopupComponent
 ];
 
 @NgModule({

@@ -3,7 +3,7 @@
   <div class="container top-header-inner">
     <div class="search-box">
       <span class="search-icon"><i class="fa-solid fa-search"></i></span>
-      <input type="text" class="search-input" placeholder="Search your keyword..." />
+      <input type="text" class="search-input" [(ngModel)]="searchCity" (input)="onSearchChange()" placeholder="Search by city..." />
     </div>
 
     <div class="top-links">
@@ -112,3 +112,10 @@
     </li>
   </ul>
 </div>
+
+<app-office-location-popup
+  [office]="selectedOffice"
+  (closePopup)="clearSearch()">
+</app-office-location-popup>
+
+

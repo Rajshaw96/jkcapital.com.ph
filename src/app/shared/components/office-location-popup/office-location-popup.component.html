@@ -1,0 +1,59 @@
+<div class="office-popup" *ngIf="office">
+  <div class="popup-card">
+
+    <!-- Close Button -->
+    <button class="close-btn" (click)="close()">✕</button>
+
+    <!-- Title -->
+    <h2 class="popup-title">
+      {{ office.office }}
+    </h2>
+
+    <!-- If Office Found -->
+    <ng-container *ngIf="!office.message; else noOffice">
+
+      <div class="office-details">
+        <p><strong>Address:</strong><br> {{ office.address }}</p>
+
+        <p *ngIf="office.phone">
+          <strong>Phone:</strong> {{ office.phone }}
+        </p>
+
+        <p *ngIf="office.mobile">
+          <strong>Mobile:</strong> {{ office.mobile }}
+        </p>
+
+        <p *ngIf="office.customerService">
+          <strong>Customer Service:</strong>
+          {{ office.customerService }}
+        </p>
+
+        <p *ngIf="office.emails?.general">
+          <strong>Email:</strong>
+          {{ office.emails.general }}
+        </p>
+      </div>
+
+    </ng-container>
+
+    <!-- If No Office Found -->
+    <ng-template #noOffice>
+      <div class="no-office">
+        <h3>Sorry 😔</h3>
+        <p>{{ office.message }}</p>
+      </div>
+    </ng-template>
+
+    <!-- Buttons -->
+    <div class="button-row">
+      <button class="primary-btn" (click)="close()">
+        Close
+      </button>
+
+      <button class="help-btn">
+        Need Help?
+      </button>
+    </div>
+
+  </div>
+</div>
