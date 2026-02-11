@@ -9,6 +9,7 @@ interface CompareRow {
 @Component({
   selector: 'app-compare-options',
   templateUrl: './compare-options.component.html',
+  styleUrls: ['./compare-options.component.css']
 })
 export class CompareOptionsComponent {
 

@@ -40,6 +40,26 @@
           (mouseleave)="closeDropdown()"
         >
           Business Loans
+
+          <div class="mega-dropdown full-width" *ngIf="activeDropdown === 'loans'">
+            <div class="mega-container">
+
+              <div class="mega-left">
+                <!-- <h4>Business Loans</h4> -->
+              </div>
+
+              <div class="mega-center">
+                <a routerLink="products/business-loans">Business Loans</a>
+                <a routerLink="products/working-capital-loan">Working Capital Loan</a>
+                <a routerLink="products/credit-line">Credit Line</a>
+                <a routerLink="products/project-financing">Project Financing</a>
+                <a routerLink="products/receivables-financing">Receivables Financing</a>
+                <a routerLink="products/check-rediscounting">Check Rediscounting</a>
+              </div>
+
+              <div class="mega-right"></div>
+            </div>
+          </div>
         </li>
 
         <li class="nav-item" routerLink="/industries" routerLinkActive="active">

@@ -1,37 +1,10 @@
 .partners-section {
   background: #F6F6F6;
-  padding: 60px 50px;
 }
 
-.container {
-  width: 100%;
-  margin: auto;
-}
-
-/* Header */
-.section-header {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.section-line {
-  width: 24px;
-  height: 2px;
-  background: var(--Primary-Blue, #0166CC);
-  display: block;
-  margin: 0 auto 12px;
-}
-
-.section-header h2 {
-  color: #353333;
-  text-align: center;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: normal;
-  font-style: normal;
-}
 /* Carousel */
 .partners-carousel {
+  width: 100%;
   overflow: hidden;
   position: relative;
 }

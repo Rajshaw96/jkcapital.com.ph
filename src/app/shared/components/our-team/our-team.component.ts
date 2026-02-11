@@ -8,10 +8,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class OurTeamComponent implements OnInit, OnDestroy {
 
   ourTeams = [
-    { teams: 'assets/img/our-team/team-1.jpg'},
+    { teams: 'assets/img/our-team/team-1.jpeg'},
     { teams: 'assets/img/our-team/team-2.jpg'},
-    { teams: 'assets/img/our-team/team-3.jpg'},
-    { teams: 'assets/img/our-team/team-4.jpg'},
+    { teams: 'assets/img/our-team/team-3.jpeg'},
+    { teams: 'assets/img/our-team/team-4.jpeg'},
     { teams: 'assets/img/our-team/team-5.png'},
   ];
 

@@ -14,9 +14,9 @@ export class CheckRediscountingComponent {
       desc: 'Check Rediscounting allows businesses to advance cash from post-dated or deposited checks. It accelerates access to funds already expected, giving you quicker liquidity.',
     },
     {
-      title: 'How This Helps with Cashflow Gaps',
+      title: 'How this helps with cash flow gaps',
       image: 'assets/img/pages/Check Rediscounting/how this helps with cashflow gaps.jpg',
-      alt: 'How This Helps with Cashflow Gaps',
+      alt: 'How this helps with cash flow gaps',
       desc: 'Bridge timing gaps between payouts and incoming collections. Use the advanced funds to cover payroll, purchase inventory, or manage unexpected operational needs.',
     },
     {
