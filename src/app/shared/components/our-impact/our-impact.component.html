@@ -4,7 +4,7 @@
     <!-- Header -->
     <div class="section-header">
       <span class="section-line"></span>
-      <h2>Our Impact, Their Breakthrough.</h2>
+      <h2>Our impact, their breakthrough</h2>
     </div>
 
     <!-- Carousel -->
@@ -18,11 +18,11 @@
         
         <!-- Active / Center Card Layout -->
         <div class="image-box" *ngIf="getPosition(i) === 'active'">
-          <img [src]="item.image" [alt]="item.name" />
+          <img [src]="item.image" [alt]="item.headline" />
           
           <div class="overlay-text">
-            <h4>{{ item.name }}</h4>
-            <p>{{ item.role }}</p>
+            <h4>{{ item.headline }}</h4>
+            <p>{{ item.subheadLine }}</p>
           </div>
 
           <button *ngIf="item.video" class="play-btn" (click)="openVideo(item.video)">
@@ -33,11 +33,11 @@
         <!-- Side Card Layout (Grey bottom text - hidden on mobile via CSS) -->
         <ng-container *ngIf="getPosition(i) !== 'active'">
           <div class="image-box">
-            <img [src]="item.image" [alt]="item.name" />
+            <img [src]="item.image" [alt]="item.headline" />
           </div>
           <div class="side-text-box">
-            <h4>{{ item.name }}</h4>
-            <p>{{ item.role }}</p>
+            <h4>{{ item.headline }}</h4>
+            <p>{{ item.subheadLine }}</p>
           </div>
         </ng-container>
 

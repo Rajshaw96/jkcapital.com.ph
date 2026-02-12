@@ -20,22 +20,22 @@ export class OurImpactComponent implements OnInit, OnDestroy {
 
   testimonials = [
     {
-      name: 'SAMITE',
-      role: 'Business Owner',
-      image: 'assets/img/testimonials/testimonials-img (1).jpg',
-      video: 'https://www.youtube.com/embed/dQw4w9WgXcQ' 
-    },
-    {
-      name: 'KAITY',
-      role: 'Fashion Director',
+      headline: 'The Veteran Loan Consultant',
+      subheadLine: 'A closer look, Era Tapar, JK Capital’s loan consultant whose years of experience and client relationships continue to guide SMEs toward smarter financial decision.',
       image: 'assets/img/pages/Our Impact/LC ERA TAPAR COVER.jpg',
+      video: 'https://www.youtube.com/embed/uV-lEbcPBUc?si=UIVYD6DuaqpBGP0d'
+    },
+    {
+      headline: 'PHILSME 2025 ',
+      subheadLine: 'Highlights from PHILSME 2025, capturing conversations, connections, and shared insights among SME leaders.',
+      image: 'assets/img/testimonials/testimonials-img (1).jpg',
       video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
     },
     {
-      name: 'RAYAN',
-      role: 'Photographer',
+      headline: 'The Resilient Partner',
+      subheadLine: 'The story of Jeffrey Calpe, a loan consultant who adapted to change and continues to support growing businesses with resilience, trust, and long-term vision.',
       image: 'assets/img/testimonials/testimonials-img (3).jpg',
-      video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+      video: 'https://www.youtube.com/embed/Vq4QbAj4HDk?si=5nzjI4yOB0rPe5xR'
     }
   ];
 
