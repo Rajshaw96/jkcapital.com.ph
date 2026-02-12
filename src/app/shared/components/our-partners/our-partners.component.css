@@ -21,7 +21,7 @@
   transition: transform 0.3s ease;
 }
 .partner-card img {
-  max-width: 280px;
+  width: 100%;
   object-fit: contain;
   padding: 10px;
 }
@@ -29,40 +29,24 @@
   transform: scale(1.05);
 }
 
-/* ALL MOBILES */
-@media (max-width: 767px) {
-  .partners-carousel {
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
+/* ========================= */
+/* MOBILE AUTO SLIDER */
+/* ========================= */
 
-  .partners-carousel::-webkit-scrollbar {
-    display: none;
+@media (max-width: 767px) {
+
+  .partners-carousel {
+    overflow: hidden;
   }
 
   .partners-track {
-    display: flex;
+    flex-wrap: nowrap;
     gap: 14px;
   }
 
   .partner-card {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 calc(50% - 7px);
+    max-width: calc(50% - 7px);
     height: 80px;
-    background: #ffffff;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .partner-card img {
-    max-width: 120px;
-    object-fit: contain;
-    padding: 10px;
   }
 }
-

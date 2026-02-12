@@ -15,15 +15,16 @@ export class HelpCenterComponent {
 
   locations = [
     { 
-      name: 'Malolos, Bulacan',
-      address: 'Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan',
-      phone: '(044) 7910241',
-      mobile: '0916-3150874 (Globe) | 0998-9632461 (Smart)',
+      name: 'Head Office:',
+      address: 'Unit 3302-D, West Tower, Tektite Towers, Exchange Road, Ortigas Center 1605',
+      phone: '(02) 5328-2192 loc 117 (Sales) | Customer Service - +639171372847 / +639989632457',
+      generalInquiries: 'info@jkcapital.com.ph',
+      LoanUpdatesEscalation: 'loans@jkcapital.com.ph',
       open: false
     },
     { 
-      name: 'Cabanatuan City, Nueva Ecija',
-      address: '2nd Floor Unit 11 Priscila Building, Brgy. H. Concepcion, Maharlika Highway, Cabanatuan City',
+      name: 'Malolos, Bulacan',
+      address: 'Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan',
       phone: '(044) 803-6399',
       mobile: '0915-6232461 (Globe) | 0998-5514189 (Smart)',
       open: false 

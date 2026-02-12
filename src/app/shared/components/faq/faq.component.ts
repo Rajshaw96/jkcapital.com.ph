@@ -113,33 +113,27 @@ export class FaqComponent {
       {
         question: 'Where is JK Capital located?',
         answer: [
-          'We have 5 central locations that service customers nationwide. Depending on your business location, the center nearest you will service your requirements.',
-          'We encourage you to first accomplish an application form via our website or reach out to our Loan Account Officer. Once your application is received, a Loan Account Officer will guide you through the process.',
+          'We have 4 central locations that service customers nationwide. Depending on your business location, the center nearest you will service your requirements. We encourage you to first accomplish an application form via our website. Once your application is received, a Customer Service representative will reach out to you to guide you through the process.',
           
           'Head Office:',
           'Unit 3302-D, West Tower, Tektite Towers, Exchange Road, Ortigas Center 1605',
-          'Phone: (02) 5328-2191',
-          'Email: info@jkcapital.com.ph, loans@jkcapital.com.ph',
-          'For Loan Consultants & Agencies: relations@jkcapital.com.ph',
+          'Phone No:- (02) 5328-2192 loc 117 (Sales)',
+          'Customer Service:- +639171372847 / +639989632457',
+          'General Inquiries:- info@jkcapital.com.ph',
+          'Loan Updates, Escalation:- loans@jkcapital.com.ph',
 
           'Malolos, Bulacan:',
-          'Unit E1, AL Building, KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan',
-          'Mobile: 0916-3150874 (Globe) | 0998-9632461 (Smart)',
-          'Phone: (044) 791-0241',
-
-          'Cabanatuan, Nueva Ecija:',
-          '2nd Floor, Unit 11, Priscila Building, Brgy. H. Concepcion, Maharlika Highway',
-          'Mobile: 0915-6232461 (Globe) | 0998-5514189 (Smart)',
-          'Phone: (044) 803-6399',
+          'Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan',
+          'Phone No:- (044) 7910241',
+          'Mobile No:- 0916-3150874 (Globe) | 0998-9632461 (Smart)',
 
           'Cebu:',
-          'Unit 2-I, 2nd Floor, 347 V. Rama Avenue, Guadalupe, Cebu City',
-          'Mobile: 0919-6571035 (Smart) | 0966-2188379 (Globe)',
-          'Phone: (032) 239-6477',
+          'Room 207, Manros Plaza bldg. General Maxilom Avenue Cebu City',
+          'Mobile No:- 0919-6571035 (Smart) | 0966-2188379 (Globe)',
 
           'Davao:',
-          'Door 2A, JRDC Building, Pink Street, Spring Village, Ma-a, Davao City',
-          'Mobile: 0917-6354509 (Globe) | 0961-1184789 (Smart)'
+          'Door 2A JRDC Building Pink Street Spring Village, Ma-a, Davao City',
+          'Mobile No: 0917-6354509 (Globe) | 0961-1184789 (Smart)'
         ]
       },
       {
