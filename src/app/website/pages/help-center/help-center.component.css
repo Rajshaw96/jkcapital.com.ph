@@ -56,14 +56,33 @@
 .location-body {
   max-height: 0;
   overflow: hidden;
-  padding: 0 18px;
+  padding: 0px 12px;
   font-size: 16px;
   color: #555;
   transition: all 0.35s ease;
 }
 
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.info-row .label {
+  min-width: 150px;   /* adjust width if needed */
+  font-weight: 600;
+  color: #333;
+}
+
+.info-row .value {
+  flex: 1;
+  color: #555;
+  word-break: break-word;
+}
+
+
 .location-body.show {
-  max-height: 300px;
+  max-height: 500px;
 }
 
 /* MAP */

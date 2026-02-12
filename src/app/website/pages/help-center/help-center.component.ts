@@ -17,30 +17,30 @@ export class HelpCenterComponent {
     { 
       name: 'Head Office:',
       address: 'Unit 3302-D, West Tower, Tektite Towers, Exchange Road, Ortigas Center 1605',
-      phone: '(02) 5328-2192 loc 117 (Sales) | Customer Service - +639171372847 / +639989632457',
+      phone: '(02) 5328-2192 loc 117 (Sales)',
+      customerService: '+639171372847 / +639989632457',
       generalInquiries: 'info@jkcapital.com.ph',
-      LoanUpdatesEscalation: 'loans@jkcapital.com.ph',
+      loanUpdatesEscalation: 'loans@jkcapital.com.ph',
       open: false
     },
     { 
-      name: 'Malolos, Bulacan',
+      name: 'Malolos, Bulacan:',
       address: 'Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan',
-      phone: '(044) 803-6399',
-      mobile: '0915-6232461 (Globe) | 0998-5514189 (Smart)',
-      open: false 
-    },
-    { 
-      name: 'Cebu City, Cebu',
-      address: 'Davao City, Davao Door 2A JRDC Building Pink Street Spring Village, Ma-a, Davao City',
-      phone: '',
-      mobile: ' 0917-6354509 (Globe) | 0961-1184789 (Smart)', 
-      open: false 
-    },
-    { 
-      name: 'Davao City, Davao', 
-      address: 'Unit F1, Al Idg, KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan',
       phone: '(044) 7910241',
-      mobile: '0918 350874 (Globe) | 0998 9632481 (Smart)',
+      mobile: ' 0916-3150874 (Globe) | 0998-9632461 (Smart)',
+      open: false 
+    },
+    { 
+      name: 'Cebu:',
+      address: 'Room 207, Manros Plaza bldg. General Maxilom Avenue Cebu City',
+      mobile: ' 0919-6571035 (Smart) | 0966-2188379 (Globe)', 
+      open: false 
+    },
+    { 
+      name: 'Davao:', 
+      address: 'Door 2A JRDC Building Pink Street Spring Village, Ma-a, Davao City',
+      phone: '(082) 236-9097',
+      mobile: '09352020568',
       open: false 
     }
   ];

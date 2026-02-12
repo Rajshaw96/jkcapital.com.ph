@@ -1,0 +1,88 @@
+<section class="locator-container section">
+  <div class="section-header">
+    <span class="section-line"></span>
+    <h2>We serve customers nationwide</h2>
+    <p>Your city is supported by one of our strategic regional offices.</p>
+  </div>
+
+  <div class="locator-grid">
+    <!-- LEFT: SEARCH PANEL -->
+    <div class="card search-panel">
+      <div class="card-body">
+        <label for="citySearch">Find your servicing JK Capital office</label>
+        
+        <div class="search-field" [class.active]="searchCity.length > 0">
+          <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+
+          <input
+            id="citySearch"
+            type="text"
+            placeholder="Enter city name (e.g. Tanauan)"
+            [(ngModel)]="searchCity"
+            (input)="onSearchChange()"
+          />
+
+          <button *ngIf="searchCity" (click)="clearSearch()" class="btn-clear">
+            x
+          </button>
+        </div>
+        
+        <p class="hint">Please enter at least 3 characters to begin.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT: RESULTS PANEL -->
+    <div class="card result-panel">
+      <!-- Loading State -->
+      <div class="state-container" *ngIf="isLoading">
+        <div class="shimmer-line"></div>
+        <div class="shimmer-line short"></div>
+      </div>
+
+      <!-- Found State -->
+      <div *ngIf="selectedOffice && !isLoading" class="office-details animate-in">
+        <!-- <div class="badge-success">
+          <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+          Active Branch Found
+        </div> -->
+        
+        <h2>{{ selectedOffice.office || 'Regional Branch' }}</h2>
+
+        <div class="detail-group">
+          <label>Office Address</label>
+          <p>{{ selectedOffice.address }}</p>
+        </div>
+
+        <div class="detail-row">
+          <div class="detail-group">
+            <label>Contact Number</label>
+            <p>{{ selectedOffice.phone }}</p>
+            <p>{{ selectedOffice.mobile }}</p>
+            <p>{{ selectedOffice.customerService }}</p>
+          </div>
+          <div class="detail-group">
+            <label>Email Support</label>
+            <p>{{ selectedOffice.emails?.general }}</p>
+            <p>{{ selectedOffice.emails?.loans }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Not Found / Empty State -->
+      <div class="state-container" *ngIf="!selectedOffice && !isLoading">
+        <div class="empty-icon" [class.error]="hasSearched">
+          <svg *ngIf="!hasSearched" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+          <svg *ngIf="hasSearched" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+        <h3>{{ hasSearched ? 'No Specific Branch Found' : 'Ready to help' }}</h3>
+        <p>{{ hasSearched ? 'We serve customers nationwide — your city is supported by our central office.' : 'Enter your city to find your local servicing branch details.' }}</p>
+      </div>
+    </div>
+  </div>
+</section>

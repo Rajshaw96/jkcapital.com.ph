@@ -5,6 +5,7 @@
   buttonLink="/apply"
   image="assets/img/pages/Help Center/banner.jpg">
 </app-hero-section>
+<app-office-locator></app-office-locator>
 <section class="section">
   <div class="location-map">
 
@@ -13,18 +14,46 @@
       <div
         class="location-card"
         *ngFor="let loc of locations; let i = index"
-        [class.active]="loc.open"
-      >
+        [class.active]="loc.open">
         <div class="location-header" (click)="toggleLocation(i)">
           <span class="title">{{ loc.name }}</span>
           <span class="arrow" [class.rotate]="loc.open"><i class="fa-solid fa-chevron-down"></i></span>
         </div>
 
         <div class="location-body" [class.show]="loc.open">
-          <p><strong>Address:</strong> {{ loc.address }}</p>
-          <p><strong>Phone:</strong> {{ loc.phone }}</p>
-          <p><strong>Mobile:</strong> {{ loc.mobile }}</p>
+
+          <div class="info-row" style="padding-top: 10px;">
+            <span class="label">Address:</span>
+            <span class="value">{{ loc.address }}</span>
+          </div>
+
+          <div class="info-row" *ngIf="loc.phone">
+            <span class="label">Phone No:</span>
+            <span class="value">{{ loc.phone }}</span>
+          </div>
+
+          <div class="info-row" *ngIf="loc.mobile" style="padding-bottom: 10px;">
+            <span class="label">Mobile No:</span>
+            <span class="value">{{ loc.mobile }}</span>
+          </div>
+
+          <div class="info-row" *ngIf="loc.customerService">
+            <span class="label">Customer Service:</span>
+            <span class="value">{{ loc.customerService }}</span>
+          </div>
+
+          <div class="info-row" *ngIf="loc.generalInquiries">
+            <span class="label">General Inquiries:</span>
+            <span class="value">{{ loc.generalInquiries }}</span>
+          </div>
+
+          <div class="info-row" *ngIf="loc.loanUpdatesEscalation" style="padding-bottom: 10px;">
+            <span class="label">Loan Updates:</span>
+            <span class="value">{{ loc.loanUpdatesEscalation }}</span>
+          </div>
+
         </div>
+
       </div>
     </div>
 

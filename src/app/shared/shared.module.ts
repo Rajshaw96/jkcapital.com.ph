@@ -36,6 +36,7 @@ import { ReceivablesFinancingCompareComponent } from './components/receivables-f
 import { WorkingCapitalCompareComponent } from './components/working-capital-compare/working-capital-compare.component';
 import { AllIndustriesComponent } from './components/all-industries/all-industries.component';
 import { OfficeLocationPopupComponent } from './components/office-location-popup/office-location-popup.component';
+import { OfficeLocatorComponent } from './components/office-locator/office-locator.component';
 
 const SHARED_COMPONENTS = [
   FaqComponent,
@@ -69,7 +70,8 @@ const SHARED_COMPONENTS = [
   ReceivablesFinancingCompareComponent,
   WorkingCapitalCompareComponent,
   AllIndustriesComponent,
-  OfficeLocationPopupComponent
+  OfficeLocationPopupComponent,
+  OfficeLocatorComponent
 ];
 
 @NgModule({
