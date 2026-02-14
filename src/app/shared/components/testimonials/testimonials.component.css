@@ -1,77 +1,89 @@
-:root {
-  --play: running;
-}
-
 .testimonials-section {
-  padding: 60px 0px;
-  background: #fff;
-  overflow: hidden;
+  background-color: var(--bg-soft);
 }
 
-/* HEADER */
-.section-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.section-line {
-  width: 24px;
-  height: 2px;
-  background: #0166cc;
-  display: block;
-  margin: 0 auto 12px;
-}
-
-.section-header h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #353333;
-}
-
-.subtitle {
-  color: #1a73e8;
-}
-
-/* MARQUEE */
-.testimonial-marquee {
-  overflow: hidden;
+/* MARQUEE VIEWPORT (The Magic Fade) */
+.marquee-viewport {
   position: relative;
+  overflow: hidden;
+  /* Creates the fade effect on edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
 }
 
 .testimonial-track {
-padding-top: 30px;
-padding-bottom: 30px;
   display: flex;
-  gap: 20px;
-  animation: marquee 30s linear infinite;
+  gap: 24px;
+  padding: 40px 0;
+  width: max-content;
+  animation: marquee 40s linear infinite;
   animation-play-state: var(--play);
+  will-change: transform;
 }
 
-/* CARD */
+/* CARD STYLING */
 .testimonial-card {
-min-width: 350px;
+  width: 380px;
   background: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  color: #333;
-  cursor: pointer;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* HOVER */
 .testimonial-card:hover {
-  background: #1a73e8;
-  color: #fff;
-  transform: translateY(-6px);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(1, 102, 204, 0.15);
+  border-color: var(--primary-color);
 }
 
-.testimonial-card:hover span,
-.testimonial-card:hover .stars {
-  color: #ffd700;
+.quote-icon {
+  font-family: serif;
+  font-size: 60px;
+  line-height: 1;
+  color: var(--primary-color);
+  opacity: 0.2;
+  position: absolute;
+  top: 10px;
+  left: 20px;
 }
 
-/* PROFILE */
+.message {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin: 20px 0;
+  z-index: 1;
+  font-style: italic;
+}
+
+/* PROFILE & FOOTER */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
 .profile {
   display: flex;
   gap: 12px;
@@ -79,47 +91,56 @@ min-width: 350px;
 }
 
 .profile img {
-  width: 48px;
-  height: 48px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
 }
 
-/* MESSAGE (CLAMP) */
-.message {
-  margin: 18px 0;
+.profile-info h4 {
+  margin: 0;
   font-size: 15px;
-  line-height: 1.6;
-
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  color: var(--text-dark);
+  font-weight: 700;
 }
 
-/* EXPAND TEXT ON HOVER */
-.testimonial-card:hover .message {
-  -webkit-line-clamp: unset;
+.profile-info span {
+  font-size: 13px;
+  color: var(--text-light);
 }
 
-/* STARS */
 .stars {
   color: #ffb400;
-  font-size: 18px;
+  font-size: 14px;
+  display: flex;
+  gap: 2px;
 }
 
-/* ✅ TRUE INFINITE LOOP */
+/* ANIMATION */
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .testimonial-card {
-    min-width: 260px;
+    width: 290px;
+    padding: 20px;
+  }
+  
+  .testimonial-track {
+    gap: 15px;
+    animation-duration: 25s; /* Faster for smaller distance */
+  }
+
+  .marquee-viewport {
+    mask-image: none; /* Remove mask on small screens to save CPU */
+    -webkit-mask-image: none;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
   }
 }

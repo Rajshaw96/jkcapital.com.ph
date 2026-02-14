@@ -1,58 +1,43 @@
-<section class="testimonials-section">
+<section class="testimonials-section section">
   <div class="container">
-
-    <!-- CENTER HEADER -->
-<div class="section-header">
+    <div class="section-header">
       <span class="section-line"></span>
       <p class="subtitle">Testimonials</p>
       <h2>What Our Clients Are Saying</h2>
     </div>
 
-    <!-- MARQUEE -->
-    <div
-      class="testimonial-marquee"
-      (mouseenter)="pause()"
-      (mouseleave)="play()"
-    >
+    <!-- Wrapper for the edge-fade effect -->
+    <div class="marquee-viewport" (mouseenter)="pause()" (mouseleave)="play()">
       <div class="testimonial-track">
-
         <!-- ORIGINAL -->
-        <div
-          class="testimonial-card"
-          *ngFor="let item of testimonials"
-        >
-          <ng-container *ngTemplateOutlet="card; context:{ $implicit: item }">
-          </ng-container>
+        <div class="testimonial-card" *ngFor="let item of testimonials">
+          <ng-container *ngTemplateOutlet="card; context:{ $implicit: item }"></ng-container>
         </div>
-
-        <!-- DUPLICATE (for infinite loop) -->
-        <div
-          class="testimonial-card"
-          *ngFor="let item of testimonials"
-        >
-          <ng-container *ngTemplateOutlet="card; context:{ $implicit: item }">
-          </ng-container>
+        <!-- DUPLICATE -->
+        <div class="testimonial-card" *ngFor="let item of testimonials">
+          <ng-container *ngTemplateOutlet="card; context:{ $implicit: item }"></ng-container>
         </div>
-
       </div>
     </div>
-
   </div>
 
   <!-- CARD TEMPLATE -->
   <ng-template #card let-item>
-    <div class="profile">
-      <img [src]="item.image" />
-      <div>
-        <h4>{{ item.name }}</h4>
-        <span>{{ item.role }}</span>
-      </div>
-    </div>
-
+    <div class="quote-icon">“</div>
+    
     <p class="message">{{ item.message }}</p>
 
-    <div class="stars">
-      <span *ngFor="let star of [].constructor(item.rating)">★</span>
+    <div class="card-footer">
+      <div class="profile">
+        <img [src]="item.image" [alt]="item.name" />
+        <div class="profile-info">
+          <h4>{{ item.name }}</h4>
+          <span>{{ item.role }}</span>
+        </div>
+      </div>
+      <div class="stars">
+        <span *ngFor="let star of [].constructor(item.rating)">★</span>
+      </div>
     </div>
   </ng-template>
 </section>
