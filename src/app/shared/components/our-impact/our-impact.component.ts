@@ -34,7 +34,7 @@ export class OurImpactComponent implements OnInit, OnDestroy {
     {
       headline: 'The Resilient Partner',
       subheadLine: 'The story of Jeffrey Calpe, a loan consultant who adapted to change and continues to support growing businesses with resilience, trust, and long-term vision.',
-      image: 'assets/img/testimonials/testimonials-img (3).jpg',
+      image: 'assets/img/testimonials/jeffrey-calpe.jpeg',
       video: 'https://www.youtube.com/embed/Vq4QbAj4HDk?si=5nzjI4yOB0rPe5xR'
     }
   ];
