@@ -9,7 +9,7 @@ export class WorkingCapitalLoanComponent {
   solutions = [
     {
       title: 'Why SMEs Need This',
-      image: 'assets/img/pages/Working Capital/Why SMEs Need This.jpg',
+      image: 'assets/img/pages/Working Capital/Why_SMEs_Need_This.jpg',
       alt: 'Why SMEs Need This',
       desc: 'Unexpected bills, seasonal slowdowns, and delayed payments can strain operations; this loan keeps you prepared for anything.',
     },

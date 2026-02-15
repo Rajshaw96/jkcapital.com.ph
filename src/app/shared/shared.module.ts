@@ -37,6 +37,8 @@ import { WorkingCapitalCompareComponent } from './components/working-capital-com
 import { AllIndustriesComponent } from './components/all-industries/all-industries.component';
 import { OfficeLocationPopupComponent } from './components/office-location-popup/office-location-popup.component';
 import { OfficeLocatorComponent } from './components/office-locator/office-locator.component';
+import { AgricultureSec1Component } from './components/industries/agriculture-sec1/agriculture-sec1.component';
+import { AgricultureSec2Component } from './components/industries/agriculture-sec2/agriculture-sec2.component';
 
 const SHARED_COMPONENTS = [
   FaqComponent,
@@ -71,11 +73,13 @@ const SHARED_COMPONENTS = [
   WorkingCapitalCompareComponent,
   AllIndustriesComponent,
   OfficeLocationPopupComponent,
-  OfficeLocatorComponent
+  OfficeLocatorComponent,
+  AgricultureSec1Component, 
+  AgricultureSec2Component,
 ];
 
 @NgModule({
-  declarations: [...SHARED_COMPONENTS,],
+  declarations: [...SHARED_COMPONENTS],
   imports: [
     CommonModule,
     ReactiveFormsModule,

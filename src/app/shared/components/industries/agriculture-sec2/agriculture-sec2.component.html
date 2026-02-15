@@ -1,0 +1,36 @@
+<section class="financing-container">
+  <div class="content-wrapper">
+    
+<div class="section-header">
+      <span class="section-line"></span>
+      <h2>Financing Solutions That Adapt to Your Business</h2>
+    </div>
+
+    <!-- Video/Image Section -->
+    <div class="video-container" (click)="onPlayVideo()">
+      <div class="play-overlay">
+        <div class="play-circle">
+          <svg viewBox="0 0 24 24" class="play-icon">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </div>
+      </div>
+      <img 
+        src="assets/img/pages/Industries/Agriculture/portrait.png" 
+        alt="Business owner portrait" 
+        class="main-image"
+      />
+    </div>
+
+    <p class="sub-heading">Fast and flexible financing for every season</p>
+
+    <!-- Responsive Grid -->
+    <div class="services-grid">
+      <a *ngFor="let item of services" [href]="item.link" class="service-card">
+        {{ item.title }}
+        <span class="arrow-icon">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,134 @@
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif; /* Or your preferred font */
+}
+
+.financing-container {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Video Wrapper Styling */
+.video-container {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.main-image {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.video-container:hover .main-image {
+  transform: scale(1.02);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: rgba(0,0,0,0.1);
+}
+
+.play-circle {
+  width: 65px;
+  height: 65px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.play-icon {
+  width: 30px;
+  height: 30px;
+  fill: #007bff;
+  margin-left: 5px; /* Visual center adjustment */
+}
+
+.video-container:hover .play-circle {
+  transform: scale(1.15);
+}
+
+.sub-heading {
+  margin: 40px 0 24px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* --- Responsive Grid System --- */
+.services-grid {
+  display: grid;
+  gap: 16px;
+  /* Default: 1 column for mobile */
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  background-color: #f5f9ff;
+  color: #0066cc;
+  text-decoration: none;
+  padding: 22px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  background-color: #ebf3ff;
+  border-color: #cfe2ff;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  font-size: 1.3rem;
+}
+
+/* Tablet Layout (2 Columns) */
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-heading {
+    font-size: 2.2rem;
+  }
+}
+
+/* Desktop Layout (3 Columns) */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main-heading {
+    font-size: 2.5rem;
+  }
+}
