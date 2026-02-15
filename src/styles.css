@@ -376,10 +376,10 @@ img {
 .nav-item:hover::after {
   content: '';
   position: absolute;
-  bottom: -23px;
+  bottom: -26px;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 4px;
   font-size: 14px;
   background: var(--Dark-Navy, #024);
 }
@@ -395,16 +395,16 @@ img {
   content: '';
   position: absolute;
   bottom: -2.5px;
-  left: 0;
+  right: 0;
   width: 100%;
-  height: 3px;
-  background: #002244;
+  height: 4px;
+  background: var(--Dark-Navy, #024);
 }
 
 .mega-dropdown.full-width {
   position: absolute;
   top: 73px;
-  left: 0;
+  right: 0;
   width: 100%;
   background-size: cover;
   background-color: var(--white);
@@ -412,32 +412,34 @@ img {
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 }
 
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.mega-col a {
+  display: block;
+  padding: 8px 0;
+  color: var(--Black, #000);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.mega-col a:hover{
+  display: block;
+  padding: 8px 0;
+  color: var(--Primary, #0166CC);
+  text-decoration: none;
+  font-size: 14px;
+}
+
 .mega-container {
   max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: 260px 250px 300px;
-}
-
-/* Mega sections */
-.mega-left {
-  color: #fff;
-  padding: 30px;
-}
-
-.mega-center {
-  padding: 30px 20px;
-}
-
-.mega-center a {
-  color: #0b5ed7;
-  padding-left: 50px;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.mega-center a:hover {
-  color: #052b4f;
 }
 
 /* ================= CTA ================= */

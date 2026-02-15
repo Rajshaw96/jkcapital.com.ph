@@ -27,14 +27,18 @@
         <!-- BUSINESS LOANS DROPDOWN -->
         <li class="nav-item has-mega" (mouseenter)="openDropdown('loans')" (mouseleave)="closeDropdown()">
           Business Loans
-          <div class="mega-dropdown dropdown-only" *ngIf="activeDropdown === 'loans'">
-            <div class="mega-center">
-              <a routerLink="products/business-loans">Business Loans</a>
-              <a routerLink="products/working-capital-loan">Working Capital Loan</a>
-              <a routerLink="products/credit-line">Credit Line</a>
-              <a routerLink="products/project-financing">Project Financing</a>
-              <a routerLink="products/receivables-financing">Receivables Financing</a>
-              <a routerLink="products/check-rediscounting">Check Rediscounting</a>
+          <div class="mega-dropdown full-width" *ngIf="activeDropdown === 'loans'">
+            <div class="mega-container industries-grid">
+              <div class="mega-col">
+                <a routerLink="products/business-loans">Business Loans</a>
+                <a routerLink="products/working-capital-loan">Working Capital Loan</a>
+                <a routerLink="products/credit-line">Credit Line</a>
+              </div>
+              <div class="mega-col">
+                <a routerLink="products/project-financing">Project Financing</a>
+                <a routerLink="products/receivables-financing">Receivables Financing</a>
+                <a routerLink="products/check-rediscounting">Check Rediscounting</a>
+              </div>
             </div>
           </div>
         </li>
