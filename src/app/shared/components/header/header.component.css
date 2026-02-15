@@ -1,0 +1,82 @@
+/* DESKTOP INDUSTRIES GRID */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.mega-col a {
+  display: block;
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* MOBILE MENU FIXES */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 1000;
+  padding-top: 60px;
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-menu a, .menu-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: #002d4d;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.submenu {
+  background: #f9f9f9;
+}
+
+.submenu li a {
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.arrow {
+  font-size: 10px;
+  transition: transform 0.3s;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.mobile-cta {
+  background: #0070d2;
+  text-align: center;
+}
+
+.mobile-cta a {
+  color: #fff !important;
+  justify-content: center;
+}

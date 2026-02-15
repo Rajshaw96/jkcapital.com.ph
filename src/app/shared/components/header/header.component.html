@@ -7,8 +7,8 @@
     </div>
 
     <div class="top-links">
-      <a routerLink="/refer-and-earn-main" routerLinkActive="active">Refer & Earn</a>
-      <a routerLink="/affiliate-referrer" routerLinkActive="active">Sign In</a>
+      <a routerLink="refer-and-earn-main" routerLinkActive="active">Refer & Earn</a>
+      <a routerLink="affiliate-referrer" routerLinkActive="active">Sign In</a>
     </div>
   </div>
 </div>
@@ -16,100 +16,104 @@
 <!-- ================= MAIN HEADER ================= -->
 <header class="main-header">
   <div class="container header-inner">
-
-    <!-- LOGO -->
     <div class="logo">
-      <a routerLink="/">
-        <img src="assets/img/jkcapital-logo.png" alt="JK Capital" />
-      </a>
+      <a routerLink=""><img src="assets/img/jkcapital-logo.png" alt="JK Capital" /></a>
     </div>
 
-    <!-- DESKTOP NAV -->
     <nav class="desktop-nav">
       <ul>
+        <li class="nav-item" routerLink="about-us" routerLinkActive="active">About Us</li>
 
-        <!-- ABOUT -->
-        <li class="nav-item" routerLink="/about-us" routerLinkActive="active">
-          About Us
-        </li>
-
-        <!-- BUSINESS LOANS -->
-        <li
-          class="nav-item has-mega"
-          (mouseenter)="openDropdown('loans')"
-          (mouseleave)="closeDropdown()"
-        >
+        <!-- BUSINESS LOANS DROPDOWN -->
+        <li class="nav-item has-mega" (mouseenter)="openDropdown('loans')" (mouseleave)="closeDropdown()">
           Business Loans
-
-          <div class="mega-dropdown full-width" *ngIf="activeDropdown === 'loans'">
-            <div class="mega-container">
-
-              <div class="mega-left">
-                <!-- <h4>Business Loans</h4> -->
-              </div>
-
-              <div class="mega-center">
-                <a routerLink="products/business-loans">Business Loans</a>
-                <a routerLink="products/working-capital-loan">Working Capital Loan</a>
-                <a routerLink="products/credit-line">Credit Line</a>
-                <a routerLink="products/project-financing">Project Financing</a>
-                <a routerLink="products/receivables-financing">Receivables Financing</a>
-                <a routerLink="products/check-rediscounting">Check Rediscounting</a>
-              </div>
-
-              <div class="mega-right"></div>
+          <div class="mega-dropdown dropdown-only" *ngIf="activeDropdown === 'loans'">
+            <div class="mega-center">
+              <a routerLink="products/business-loans">Business Loans</a>
+              <a routerLink="products/working-capital-loan">Working Capital Loan</a>
+              <a routerLink="products/credit-line">Credit Line</a>
+              <a routerLink="products/project-financing">Project Financing</a>
+              <a routerLink="products/receivables-financing">Receivables Financing</a>
+              <a routerLink="products/check-rediscounting">Check Rediscounting</a>
             </div>
           </div>
         </li>
 
-        <li class="nav-item" routerLink="/industries" routerLinkActive="active">
+        <!-- INDUSTRIES MEGA MENU -->
+        <li class="nav-item has-mega" (mouseenter)="openDropdown('industries')" (mouseleave)="closeDropdown()">
           Industries
+          <div class="mega-dropdown full-width" *ngIf="activeDropdown === 'industries'">
+            <div class="mega-container industries-grid">
+              <div class="mega-col">
+                <a routerLink="industries/agriculture">Agriculture</a>
+                <a routerLink="industries/construction-building">Construction & Building</a>
+                <a routerLink="industries/distribution-wholesale-solutions">Distribution & Wholesale Solutions</a>
+              </div>
+              <div class="mega-col">
+                <a routerLink="industries/infrastructure-industrial">Infrastructure & Industrial</a>
+                <a routerLink="industries/manufacturing-production">Manufacturing & Production</a>
+                <a routerLink="industries/pharmaceutical-medical">Pharmaceutical & Medical</a>
+              </div>
+              <div class="mega-col">
+                <a routerLink="industries/renewable-energy">Renewable Energy</a>
+                <a routerLink="industries/professional-services">Professional Services</a>
+                <a routerLink="industries/retail">Retail</a>
+              </div>
+            </div>
+          </div>
         </li>
 
-        <li class="nav-item" routerLink="/knowledge-hub/artical" routerLinkActive="active">
-          Knowledge Hub
-        </li>
-
-        <li class="nav-item" routerLink="/help-center" routerLinkActive="active">
-          Help Center
-        </li>
+        <li class="nav-item" routerLink="knowledge-hub/artical" routerLinkActive="active">Knowledge Hub</li>
+        <li class="nav-item" routerLink="help-center" routerLinkActive="active">Help Center</li>
       </ul>
     </nav>
 
-    <!-- CTA -->
-    <button class="apply-btn" routerLink="/loan-application">
-      Apply Now
-    </button>
-
-    <!-- MOBILE ICON -->
+    <button class="apply-btn" routerLink="loan-application">Apply Now</button>
     <div class="hamburger" (click)="toggleMobileMenu()">☰</div>
   </div>
 </header>
 
 <!-- ================= MOBILE MENU ================= -->
-<div class="mobile-menu" *ngIf="isMobileMenuOpen">
+<div class="mobile-menu" [class.open]="isMobileMenuOpen">
   <ul>
-    <li><a routerLink="/about-us" (click)="toggleMobileMenu()">About Us</a></li>
+    <li><a routerLink="about-us" (click)="toggleMobileMenu()">About Us</a></li>
 
-    <li>
-      Business Loans
-      <ul>
-        <li><a routerLink="/business-loans" (click)="toggleMobileMenu()">Business Loans</a></li>
-        <li><a routerLink="/working-capital-loan" (click)="toggleMobileMenu()">Working Capital Loan</a></li>
-        <li><a routerLink="/credit-line" (click)="toggleMobileMenu()">Credit Line</a></li>
-        <li><a routerLink="/project-financing" (click)="toggleMobileMenu()">Project Financing</a></li>
-        <li><a routerLink="/receivables-financing" (click)="toggleMobileMenu()">Receivables Financing</a></li>
-        <li><a routerLink="/check-rediscounting" (click)="toggleMobileMenu()">Check Rediscounting</a></li>
+    <!-- Mobile Business Loans -->
+    <li class="has-submenu">
+      <div class="menu-label" (click)="toggleMobileSubmenu('loans')">
+        Business Loans <span class="arrow" [class.up]="activeMobileSubmenu === 'loans'">▼</span>
+      </div>
+      <ul class="submenu" *ngIf="activeMobileSubmenu === 'loans'">
+        <li><a routerLink="business-loans" (click)="toggleMobileMenu()">Business Loans</a></li>
+        <li><a routerLink="working-capital-loan" (click)="toggleMobileMenu()">Working Capital Loan</a></li>
+        <li><a routerLink="credit-line" (click)="toggleMobileMenu()">Credit Line</a></li>
+        <li><a routerLink="project-financing" (click)="toggleMobileMenu()">Project Financing</a></li>
+        <li><a routerLink="receivables-financing" (click)="toggleMobileMenu()">Receivables Financing</a></li>
+        <li><a routerLink="check-rediscounting" (click)="toggleMobileMenu()">Check Rediscounting</a></li>
       </ul>
     </li>
 
-    <li><a routerLink="/industries" (click)="toggleMobileMenu()">Industries</a></li>
-    <li><a routerLink="/knowledge-hub" (click)="toggleMobileMenu()">Knowledge Hub</a></li>
-    <li><a routerLink="/help-center" (click)="toggleMobileMenu()">Help Center</a></li>
-
-    <li class="mobile-cta">
-      <a routerLink="/loan-application" (click)="toggleMobileMenu()">Apply Now</a>
+    <!-- Mobile Industries -->
+    <li class="has-submenu">
+      <div class="menu-label" (click)="toggleMobileSubmenu('industries')">
+        Industries <span class="arrow" [class.up]="activeMobileSubmenu === 'industries'">▼</span>
+      </div>
+      <ul class="submenu" *ngIf="activeMobileSubmenu === 'industries'">
+        <li><a routerLink="industries/agriculture" (click)="toggleMobileMenu()">Agriculture</a></li>
+        <li><a routerLink="industries/construction-building" (click)="toggleMobileMenu()">Construction & Building</a></li>
+        <li><a routerLink="industries/distribution-wholesale-solutions" (click)="toggleMobileMenu()">Distribution & Wholesale</a></li>
+        <li><a routerLink="industries/infrastructure-industrial" (click)="toggleMobileMenu()">Infrastructure & Industrial</a></li>
+        <li><a routerLink="industries/manufacturing-production" (click)="toggleMobileMenu()">Manufacturing & Production</a></li>
+        <li><a routerLink="industries/pharmaceutical-medical" (click)="toggleMobileMenu()">Pharmaceutical & Medical</a></li>
+        <li><a routerLink="industries/renewable-energy" (click)="toggleMobileMenu()">Renewable Energy</a></li>
+        <li><a routerLink="industries/professional-services" (click)="toggleMobileMenu()">Professional Services</a></li>
+        <li><a routerLink="industries/retail" (click)="toggleMobileMenu()">Retail</a></li>
+      </ul>
     </li>
+
+    <li><a routerLink="knowledge-hub" (click)="toggleMobileMenu()">Knowledge Hub</a></li>
+    <li><a routerLink="help-center" (click)="toggleMobileMenu()">Help Center</a></li>
+    <li class="mobile-cta"><a routerLink="loan-application" (click)="toggleMobileMenu()">Apply Now</a></li>
   </ul>
 </div>
 

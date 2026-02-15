@@ -384,25 +384,6 @@ img {
   background: var(--Dark-Navy, #024);
 }
 
-/* ================= DROPDOWN ================= */
-.dropdown {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  background: #fff;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  list-style: none;
-  min-width: 200px;
-}
-
-.dropdown li {
-  padding: 10px 16px;
-}
-
-.dropdown a {
-  color: #333;
-  text-decoration: none;
-}
 
 /* ================= MEGA MENU ================= */
 .has-mega {
