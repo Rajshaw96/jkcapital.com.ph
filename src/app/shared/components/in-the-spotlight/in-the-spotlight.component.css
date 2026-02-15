@@ -73,19 +73,21 @@
 
 /* TITLE */
 .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* number of lines */
+  -webkit-box-orient: vertical;
   overflow: hidden;
+
   color: var(--Black, #000);
-  font-feature-settings: 'liga' off, 'clig' off;
-  text-overflow: ellipsis;
   font-family: Manrope;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 21px; /* 131.25% */
+  line-height: 21px;
+  text-decoration: none;
 }
 
 .title:hover {
-  color: var(--Primary, #010469);
+  color: #0166CC;
 }
 
 /* ===== TABLET ===== */
