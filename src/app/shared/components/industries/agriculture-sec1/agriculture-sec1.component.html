@@ -4,38 +4,35 @@
     <!-- HEADER -->
     <div class="section-header">
       <span class="section-line"></span>
-      <h2>Practical financing built around your operations</h2>
-      <p>Agriculture businesses operate around seasons, weather, and fluctuating costs, often beyond your control. We take time to understand your cycle and
-          <br>structure financing that supports both immediate needs and long-term growth on the land you've built.</p>
+      <h2>{{ title }}</h2>
+      <p [innerHTML]="subtitle"></p>
     </div>
 
     <!-- CARDS -->
     <div class="structure-grid">
 
-      <!-- SECURED -->
+      <!-- CARD 1 -->
       <div class="structure-card">
         <img
-          src="assets/img/pages/Industries/Agriculture/Our-Customers.png"
-          alt="Secured Loan"
+          [src]="card1Image"
+          [alt]="card1Title"
           loading="lazy"
         />
 
-        <h3>Our Customers</h3>
-        <p>We work with farming and agro-forestry SMEs managing seasonal cycles, equipment needs, land productivity, and
-          produce management. Our focus is to help clients maintain cash flow and invest confidently.</p>
+        <h3>{{ card1Title }}</h3>
+        <p>{{ card1Description }}</p>
       </div>
 
-      <!-- UNSECURED -->
+      <!-- CARD 2 -->
       <div class="structure-card">
         <img
-          src="assets/img/pages/Industries/Agriculture/Our-Solutions.png"
-          alt="Unsecured Loan"
+          [src]="card2Image"
+          [alt]="card2Title"
           loading="lazy"
         />
 
-        <h3>Our Solutions</h3>
-        <p>We provide flexible financing solutions aligned with planting, production, and expansion timelines, designed to
-          address cash flow gaps, support modernization, and adapt to agricultural cycles.</p>
+        <h3>{{ card2Title }}</h3>
+        <p>{{ card2Description }}</p>
       </div>
 
     </div>
