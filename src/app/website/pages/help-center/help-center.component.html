@@ -44,12 +44,12 @@
 
           <div class="info-row" *ngIf="loc.generalInquiries">
             <span class="label">General Inquiries:</span>
-            <span class="value">{{ loc.generalInquiries }}</span>
+            <span class="value"><a href="mailto:{{ loc.generalInquiries }}">{{ loc.generalInquiries }}</a></span>
           </div>
 
           <div class="info-row" *ngIf="loc.loanUpdatesEscalation" style="padding-bottom: 10px;">
             <span class="label">Loan Updates:</span>
-            <span class="value">{{ loc.loanUpdatesEscalation }}</span>
+            <span class="value"><a href="mailto:{{ loc.loanUpdatesEscalation }}">{{ loc.loanUpdatesEscalation }}</a></span>
           </div>
 
         </div>

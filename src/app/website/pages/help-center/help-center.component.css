@@ -80,6 +80,11 @@
   word-break: break-word;
 }
 
+.info-row .value a {
+  color: #0166CC;
+  text-decoration: none;
+}
+
 
 .location-body.show {
   max-height: 500px;
@@ -88,7 +93,8 @@
 /* MAP */
 .map img {
   top: 0;
-  padding-left: 100px;
+  width: 100%;
+  height: auto;
 }
 
 /* ================= MOBILE ================= */
