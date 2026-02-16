@@ -27,13 +27,20 @@ export class HelpCenterComponent {
       name: 'Malolos, Bulacan:',
       address: 'Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan',
       phone: '(044) 7910241',
-      mobile: ' 0916-3150874 (Globe) | 0998-9632461 (Smart)',
+      mobile: '0916-3150874 (Globe) | 0998-9632461 (Smart)',
       open: false 
     },
     { 
+      name: 'Cabanatuan:',
+      address: 'Purok 5,Burgos,Sto.Domingo,Nueva Ecija',
+      phone: '(044) 7910241',
+      mobile: '916-315-0874 (Globe) | 0998-9632461 (Smart)',
+      open: false 
+    },    
+    { 
       name: 'Cebu:',
       address: 'Room 207, Manros Plaza bldg. General Maxilom Avenue Cebu City',
-      mobile: ' 0919-6571035 (Smart) | 0966-2188379 (Globe)', 
+      mobile: '0919-6571035 (Smart) | 0966-2188379 (Globe)', 
       open: false 
     },
     { 

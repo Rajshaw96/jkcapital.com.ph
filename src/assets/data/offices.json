@@ -12,25 +12,69 @@
     "cities": [
       "Caloocan","Las Piñas","Makati","Malabon","Mandaluyong","Manila",
       "Marikina","Muntinlupa","Navotas","Parañaque","Pasay","Pasig",
-      "Quezon City","San Juan","Taguig","Valenzuela","Antipolo",
-      "Bacoor","Biñan","Batangas City","Cabuyao","Calamba","Cavite City",
-      "Dasmariñas","General Trias","Imus","Lipa","San Pablo","San Pedro",
-      "Santa Rosa","Santo Tomas","Tagaytay","Tayabas","Trece Martires",
-      "Calapan","Tanauan","Legazpi","Naga","Iriga","Masbate City"
+      "Quezon City","San Juan","Taguig","Valenzuela",
+      "Antipolo (Rizal)","Bacoor (Cavite)","Biñan (Laguna)",
+      "Batangas City (Batangas)","Cabuyao (Laguna)","Calamba (Laguna)",
+      "Cavite City (Cavite)","Dasmariñas (Cavite)","General Trias (Cavite)",
+      "Imus (Cavite)","Lipa (Batangas)","San Pablo (Laguna)",
+      "San Pedro (Laguna)","Santa Rosa (Laguna)",
+      "Santo Tomas (Batangas)","Tagaytay (Cavite)",
+      "Tayabas (Quezon)","Trece Martires (Cavite)",
+      "Calapan (Oriental Mindoro)","Tanauan (Batangas)",
+      "Legazpi (Albay)","Naga (Camarines Sur)",
+      "Iriga (Camarines Sur)","Masbate City (Masbate)"
     ]
   },
   {
     "office": "Malolos Branch",
     "baseCity": "Malolos, Bulacan",
     "address": "Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan",
+    "phone": "09985514189",
+    "cities": [
+      "Malolos (Bulacan)","Meycauayan (Bulacan)",
+      "San Jose del Monte (Bulacan)","Balagtas (Bulacan)",
+      "Bocaue (Bulacan)","Guiguinto (Bulacan)",
+      "Calumpit (Bulacan)","Dagupan","Alaminos",
+      "Urdaneta","San Carlos (Pangasinan)",
+      "Tarlac City","Mabalacat",
+      "San Fernando (Pampanga)","Angeles (Pampanga)",
+      "Olongapo (Zambales)","Tuguegarao (Cagayan)",
+      "Santiago (Isabela)","Ilagan (Isabela)",
+      "Laoag (Ilocos Norte)","Batac (Ilocos Norte)",
+      "San Fernando (La Union)","Candon (Ilocos Sur)"
+    ]
+  },
+  {
+    "office": "Cabanatuan Branch",
+    "baseCity": "Cabanatuan, Nueva Ecija",
+    "address": "Purok 5, Burgos, Sto. Domingo, Nueva Ecija",
     "phone": "(044) 7910241",
     "mobile": "0916-3150874 (Globe) | 0998-9632461 (Smart)",
     "cities": [
-      "Malolos","Meycauayan","San Jose del Monte","Balagtas","Bocaue",
-      "Guiguinto","Calumpit","Cabanatuan","Palayan","San Jose","Muñoz",
-      "Gapan","Dagupan","Alaminos","Urdaneta","San Carlos",
-      "Tarlac City","Mabalacat","San Fernando","Angeles","Olongapo",
-      "Tuguegarao","Santiago","Ilagan","Laoag","Batac","Candon"
+      "Cabanatuan / Cabanatuan City",
+      "Palayan","San Jose","Muñoz","Gapan (Nueva Ecija)",
+
+      "Bagong Baluarte","Bagong Sikat","Bagong Silang",
+      "Balaring","Balincarin","Bangad","Banged",
+      "Barrio Bangad","Belen","Cabu","Kawayan",
+      "Magasawang","Magasawang Pulo","Magasawang Sampaloc",
+      "Malacanan / Malacanang",
+      "Mataas Na Kahey / Mataas na Kahoy / Mataas na Pangpang",
+      "Miller","Pagas","Panacsac","Panaksak","Pangatian",
+      "Pipas","Plainfield","Platero / Plateros","Populon",
+      "Pulungkamun","Samon",
+      "San Jose / San Josef / San Joseph",
+      "Sangitan","Sapang Kawayan","Sumacab",
+      "Talabutab Norte / Talabutab Sur",
+      "Talipapa",
+
+      "Aliaga","Bongabon","Cabiao","Carranglan",
+      "Cuyapo","General Mamerto Natividad","Gen. Tinio",
+      "Guimba","Jaen","Laur","Licab","Llanera",
+      "Lupao","Nampicuan","Pantabangan","Peñaranda",
+      "Quezon","Rizal","San Antonio","San Isidro",
+      "San Leonardo","Santa Rosa","Santo Domingo",
+      "Talavera","Talugtug","Zaragoza"
     ]
   },
   {
@@ -39,13 +83,19 @@
     "address": "Room 207, Manros Plaza bldg. General Maxilom Avenue Cebu City",
     "mobile": "0919-6571035 (Smart) | 0966-2188379 (Globe)",
     "cities": [
-      "Cebu City","Lapu-Lapu","Mandaue","Danao","Carcar","Talisay",
-      "Toledo","Bogo","Bacolod","Bago","Cadiz","Escalante",
-      "Himamaylan","Kabankalan","La Carlota","Silay","Sagay",
-      "Bayawan","Bais","Canlaon","Dumaguete","Guihulngan",
-      "Tanjay","Passi","Victorias","Sipalay","Ormoc",
-      "Baybay","Tacloban","Borongan","Catbalogan","Calbayog",
-      "Maasin","Tagbilaran","Puerto Princesa"
+      "Cebu City","Lapu-Lapu","Mandaue","Danao","Carcar",
+      "Talisay (Cebu)","Toledo","Bogo","Naga (Cebu)",
+
+      "Bacolod","Bago","Cadiz","Escalante",
+      "Himamaylan","Kabankalan","La Carlota","Silay",
+      "Sagay","San Carlos (Negros Occidental)",
+      "Talisay (Negros Occidental)","Bayawan","Bais",
+      "Canlaon","Dumaguete","Guihulngan","Tanjay",
+      "Passi","Victorias","Sipalay",
+
+      "Ormoc","Baybay","Tacloban","Borongan",
+      "Catbalogan","Calbayog","Maasin","Tagbilaran",
+      "Puerto Princesa"
     ]
   },
   {
@@ -56,11 +106,13 @@
     "mobile": "09352020568",
     "cities": [
       "Davao City","Digos","Panabo","Tagum","Mati","Samal",
-      "Cotabato City","Kidapawan","Koronadal","General Santos",
-      "Tacurong","Surigao City","Bislig","Bayugan","Butuan",
-      "Cabadbaran","Iligan","Marawi","Dipolog","Dapitan",
-      "Ozamiz","Oroquieta","Zamboanga City","Pagadian",
-      "Valencia","Lamitan","Isabela City","Malaybalay"
+      "Cotabato City","Kidapawan","Koronadal",
+      "General Santos","Tacurong","Surigao City",
+      "Bislig","Bayugan","Butuan","Cabadbaran",
+      "Iligan","Marawi","Dipolog","Dapitan",
+      "Ozamiz","Oroquieta","Zamboanga City",
+      "Pagadian","Valencia","Lamitan",
+      "Isabela City","Malaybalay","Iligan"
     ]
   }
 ]
