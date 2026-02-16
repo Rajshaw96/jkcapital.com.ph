@@ -43,10 +43,6 @@
 
       <!-- Found State -->
       <div *ngIf="selectedOffice && !isLoading" class="office-details animate-in">
-        <!-- <div class="badge-success">
-          <svg class="w-2 h-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-          Active Branch Found
-        </div> -->
         
         <h2>{{ selectedOffice.office || 'Regional Branch' }}</h2>
 
@@ -73,15 +69,14 @@
       <!-- Not Found / Empty State -->
       <div class="state-container" *ngIf="!selectedOffice && !isLoading">
         <div class="empty-icon" [class.error]="hasSearched">
-          <svg *ngIf="!hasSearched" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <!-- <svg *ngIf="!hasSearched" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
           </svg>
           <svg *ngIf="hasSearched" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
+          </svg> -->
         </div>
-        <h3>{{ hasSearched ? 'No Specific Branch Found' : 'Ready to help' }}</h3>
-        <p>{{ hasSearched ? 'We serve customers nationwide — your city is supported by our central office.' : 'Enter your city to find your local servicing branch details.' }}</p>
+        <p>{{ hasSearched ? 'We serve customers nationwide — your city is supported by our central office.' : '' }}</p>
       </div>
     </div>
   </div>
