@@ -14,6 +14,7 @@ export class LandingLoanApplicationFormComponent implements OnInit, OnDestroy {
   loanForm!: FormGroup;
   submitted = false;
   loading = false;
+  showFullForm = false;
 
   private draftKey = 'loanApplicationDraft';
   private formSub!: Subscription;
@@ -71,13 +72,7 @@ export class LandingLoanApplicationFormComponent implements OnInit, OnDestroy {
       /* LOAN DETAILS */
       loanProduct: ['', Validators.required],
       loanPurpose: ['', Validators.required],
-      loanAmount: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern('^[0-9,]+$')
-        ]
-      ],
+      loanAmount: ['', [Validators.required, Validators.pattern('^[0-9,.]+$')]],
       loanTerm: ['', Validators.required],
       annualIncome: ['', Validators.required],
 
