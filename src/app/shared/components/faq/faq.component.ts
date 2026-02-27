@@ -276,7 +276,7 @@ export class FaqComponent {
     'Interest Rates & Fees': [
       {
         question: 'What is the interest rate of JK Capital loans?',
-        answer: 'nterest rates range from 2% to 3.5% added on monthly. New customers start with 3.5%. The rate is determined by the borrower’s credit profile, financial standing, credit history, availability of collateral, and amount of the loan.'
+        answer: 'Interest rates range from 2% to 3.5% added on monthly. New customers start with 3.5%. The rate is determined by the borrower’s credit profile, financial standing, credit history, availability of collateral, and amount of the loan.'
       },
       {
         question: 'How is the interest rate computed?',
