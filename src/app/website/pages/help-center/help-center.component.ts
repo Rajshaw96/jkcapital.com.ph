@@ -33,8 +33,7 @@ export class HelpCenterComponent {
     { 
       name: 'Cabanatuan:',
       address: 'Purok 5,Burgos,Sto.Domingo,Nueva Ecija',
-      phone: '(044) 7910241',
-      mobile: '916-315-0874 (Globe) | 0998-9632461 (Smart)',
+      phone: '09985514189',
       open: false 
     },    
     { 
