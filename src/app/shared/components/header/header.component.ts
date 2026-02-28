@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,12 +16,20 @@ export class HeaderComponent {
   activeMobileSubmenu: string | null = null;
   private dropdownTimer: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.http.get<any[]>('assets/data/offices.json').subscribe((data) => {
       this.offices = data;
     });
+  }
+
+  goToSearch(keyword: string) {
+    if (keyword.trim()) {
+      this.router.navigate(['/search'], {
+        queryParams: { q: keyword }
+      });
+    }
   }
 
   onSearchChange() {

@@ -1,0 +1,19 @@
+<div class="search-container">
+
+  <h2>Search Results for "{{ keyword }}"</h2>
+
+  <div *ngIf="results.length === 0">
+    No results found.
+  </div>
+
+  <div *ngFor="let result of results" class="result">
+    <h3>
+      <a [routerLink]="result.url">
+        {{ result.title }}
+      </a>
+    </h3>
+    <p>{{ result.snippet }}</p>
+    <small>{{ result.url }}</small>
+  </div>
+
+</div>

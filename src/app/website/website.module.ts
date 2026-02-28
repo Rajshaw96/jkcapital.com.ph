@@ -40,6 +40,8 @@ import { RenewableEnergyComponent } from './pages/industries/renewable-energy/re
 import { ProfessionalServicesComponent } from './pages/industries/professional-services/professional-services.component';
 import { RetailComponent } from './pages/industries/retail/retail.component';
 import { KnowledgeHubRoutingModule } from '../knowledge-hub/knowledge-hub-routing.module';
+import { SearchResultComponent } from './pages/search-result/search-result.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -76,10 +78,12 @@ import { KnowledgeHubRoutingModule } from '../knowledge-hub/knowledge-hub-routin
     RenewableEnergyComponent,
     ProfessionalServicesComponent,
     RetailComponent,
+    SearchResultComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
+    RouterModule,
     ReactiveFormsModule,
     HttpClientModule,
     WebsiteRoutingModule,

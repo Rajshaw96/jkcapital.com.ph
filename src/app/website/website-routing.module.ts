@@ -33,6 +33,7 @@ import { PharmaceuticalMedicalComponent } from './pages/industries/pharmaceutica
 import { ManufacturingProductionComponent } from './pages/industries/manufacturing-production/manufacturing-production.component';
 import { InfrastructureIndustrialComponent } from './pages/industries/infrastructure-industrial/infrastructure-industrial.component';
 import { DistributionWholesaleSolutionsComponent } from './pages/industries/distribution-wholesale-solutions/distribution-wholesale-solutions.component';
+import { SearchResultComponent } from './pages/search-result/search-result.component';
 
 
 const routes: Routes = [
@@ -73,6 +74,7 @@ const routes: Routes = [
 
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'truth-in-lending-act', component: TruthInLendingActComponent },
+      { path: 'search', component: SearchResultComponent },
 
 
 
