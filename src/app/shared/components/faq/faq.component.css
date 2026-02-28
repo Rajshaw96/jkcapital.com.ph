@@ -275,12 +275,10 @@
 
 .faq-answer li {
   line-height: 1.5;
-  margin: 3px 0;
 }
 
 /* Apply hanging indent ONLY to dash lines */
 .faq-answer li.dash-line {
   padding-left: 18px;
   text-indent: -11px;
-  margin-top: 8px;
 }

@@ -19,6 +19,7 @@
           <input
             id="citySearch"
             type="text"
+            autocomplete="off"
             placeholder="Enter city name (e.g. Tanauan)"
             [(ngModel)]="searchCity"
             (input)="onSearchChange()"
@@ -60,16 +61,16 @@
           </div>
           <div class="detail-group">
             <label>Email Support</label>
-            <p>{{ selectedOffice.emails?.general }}</p>
-            <p>{{ selectedOffice.emails?.loans }}</p>
+            <p><a style="text-decoration: none; color: #0166CC;" href="mailto:{{ selectedOffice.emails?.general }}">{{ selectedOffice.emails?.general }}</a></p>
+            <p><a style="text-decoration: none; color: #0166CC;" href="mailto:{{ selectedOffice.emails?.loans }}">{{ selectedOffice.emails?.loans }}</a></p>
           </div>
         </div>
       </div>
 
       <!-- Not Found / Empty State -->
-      <div class="state-container" *ngIf="!selectedOffice && !isLoading">
-        <p class="popupstyle">{{ hasSearched ? 'Opsl Thai didn 1 work. Piesss ander youe usact eily-well firsd th neseust
-          efios that wil service your naeds. We sarve SMEa natianwide' : '' }}</p>
+      <div class="state-container" *ngIf="!selectedOffice && hasSearched && !isLoading">
+        <p class="popupstyle">{{ hasSearched ? 'Opsl Thai didn 1 work. Piesss ander youe usact eily-well firsd th neseustios that wil service your naeds. We sarve SMEa natianwide' : '' }}
+        </p>
       </div>
     </div>
   </div>
