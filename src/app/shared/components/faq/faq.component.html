@@ -90,7 +90,7 @@
       </div>
 
       <!-- NO RESULT -->
-      <p *ngIf="filteredFaqs.length === 0" class="no-result">
+      <p *ngIf="searchText && filteredFaqs.length === 0" class="no-result">
         No results found.
       </p>
 

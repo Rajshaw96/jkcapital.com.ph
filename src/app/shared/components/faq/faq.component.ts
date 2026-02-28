@@ -374,25 +374,41 @@ export class FaqComponent {
 
   /** SEARCH FILTER (handles string + list) */
   get filteredFaqs(): FaqItem[] {
-    const list = this.faqs[this.activeTab] || [];
 
-    // SEARCH MODE → show all matching
+    // 🔍 SEARCH MODE
     if (this.searchText.trim()) {
+
       const keyword = this.searchText.toLowerCase();
 
-      return list.filter(faq => {
-        const answerText = Array.isArray(faq.answer)
-          ? faq.answer.join(' ')
-          : faq.answer;
+      for (const tab of this.tabs) {
 
-        return (
-          faq.question.toLowerCase().includes(keyword) ||
-          answerText.toLowerCase().includes(keyword)
-        );
-      });
+        const list = this.faqs[tab] || [];
+
+        const matches = list.filter(faq => {
+          const answerText = Array.isArray(faq.answer)
+            ? faq.answer.join(' ')
+            : faq.answer;
+
+          return (
+            faq.question.toLowerCase().includes(keyword) ||
+            answerText.toLowerCase().includes(keyword)
+          );
+        });
+
+        // ✅ If match found → switch tab automatically
+        if (matches.length > 0) {
+          this.activeTab = tab;
+          this.showAll = true;
+          return matches;
+        }
+      }
+
+      // ❌ If no match found
+      return [];
     }
 
-    // NORMAL MODE → limit to 3 unless "More" clicked
+    // 📌 NORMAL MODE
+    const list = this.faqs[this.activeTab] || [];
     return this.showAll ? list : list.slice(0, this.visibleCount);
   }
 
