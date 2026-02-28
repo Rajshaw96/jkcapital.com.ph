@@ -76,9 +76,17 @@
         <div class="faq-answer" [class.show]="item.open">
 
           <ul *ngIf="isArray(item.answer)">
-            <li *ngFor="let ans of item.answer">
-              <strong *ngIf="ans.endsWith(':')">{{ ans }}</strong>
-              <span *ngIf="!ans.endsWith(':')">{{ ans }}</span>
+            <li *ngFor="let ans of item.answer"
+                [ngClass]="{
+                  'dash-line': ans.trim().startsWith('-'),
+                  'normal-line': !ans.trim().startsWith('-')
+                }">
+              <strong *ngIf="ans.endsWith(':')">
+                {{ ans }}
+              </strong>
+              <span *ngIf="!ans.endsWith(':')">
+                {{ ans }}
+              </span>
             </li>
           </ul>
 
