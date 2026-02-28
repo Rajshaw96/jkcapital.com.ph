@@ -22,22 +22,20 @@
 /* Close */
 .close-btn {
   position: absolute;
-  top: 20px;
   right: 20px;
-  border: 1px solid #999;
+  border: 0px solid #999;
   background: #fff;
-  width: 26px;
   cursor: pointer;
 }
 
 .close-btn:hover {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 20px; 
   border: 1px solid #0166CC;
   background: #0166CC;
   color: #fff;
-  width: 26px;
+  height: 24px;
   cursor: pointer;
 }
 

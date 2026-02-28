@@ -21,7 +21,7 @@
 }
 
 .result-panel {
-  background-image: url('/assets/img/teardropmap.png');
+  background-image: url('/assets/img/img1.jpg');
   background-position: center center;   /* Center image */
   background-repeat: no-repeat;         /* Prevent repeat */
   background-size: cover;               /* Fill container properly */
@@ -151,9 +151,15 @@ label {
 
 .state-container p {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color:black;
   max-width: 280px;
   margin: 0 auto;
+  background-color:white;
+  font-size: 16px;
+  width: 100%;
+  border-radius:5px;
+  padding: 20px;
+
 }
 
 /* Animations */
