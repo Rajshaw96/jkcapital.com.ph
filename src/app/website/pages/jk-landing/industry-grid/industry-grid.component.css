@@ -1,7 +1,6 @@
 .industry-container {
-  background-color: #ecf3ff;
-  padding: 80px 50px;
-  min-height: 100vh;
+  background: rgba(208, 241, 240, 0);
+  padding: 30px 50px 60px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +15,7 @@
 
 /* Card Styling */
 .card {
-  background-color: #F6FDFD;
+  background-color: #f6fdfd;
   border-radius: 4px;
   padding: 15px 10px;
   display: flex;

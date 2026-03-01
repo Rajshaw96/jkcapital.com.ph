@@ -1,6 +1,7 @@
 .page-wrapper {
   position: relative;
-  background: #ffffff;
+  background: rgba(208, 241, 240, 0);
+  overflow: hidden;
 }
 
 .page-wrapper::before {
@@ -10,8 +11,38 @@
   left: 0;
   width: 100%;
   height: 50%;
-  background: url('/assets/img/landing.jpg') center/cover no-repeat;
+
+  background:
+    linear-gradient(
+      rgba(3, 34, 88, 0.88),
+      rgba(3, 34, 88, 0.88)
+    ),
+    url('src/assets/img/landing.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   z-index: 0;
+}
+
+.loan-simulator-header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.loan-simulator-header h2 {
+  color: #fff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.loan-simulator-header p {
+  margin: 0px;
+  color: #fff;    
 }
 
 /* Header Cards */
@@ -67,7 +98,7 @@
   box-shadow: 0 4px 35.8px 11px rgba(191, 255, 252, 0.30);
   position: relative;
   z-index: 10;
-  margin-top: 400px;
+  margin-top: 230px;
 }
 
 .main-title {
