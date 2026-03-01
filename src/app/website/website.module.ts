@@ -27,7 +27,7 @@ import { IndustriesComponent } from './pages/industries/industries/industries.co
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { OfflineComponent } from './pages/offline/offline.component';
 import { LoanApplicationComponent } from './pages/loan-application/loan-application.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JkCapitalLandingPageComponent } from './pages/jk-capital-landing-page/jk-capital-landing-page.component';
 import { AgricultureComponent } from './pages/industries/agriculture/agriculture.component';
@@ -45,6 +45,7 @@ import { RouterModule } from '@angular/router';
 import { JkLandingComponent } from './pages/jk-landing/jk-landing.component';
 import { IndustryGridComponent } from './pages/jk-landing/industry-grid/industry-grid.component';
 import { JkLandingLoanSimulatorComponent } from './pages/jk-landing/jk-landing-loan-simulator/jk-landing-loan-simulator.component';
+import { JkLandingLoanApplicationComponent } from './pages/jk-landing/jk-landing-loan-application/jk-landing-loan-application.component';
 
 @NgModule({
   declarations: [
@@ -85,11 +86,14 @@ import { JkLandingLoanSimulatorComponent } from './pages/jk-landing/jk-landing-l
     JkLandingComponent,
     IndustryGridComponent,
     JkLandingLoanSimulatorComponent,
+    JkLandingLoanApplicationComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     WebsiteRoutingModule,

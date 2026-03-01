@@ -39,7 +39,6 @@ import { OfficeLocationPopupComponent } from './components/office-location-popup
 import { OfficeLocatorComponent } from './components/office-locator/office-locator.component';
 import { AgricultureSec1Component } from './components/industries/agriculture-sec1/agriculture-sec1.component';
 import { AgricultureSec2Component } from './components/industries/agriculture-sec2/agriculture-sec2.component';
-import { LandingLoanApplicationFormComponent } from './components/landing-page/landing-loan-application-form/landing-loan-application-form.component';
 
 const SHARED_COMPONENTS = [
   FaqComponent,
@@ -77,7 +76,6 @@ const SHARED_COMPONENTS = [
   OfficeLocatorComponent,
   AgricultureSec1Component, 
   AgricultureSec2Component,
-  LandingLoanApplicationFormComponent
 ];
 
 @NgModule({
