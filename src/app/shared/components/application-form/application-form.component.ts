@@ -15,8 +15,8 @@ export class ApplicationFormComponent implements OnInit {
   loading = false;
   resumeFile: File | null = null;
 
-  // 🔥 CHANGE THIS TO YOUR REAL API
   private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+  private storageKey = 'loanConsultantApplication';
 
   constructor(
     private fb: FormBuilder,
@@ -25,30 +25,27 @@ export class ApplicationFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildForm();
+    this.loadSavedData();
+    this.autoSaveToLocalStorage();
   }
 
   /* ================= FORM BUILD ================= */
   private buildForm(): void {
     this.applicationForm = this.fb.group({
 
-      /* BASIC DETAILS */
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
       age: ['', [Validators.required, Validators.min(18), Validators.max(65)]],
       gender: ['', Validators.required],
 
-      /* EXPERIENCE */
       experience: this.fb.array([this.createExperienceGroup()]),
-
-      /* EDUCATION */
       education: this.fb.array([this.createEducationGroup()]),
 
-      /* RESUME */
       resume: ['', Validators.required]
     });
   }
 
-  /* ================= FORM GROUPS ================= */
+  /* ================= GROUP BUILDERS ================= */
   private createExperienceGroup(): FormGroup {
     return this.fb.group({
       company: ['', Validators.required],
@@ -95,12 +92,12 @@ export class ApplicationFormComponent implements OnInit {
     ];
 
     if (!allowedTypes.includes(file.type)) {
-      Swal.fire('Invalid File', 'Only PDF or DOCX files are allowed.', 'error');
+      Swal.fire('Invalid File', 'Only PDF or DOCX allowed.', 'error');
       return;
     }
 
     if (file.size > 5 * 1024 * 1024) {
-      Swal.fire('File Too Large', 'Maximum file size is 5MB.', 'error');
+      Swal.fire('File Too Large', 'Maximum 5MB allowed.', 'error');
       return;
     }
 
@@ -108,19 +105,39 @@ export class ApplicationFormComponent implements OnInit {
     this.applicationForm.get('resume')?.setValue(file.name);
   }
 
-  /* ================= VALIDATION HELPER ================= */
+  /* ================= VALIDATION ================= */
   isInvalid(controlName: string): boolean {
     const control = this.applicationForm.get(controlName);
     return !!(control && control.invalid && (control.touched || this.submitted));
   }
 
+  /* ================= LOCAL STORAGE ================= */
+
+  private autoSaveToLocalStorage(): void {
+    this.applicationForm.valueChanges.subscribe(value => {
+      const dataToSave = {
+        ...value,
+        resumeFileName: this.resumeFile?.name || null
+      };
+      localStorage.setItem(this.storageKey, JSON.stringify(dataToSave));
+    });
+  }
+
+  private loadSavedData(): void {
+    const saved = localStorage.getItem(this.storageKey);
+    if (!saved) return;
+
+    const parsed = JSON.parse(saved);
+    this.applicationForm.patchValue(parsed);
+  }
+
   /* ================= SUBMIT ================= */
   submit(): void {
+
     this.submitted = true;
 
     if (this.applicationForm.invalid || !this.resumeFile) {
       this.applicationForm.markAllAsTouched();
-
       Swal.fire({
         icon: 'error',
         title: 'Incomplete Application',
@@ -137,7 +154,6 @@ export class ApplicationFormComponent implements OnInit {
       didOpen: () => Swal.showLoading()
     });
 
-    // ✅ Use FormData for file upload
     const formData = new FormData();
 
     formData.append('firstName', this.applicationForm.value.firstName);
@@ -148,18 +164,24 @@ export class ApplicationFormComponent implements OnInit {
     formData.append('education', JSON.stringify(this.applicationForm.value.education));
     formData.append('resume', this.resumeFile);
 
+    /* ✅ API CALL + LOCAL STORAGE SAVE */
     this.http.post(this.apiUrl, formData).subscribe({
-      next: () => this.handleSuccess(),
+      next: () => {
+        localStorage.setItem(this.storageKey, JSON.stringify(this.applicationForm.value));
+        this.handleSuccess();
+      },
       error: () => this.handleError()
     });
   }
 
-  /* ================= SWEET ALERT HANDLERS ================= */
+  /* ================= SUCCESS ================= */
   private handleSuccess(): void {
     this.loading = false;
+    localStorage.removeItem(this.storageKey);
+
     this.applicationForm.reset();
-    this.submitted = false;
     this.resumeFile = null;
+    this.submitted = false;
 
     Swal.fire({
       icon: 'success',
@@ -170,6 +192,7 @@ export class ApplicationFormComponent implements OnInit {
     });
   }
 
+  /* ================= ERROR ================= */
   private handleError(): void {
     this.loading = false;
 

@@ -30,7 +30,7 @@ export class SupportSmeComponent {
       link: '/starter-referrer'
     },
     {
-      icon: 'assets/img/icons/affiliate-referrer.png',
+      icon: 'assets/img/icons/affiliate-referrer-ing.jpg',
       title: 'Affiliate Referrer',
       percent: '1%++',
       points: [
