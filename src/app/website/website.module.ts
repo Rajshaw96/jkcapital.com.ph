@@ -42,6 +42,9 @@ import { RetailComponent } from './pages/industries/retail/retail.component';
 import { KnowledgeHubRoutingModule } from '../knowledge-hub/knowledge-hub-routing.module';
 import { SearchResultComponent } from './pages/search-result/search-result.component';
 import { RouterModule } from '@angular/router';
+import { JkLandingComponent } from './pages/jk-landing/jk-landing.component';
+import { IndustryGridComponent } from './pages/jk-landing/industry-grid/industry-grid.component';
+import { JkLandingLoanSimulatorComponent } from './pages/jk-landing/jk-landing-loan-simulator/jk-landing-loan-simulator.component';
 
 @NgModule({
   declarations: [
@@ -79,6 +82,9 @@ import { RouterModule } from '@angular/router';
     ProfessionalServicesComponent,
     RetailComponent,
     SearchResultComponent,
+    JkLandingComponent,
+    IndustryGridComponent,
+    JkLandingLoanSimulatorComponent,
   ],
   imports: [
     CommonModule,

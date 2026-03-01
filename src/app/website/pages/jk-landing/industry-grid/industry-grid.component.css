@@ -1,0 +1,102 @@
+.industry-container {
+  background-color: #ecf3ff;
+  padding: 80px 50px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 5 Column Grid Layout */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #F6FDFD;
+  border-radius: 4px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Styling */
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Typography */
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 10px 0;
+  min-height: 30px;
+}
+
+/* Link Styling */
+.learn-more {
+  color: #0166CC;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.arrow {
+  font-size: 1.2rem;
+  line-height: 0;
+}
+
+/* Responsive Breakpoints */
+
+/* Desktop to Tablet */
+@media (max-width: 1200px) {
+  .industry-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet to Mobile */
+@media (max-width: 768px) {
+  .industry-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industry-container {
+    padding: 40px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}

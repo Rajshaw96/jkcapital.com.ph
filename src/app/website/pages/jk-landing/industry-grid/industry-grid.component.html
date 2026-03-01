@@ -1,0 +1,19 @@
+<div class="industry-container">
+  <div class="industry-grid">
+    <div class="card" *ngFor="let item of industries">
+      <!-- Icon from Assets Folder -->
+      <div class="icon-wrapper">
+        <img [src]="getIconPath(item.icon)" [alt]="item.title" class="industry-icon" />
+      </div>
+      
+      <!-- Content -->
+      <h3 class="title">{{ item.title }}</h3>
+      <p class="description">{{ item.desc }}</p>
+      
+      <!-- Link -->
+      <a href="#" class="learn-more">
+        Learn More <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>

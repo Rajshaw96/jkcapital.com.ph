@@ -1,0 +1,154 @@
+<div class="page-wrapper section">
+  <div class="section-header">
+      <h2 style="color: #fff;">Find SME financing that fits - faster</h2>
+      <p>
+        Get clarity on options, run the numbers, and start your application<br>
+        all in one place.
+      </p>
+  </div>
+  <!-- Main Simulator Section -->
+  <div class="simulator-card">
+    <h1 class="main-title">Simulate your loan terms</h1>
+
+    <div class="simulator-grid">
+      <!-- Left: Controls -->
+      <div class="controls-col">
+        <h2 class="section-title">LOAN CONTROLS</h2>
+
+        <!-- Loan Amount -->
+        <div class="input-row">
+          <div class="slider-box">
+            <label>Loan Amount (₱)</label>
+            <div class="slider-wrapper" (mousedown)="startDrag($event, 'loan')" (touchstart)="startDrag($event, 'loan')">
+              <div class="custom-slider">
+                <div class="track"></div>
+                <div class="progress" [style.width.%]="loanPercent"></div>
+                <div class="thumb" [style.left.%]="loanPercent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="display-value">₱ {{ loanAmount | number }}</div>
+        </div>
+
+        <!-- Terms -->
+        <div class="input-row">
+          <div class="slider-box">
+            <label>Terms (Months)</label>
+            <div class="slider-wrapper" (mousedown)="startDrag($event, 'months')" (touchstart)="startDrag($event, 'months')">
+              <div class="custom-slider">
+                <div class="track"></div>
+                <div class="progress" [style.width.%]="monthPercent"></div>
+                <div class="thumb" [style.left.%]="monthPercent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="display-value">{{ months }} Months</div>
+        </div>
+
+        <!-- Interest -->
+        <div class="input-row">
+          <div class="slider-box">
+            <label>Monthly Interest Rate <span class="tc-apply">(T&C Apply <span>*</span>)</span></label>
+            <div class="slider-wrapper" (mousedown)="startDrag($event, 'interest')" (touchstart)="startDrag($event, 'interest')">
+              <div class="custom-slider">
+                <div class="track"></div>
+                <div class="progress" [style.width.%]="interestPercent"></div>
+                <div class="thumb" [style.left.%]="interestPercent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="display-value">{{ interestRate | number:'1.2-2' }}%</div>
+        </div>
+
+        <!-- Processing Fee -->
+        <div class="input-row">
+          <div class="slider-box">
+            <label>Processing Fee</label>
+            <div class="slider-wrapper"
+                (mousedown)="startDrag($event, 'processing')"
+                (touchstart)="startDrag($event, 'processing')">
+              <div class="custom-slider">
+                <div class="track"></div>
+                <div class="progress" [style.width.%]="processingPercent"></div>
+                <div class="thumb" [style.left.%]="processingPercent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="display-value">
+            {{ processingFee | number:'1.2-2' }}%
+          </div>
+        </div>
+
+        <!-- Frequency -->
+        <div class="frequency-wrap">
+          <label>Payment Frequency</label>
+          <div class="toggle-container">
+            <button [class.active]="paymentFrequency === 'monthly'" (click)="setPaymentFrequency('monthly')">
+               <span class="check" *ngIf="paymentFrequency === 'monthly'">✓</span> Monthly
+            </button>
+            <button [class.active]="paymentFrequency === 'semi-monthly'" (click)="setPaymentFrequency('semi-monthly')">
+               <span class="check" *ngIf="paymentFrequency === 'semi-monthly'">✓</span> Semi-Monthly
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-stats">
+          <div class="stat">
+            <label>Checks Per Month</label>
+            <div class="stat-val">{{ checksPerMonth }}</div>
+          </div>
+          <div class="stat">
+            <label>Processing Fee</label>
+            <div class="stat-val">{{ processingFee | number:'1.1-1' }}%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Results -->
+      <div class="results-card">
+        <div class="results-header">
+          <h2 class="section-title">RESULTS</h2>
+          <div class="info-tag">
+            <span class="info-icon">i</span> This is a simulation, not a loan offer.
+          </div>
+        </div>
+
+        <div class="est-loan-section">
+          <label>Estimated Loan</label>
+          <div class="big-value">
+            ₱ {{ loanAmount | number:'1.2-2' }} <span class="green-check">✓</span>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="results-grid">
+          <div class="res-item">
+            <label>Months</label>
+            <p>{{ months }} Months</p>
+          </div>
+          <div class="res-item">
+            <label>Interest Rate (Per Month)</label>
+            <p>{{ interestRate | number:'1.2-2' }}%</p>
+          </div>
+          <div class="res-item">
+            <label>Total Interest</label>
+            <p>₱ {{ totalInterest | number:'1.2-2' }}</p>
+          </div>
+          <div class="res-item">
+            <label>Per Month (Monthly Amortisation)</label>
+            <p>₱ {{ monthlyAmortisation | number:'1.2-2' }}</p>
+          </div>
+          <div class="res-item">
+            <label>Processing Fee ({{processingFee}}%)</label>
+            <p>₱ {{ processingFeeAmount | number:'1.2-2' }}</p>
+          </div>
+          <div class="res-item">
+            <label>Total Proceeds You Will Receive</label>
+            <p>₱ {{ netProceeds | number:'1.2-2' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1544_5296" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="60" height="60">
+<rect width="60" height="60" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_1544_5296)">
+<path d="M10 47.4999H17.5V27.4999H42.5V47.4999H50V20.8749L30 12.8749L10 20.8749V47.4999ZM7.5 49.9999V19.1824L30 10.1924L52.5 19.1824V49.9999H40V29.9999H20V49.9999H7.5ZM23.8944 49.9999V46.1536H27.7406V49.9999H23.8944ZM28.0769 42.4999V38.6536H31.9231V42.4999H28.0769ZM32.2594 49.9999V46.1536H36.1056V49.9999H32.2594Z" fill="#0166CC"/>
+</g>
+</svg>
