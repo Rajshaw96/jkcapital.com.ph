@@ -1,13 +1,9 @@
 .recruitment-section {
   background: #f7fbff;
-  padding: 80px 0;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
-.container {
-  width: 100%;
-  margin: auto;
+.section-line{
+  margin: 0px;
 }
 
 .recruit-grid {
@@ -26,12 +22,9 @@
   line-height: 1.7;
 }
 
-.recruit-content ul {
-  padding-left: 18px;
-}
 
 .recruit-content li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .video-card {
