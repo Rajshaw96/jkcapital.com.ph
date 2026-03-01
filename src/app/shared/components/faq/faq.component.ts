@@ -12,9 +12,10 @@ interface FaqItem {
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent {
+  searchText: string = '';
+  submittedSearchText: string = '';
   visibleCount = 3;
   showAll = false;
-  searchText = '';
   activeTab = 'General Information';
 
   tabs: string[] = [
@@ -372,13 +373,36 @@ export class FaqComponent {
     ]
   };
 
+
+  onSearch(): void {
+    const value = this.searchText.trim();
+    // 🔄 If search is empty → reset everything
+    if (!value) {
+      this.resetToDefault();
+      return;
+    }
+    this.submittedSearchText = value;
+  }
+
+  resetToDefault(): void {
+    this.submittedSearchText = '';
+    this.searchText = '';
+    this.activeTab = 'General Information'; // default tab
+    this.showAll = false;
+
+    // close all accordions
+    Object.keys(this.faqs).forEach(tab => {
+      this.faqs[tab]?.forEach(faq => faq.open = false);
+    });
+  }
+
   /** SEARCH FILTER (handles string + list) */
   get filteredFaqs(): FaqItem[] {
 
     // 🔍 SEARCH MODE
-    if (this.searchText.trim()) {
+    if (this.submittedSearchText) {
 
-      const keyword = this.searchText.toLowerCase();
+      const keyword = this.submittedSearchText.toLowerCase();
 
       for (const tab of this.tabs) {
 
@@ -395,7 +419,6 @@ export class FaqComponent {
           );
         });
 
-        // ✅ If match found → switch tab automatically
         if (matches.length > 0) {
           this.activeTab = tab;
           this.showAll = true;
@@ -403,7 +426,6 @@ export class FaqComponent {
         }
       }
 
-      // ❌ If no match found
       return [];
     }
 
@@ -426,13 +448,14 @@ export class FaqComponent {
   setActiveTab(tab: string): void {
     this.activeTab = tab;
     this.searchText = '';
+    this.submittedSearchText = ''; // important
     this.showAll = false;
     this.faqs[tab]?.forEach(faq => (faq.open = false));
   }
 
   get hasMoreFaqs(): boolean {
     return (
-      !this.searchText &&
+      !this.submittedSearchText &&
       !!this.faqs[this.activeTab] &&
       this.faqs[this.activeTab].length > this.visibleCount
     );
