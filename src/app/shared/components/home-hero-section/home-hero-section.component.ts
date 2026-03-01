@@ -6,7 +6,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   styleUrls: ['./home-hero-section.component.css']
 })
 export class HomeHeroSectionComponent implements OnInit, OnDestroy {
-
+  showConsultationPopup = false;
   activeIndex = 0;
   intervalId!: any;
 
@@ -61,5 +61,9 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
     this.activeIndex = index;
     clearInterval(this.intervalId);
     this.startAutoSlide();
+  }
+
+  openConsultationPopup() {
+    this.showConsultationPopup = true;
   }
 }

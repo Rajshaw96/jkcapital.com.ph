@@ -22,11 +22,9 @@
           </div>
         </div>
 
-        <button
-          *ngIf="slide.btn?.trim()"
-          class="hero-btn"
-          [routerLink]="slide.btnLink"
-        >
+        <button 
+          *ngIf="slide.btn?.trim()" (click)="openConsultationPopup()"
+          class="hero-btn">
           {{ slide.btn }}
         </button>
 
@@ -48,3 +46,9 @@
 
   </div>
 </section>
+
+<!-- POPUP COMPONENT -->
+<app-consultation-popup
+  *ngIf="showConsultationPopup"
+  (closed)="showConsultationPopup = false">
+</app-consultation-popup>

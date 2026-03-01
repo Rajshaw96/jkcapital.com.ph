@@ -5,6 +5,23 @@
   color: #333;
 }
 
+.error {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+input.invalid {
+  border: 1px solid #d32f2f;
+  background: #fff5f5;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* Header Text */
 .form-header {
   text-align: center;

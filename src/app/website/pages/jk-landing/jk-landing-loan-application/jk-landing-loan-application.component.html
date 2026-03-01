@@ -1,8 +1,12 @@
 <div class="page-container">
+  
   <!-- HEADER -->
   <div class="section-header">
     <span class="section-line"></span>
-    <h2>Take the next step - let's make your plan real.<br>Start your application</h2>
+    <h2>
+      Take the next step - let's make your plan real.<br>
+      Start your application
+    </h2>
   </div>
 
   <!-- Main Form Container -->
@@ -10,61 +14,170 @@
     <h3 class="form-main-title">LOAN APPLICATION FORM</h3>
 
     <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
-      
-      <!-- Section: Enter Your Details -->
+
+      <!-- ================= ENTER DETAILS ================= -->
       <section class="form-section">
         <h4 class="section-title">Enter Your Details</h4>
-        
+
         <div class="row">
+          
+          <!-- First Name -->
           <div class="form-group">
             <label>First Name <span class="required">*</span></label>
-            <input type="text" formControlName="firstName" placeholder="e.g. John">
+            <input 
+              type="text"
+              formControlName="firstName"
+              placeholder="e.g. John"
+              [class.invalid]="f['firstName'].touched && f['firstName'].invalid"
+            >
+            <small class="error"
+              *ngIf="f['firstName'].touched && f['firstName'].errors?.['required']">
+              First Name is required
+            </small>
+            <small class="error"
+              *ngIf="f['firstName'].touched && f['firstName'].errors?.['minlength']">
+              Minimum 2 characters required
+            </small>
           </div>
+
+          <!-- Last Name -->
           <div class="form-group">
             <label>Last Name <span class="required">*</span></label>
-            <input type="text" formControlName="lastName" placeholder="e.g. Doe">
+            <input 
+              type="text"
+              formControlName="lastName"
+              placeholder="e.g. Doe"
+              [class.invalid]="f['lastName'].touched && f['lastName'].invalid"
+            >
+            <small class="error"
+              *ngIf="f['lastName'].touched && f['lastName'].errors?.['required']">
+              Last Name is required
+            </small>
           </div>
+
         </div>
 
         <div class="row">
+
+          <!-- Email -->
           <div class="form-group">
             <label>Email <span class="required">*</span></label>
-            <input type="email" formControlName="email" placeholder="e.g. john.doe@domain.com">
+            <input 
+              type="email"
+              formControlName="email"
+              placeholder="e.g. john.doe@domain.com"
+              [class.invalid]="f['email'].touched && f['email'].invalid"
+            >
+            <small class="error"
+              *ngIf="f['email'].touched && f['email'].errors?.['required']">
+              Email is required
+            </small>
+            <small class="error"
+              *ngIf="f['email'].touched && f['email'].errors?.['email']">
+              Enter valid email address
+            </small>
           </div>
+
+          <!-- Mobile -->
           <div class="form-group">
             <label>Mobile Number <span class="required">*</span></label>
-            <input type="text" formControlName="mobileNumber" placeholder="e.g. 909 087 6876">
+            <input 
+              type="text"
+              formControlName="mobileNumber"
+              maxlength="10"
+              placeholder="e.g. 9090876876"
+              (input)="onMobileInput($event)"
+              [class.invalid]="f['mobileNumber'].touched && f['mobileNumber'].invalid"
+            >
+            <small class="error"
+              *ngIf="f['mobileNumber'].touched && f['mobileNumber'].errors?.['required']">
+              Mobile Number is required
+            </small>
+            <small class="error"
+              *ngIf="f['mobileNumber'].touched && f['mobileNumber'].errors?.['pattern']">
+              Enter valid 10-digit mobile number
+            </small>
           </div>
+
         </div>
       </section>
 
-      <!-- Section: Business Details -->
+      <!-- ================= BUSINESS DETAILS ================= -->
       <section class="form-section">
         <h4 class="section-title">Business Details</h4>
 
+        <!-- Business Name -->
         <div class="form-group full-width">
           <label>Business Name <span class="required">*</span></label>
-          <input type="text" formControlName="businessName" placeholder="e.g. Rocklage Solutions">
+          <input 
+            type="text"
+            formControlName="businessName"
+            placeholder="e.g. Rocklage Solutions"
+            [class.invalid]="f['businessName'].touched && f['businessName'].invalid"
+          >
+          <small class="error"
+            *ngIf="f['businessName'].touched && f['businessName'].errors?.['required']">
+            Business Name is required
+          </small>
         </div>
 
+        <!-- Business Address -->
         <div class="form-group full-width">
           <label>Business Address <span class="required">*</span></label>
-          <input type="text" formControlName="businessAddress" placeholder="e.g. Street Name, Building Name, Building Number, Landmark">
+          <input 
+            type="text"
+            formControlName="businessAddress"
+            placeholder="Street Name, Building Name, Landmark"
+            [class.invalid]="f['businessAddress'].touched && f['businessAddress'].invalid"
+          >
+          <small class="error"
+            *ngIf="f['businessAddress'].touched && f['businessAddress'].errors?.['required']">
+            Business Address is required
+          </small>
         </div>
 
+        <!-- Province -->
         <div class="form-group full-width">
-          <label>Which province is your business located in? <span class="required">*</span></label>
-          <input type="text" formControlName="province" placeholder="e.g. Select Region / Province">
+          <label>Province <span class="required">*</span></label>
+          <input 
+            type="text"
+            formControlName="province"
+            placeholder="Select Region / Province"
+            [class.invalid]="f['province'].touched && f['province'].invalid"
+          >
+          <small class="error"
+            *ngIf="f['province'].touched && f['province'].errors?.['required']">
+            Province is required
+          </small>
         </div>
 
+        <!-- Address Line -->
         <div class="form-group full-width">
           <label>Address Line 1 <span class="required">*</span></label>
-          <input type="text" formControlName="addressLine1" placeholder="e.g. Street Address">
+          <input 
+            type="text"
+            formControlName="addressLine1"
+            placeholder="Street Address"
+            [class.invalid]="f['addressLine1'].touched && f['addressLine1'].invalid"
+          >
+          <small class="error"
+            *ngIf="f['addressLine1'].touched && f['addressLine1'].errors?.['required']">
+            Address Line 1 is required
+          </small>
         </div>
+
       </section>
 
       <!-- Submit Button -->
-      <button type="submit" class="submit-btn">Submit</button>
+      <button 
+        type="submit"
+        class="submit-btn"
+        [disabled]="loanForm.invalid || isLoading">
+
+        <span *ngIf="!isLoading">Submit Application</span>
+        <span *ngIf="isLoading">Submitting...</span>
+
+      </button>
 
     </form>
   </div>

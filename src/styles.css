@@ -332,6 +332,15 @@ img {
   color: var(--primary);
 }
 
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+    border-radius: var(--swal2-confirm-button-border-radius);
+    background: initial;
+    background-color: #0166CC !important;
+    box-shadow: var(--swal2-confirm-button-box-shadow);
+    color: var(--swal2-confirm-button-color);
+    font-size: 1em;
+}
+
 /* ================= MAIN HEADER ================= */
 .main-header {
   background: var(--Soft-white, #F8F9FB);
