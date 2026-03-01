@@ -36,8 +36,8 @@ export class SupportSmeComponent {
       points: [
         '1% commission on each successful loan.',
         '1% commission on 2nd and 3rd-level referrals.',
-        'Earn from repeat and renewal loans.',
-        'Promote us on your social media to grow income.'
+        '1% commission on renewal loans.',
+        'Promote and refer us. We do the rest.'
       ],
       ctaText: 'REGISTER & REFER NOW',
       link: '/affiliate-referrer'
