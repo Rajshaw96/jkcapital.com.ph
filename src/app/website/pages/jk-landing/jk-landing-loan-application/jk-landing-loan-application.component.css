@@ -1,5 +1,5 @@
 .page-container {
-  background-color: #fcfdfe;
+  background-color: #fff;
   padding: 60px 20px;
   font-family: 'Inter', -apple-system, sans-serif;
   color: #333;
@@ -29,7 +29,7 @@
 .form-wrapper {
   max-width: 850px;
   margin: 0 auto;
-  background: white;
+  background: #fafafa;
   padding: 40px;
 }
 

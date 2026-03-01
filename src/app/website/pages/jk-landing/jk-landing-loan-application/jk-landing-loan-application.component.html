@@ -1,9 +1,9 @@
 <div class="page-container">
-  <!-- Top Header Section -->
-  <header class="form-header">
-    <h1>Take the next step - let's make your plan real.</h1>
-    <h2>Start your application</h2>
-  </header>
+  <!-- HEADER -->
+  <div class="section-header">
+    <span class="section-line"></span>
+    <h2>Take the next step - let's make your plan real.<br>Start your application</h2>
+  </div>
 
   <!-- Main Form Container -->
   <div class="form-wrapper">
@@ -54,12 +54,7 @@
 
         <div class="form-group full-width">
           <label>Which province is your business located in? <span class="required">*</span></label>
-          <div class="select-wrapper">
-            <select formControlName="province">
-              <option value="" disabled selected>e.g. Select Region / Province</option>
-              <option *ngFor="let p of provinces" [value]="p">{{p}}</option>
-            </select>
-          </div>
+          <input type="text" formControlName="province" placeholder="e.g. Select Region / Province">
         </div>
 
         <div class="form-group full-width">
