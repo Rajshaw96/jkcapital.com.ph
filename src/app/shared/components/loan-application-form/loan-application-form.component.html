@@ -16,15 +16,10 @@
 
       <form [formGroup]="loanForm" (ngSubmit)="submit()" novalidate>
 
-        <!-- 🔴 TOP FORM ERROR (NEW) -->
-        <p class="error-text" *ngIf="submitted && loanForm.invalid">
-          Please fix the highlighted fields before submitting the form.
-        </p>
-
         <!-- BASIC DETAILS -->
         <div class="form-row">
           <div class="form-group">
-            <label>First Name *</label>
+            <label>First Name <span class="required">*</span></label>
             <input formControlName="firstName" placeholder="e.g. John" />
             <p class="error-text" *ngIf="isInvalid('firstName')">
               First name is required (min 2 characters)
