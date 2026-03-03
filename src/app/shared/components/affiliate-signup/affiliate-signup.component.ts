@@ -26,15 +26,19 @@ export class AffiliateSignupComponent implements OnInit {
   affiliateForm = this.fb.group({
     firstName: ['', [Validators.required, Validators.minLength(2)]],
     lastName: ['', [Validators.required, Validators.minLength(2)]],
-    phone: ['', [Validators.required, Validators.pattern('^[+]?[0-9 ]{7,20}$')]],
     email: ['', [Validators.required, Validators.email]],
-    address: ['', Validators.required],
+
+    street1: ['', Validators.required],
+    street2: [''],
     city: ['', Validators.required],
-    province: ['', Validators.required],
+    region: ['', Validators.required],
+    postalCode: ['', Validators.required],
     country: ['', Validators.required],
-    businessName: ['', Validators.required],
-    businessType: ['', Validators.required],
-    company: [''] // honeypot
+
+    socialUrl: ['', Validators.required],
+    commissionType: ['', Validators.required],
+
+    company: [''] // 🛑 honeypot
   });
 
   constructor(
@@ -74,10 +78,11 @@ export class AffiliateSignupComponent implements OnInit {
 
     if (this.affiliateForm.invalid) {
       this.affiliateForm.markAllAsTouched();
-      Swal.fire('Incomplete Form', 'Please fix highlighted fields.', 'error');
+      Swal.fire('Incomplete Form', 'Please fill all required fields.', 'error');
       return;
     }
 
+    // 🛑 Honeypot protection
     if (this.affiliateForm.value.company) {
       console.warn('Bot detected');
       return;
@@ -99,7 +104,7 @@ export class AffiliateSignupComponent implements OnInit {
 
     console.log('PAYLOAD', payload);
 
-    // 🔥 USE REAL API HERE
+    // 🔥 Replace with real API
     this.http.post('https://jsonplaceholder.typicode.com/posts', payload)
       .subscribe({
         next: () => {

@@ -2,6 +2,26 @@
   background: #ffffff;
 }
 
+.form-row {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 10px;
+}
+
+.form-row input,
+.form-row select {
+  padding-bottom: 10px;
+  flex: 5;
+}
+input,
+select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 13px;
+}
+
+
 
 /* GRID */
 .affiliate-grid {
@@ -74,6 +94,7 @@ h5 {
 .form-group {
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px;
 }
 
 .form-group.full {

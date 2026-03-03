@@ -29,6 +29,7 @@ export class OurImpactComponent implements OnInit, OnDestroy {
       headline: 'PHILSME 2025 ',
       subheadLine: 'Highlights from PHILSME 2025, capturing conversations, connections, and shared insights among SME leaders.',
       image: 'assets/img/testimonials/viber_image_2026-02-13_14-28-04-285.jpg',
+      video: 'https://www.youtube.com/embed/F6ZNV08y7MY?si=mer7VWkXhHlwvNSS'
     },
     {
       headline: 'The Resilient Partner',

@@ -150,11 +150,11 @@ label {
 }
 
 .state-container p {
-  font-size: 0.9rem;
   color:black;
   margin: 0 auto;
-  background-color:white;
+  background-color: #ffffffc9;
   font-size: 16px;
+  font-weight: 600;
   width: 100%;
   border-radius:5px;
   padding: 20px;
