@@ -16,7 +16,7 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
       desc: 'More than capital — we bring clarity to your business challenges, bridge financial gaps, and craft solutions that help you thrive in a changing world.',
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
       btnLink: '/industries',
-      image: 'assets/img/banner/jk-home-banner.png',
+      image: 'assets/img/banner/We Diagnose.jpg',
     },
     {
       title: 'Beyond capital, behind your next breakthrough.',

@@ -1,0 +1,36 @@
+<div class="news-wrapper">
+
+    
+  <!-- LEFT MENU -->
+  <div class="news-menu">
+    <ul>
+      <li *ngFor="let category of categories"
+          (click)="selectCategory(category)"
+          [class.active]="activeCategory === category">
+        {{category}}
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- RIGHT CONTENT -->
+  <div class="news-content">
+
+    <div class="cards-wrapper">
+
+      <!-- CARD -->
+      <div class="news-card" *ngFor="let item of visibleItems">
+        <img [src]="item.image" alt="">
+        <h4>{{item.title}}</h4>
+      </div>
+
+    </div>
+
+    <!-- ARROW -->
+    <button class="arrow-btn" (click)="nextBatch()">
+      ❯
+    </button>
+
+  </div>
+
+</div>

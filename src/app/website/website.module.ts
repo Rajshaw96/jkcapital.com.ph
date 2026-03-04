@@ -48,6 +48,7 @@ import { JkLandingLoanSimulatorComponent } from './pages/jk-landing/jk-landing-l
 import { JkLandingLoanApplicationComponent } from './pages/jk-landing/jk-landing-loan-application/jk-landing-loan-application.component';
 import { KnowledgeHubComponent } from './pages/knowledge-hub/knowledge-hub.component';
 import { TechnologyComponent } from './pages/industries/technology/technology.component';
+import { NewsSectionComponent } from './pages/knowledge-hub/news-section/news-section.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { TechnologyComponent } from './pages/industries/technology/technology.co
     JkLandingLoanApplicationComponent,
     KnowledgeHubComponent,
     TechnologyComponent,
+    NewsSectionComponent,
   ],
   imports: [
     CommonModule,
