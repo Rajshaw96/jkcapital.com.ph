@@ -36,6 +36,7 @@ import { DistributionWholesaleSolutionsComponent } from './pages/industries/dist
 import { SearchResultComponent } from './pages/search-result/search-result.component';
 import { JkLandingComponent } from './pages/jk-landing/jk-landing.component';
 import { KnowledgeHubComponent } from './pages/knowledge-hub/knowledge-hub.component';
+import { TechnologyComponent } from './pages/industries/technology/technology.component';
 
 
 const routes: Routes = [
@@ -67,6 +68,8 @@ const routes: Routes = [
       { path: 'industries/renewable-energy', component: RenewableEnergyComponent },
       { path: 'industries/professional-services', component: ProfessionalServicesComponent },
       { path: 'industries/retail', component: RetailComponent },
+      { path: 'industries/technology', component: TechnologyComponent },
+
 
       { path: 'refer-and-earn-main', component: ReferAndEarnMainComponent },
       { path: 'starter-referrer', component: StarterReferrerComponent },

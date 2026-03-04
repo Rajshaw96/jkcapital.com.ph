@@ -37,7 +37,7 @@ export class HomeHeroSectionComponent implements OnInit, OnDestroy {
       ],
       btn: 'EXPLORE OUR LOAN SOLUTIONS',
       btnLink: '/industries',
-      image: 'assets/img/banner/jk-home-banner (2).jpg',
+      image: 'assets/img/banner/No Collaterla.jpg',
     }
   ];
 

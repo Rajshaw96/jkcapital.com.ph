@@ -47,6 +47,7 @@ import { IndustryGridComponent } from './pages/jk-landing/industry-grid/industry
 import { JkLandingLoanSimulatorComponent } from './pages/jk-landing/jk-landing-loan-simulator/jk-landing-loan-simulator.component';
 import { JkLandingLoanApplicationComponent } from './pages/jk-landing/jk-landing-loan-application/jk-landing-loan-application.component';
 import { KnowledgeHubComponent } from './pages/knowledge-hub/knowledge-hub.component';
+import { TechnologyComponent } from './pages/industries/technology/technology.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { KnowledgeHubComponent } from './pages/knowledge-hub/knowledge-hub.compo
     JkLandingLoanSimulatorComponent,
     JkLandingLoanApplicationComponent,
     KnowledgeHubComponent,
+    TechnologyComponent,
   ],
   imports: [
     CommonModule,
