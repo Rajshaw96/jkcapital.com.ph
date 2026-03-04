@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NewsSectionComponent {
 
-  batchSize = 4;
+  batchSize = 3;
 
   categories = [
     'Our Story & News',
