@@ -1,35 +1,33 @@
 <div class="news-wrapper">
 
-    
-  <!-- LEFT MENU -->
-  <div class="news-menu">
-    <ul>
-      <li *ngFor="let category of categories"
-          (click)="selectCategory(category)"
-          [class.active]="activeCategory === category">
-        {{category}}
-      </li>
-    </ul>
-  </div>
+  <div class="news-row" *ngFor="let category of categories">
 
-
-  <!-- RIGHT CONTENT -->
-  <div class="news-content">
-
-    <div class="cards-wrapper">
-
-      <!-- CARD -->
-      <div class="news-card" *ngFor="let item of visibleItems">
-        <img [src]="item.image" alt="">
-        <h4>{{item.title}}</h4>
-      </div>
-
+    <!-- LEFT TITLE -->
+    <div class="news-title">
+      {{category}}
     </div>
 
-    <!-- ARROW -->
-    <button class="arrow-btn" (click)="nextBatch()">
-      ❯
-    </button>
+    <!-- RIGHT CARDS -->
+    <div class="news-content">
+
+      <div class="cards-wrapper">
+
+        <div class="news-card"
+             *ngFor="let item of getVisibleItems(category)">
+
+          <img [src]="item.image">
+          <h4>{{item.title}}</h4>
+
+        </div>
+
+      </div>
+
+      <!-- ARROW -->
+      <button class="arrow-btn" (click)="nextBatch(category)">
+        ❯
+      </button>
+
+    </div>
 
   </div>
 
