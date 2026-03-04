@@ -423,22 +423,24 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
 
 .industries-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .mega-col a {
   display: block;
-  padding: 8px 0;
+  padding: 10px;
   color: var(--Black, #000);
   text-decoration: none;
   font-size: 14px;
+  transition: color 0.3s ease;
+  border-right: 1px solid #E0E0E0;
 }
 
 .mega-col a:hover{
   display: block;
-  padding: 8px 0;
+  padding: 10px;
   color: var(--Primary, #0166CC);
   text-decoration: none;
   font-size: 14px;
@@ -447,8 +449,8 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
 .mega-container {
   max-width: 1200px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 260px 250px 300px;
+  /* display: grid;
+  grid-template-columns: 260px 250px 300px; */
 }
 
 /* ================= CTA ================= */
