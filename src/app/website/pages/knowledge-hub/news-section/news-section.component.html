@@ -1,34 +1,49 @@
-<div class="news-wrapper">
-
+<section class="news-wrapper">
   <div class="news-row" *ngFor="let category of categories">
-
-    <!-- LEFT TITLE -->
-    <div class="news-title">
-      {{category}}
+    
+    <!-- HEADER AREA -->
+    <div class="row-header">
+      <div class="title-group">
+        <h2 class="category-heading">{{category}}</h2>
+        <div class="accent-line"></div>
+      </div>
+      
+      <div class="nav-controls">
+        <!-- LEFT ARROW (Disabled at step 0) -->
+        <button class="nav-btn" 
+                (click)="prev(category)" 
+                [disabled]="categoryStep[category] === 0">
+          <span class="icon">❮</span>
+        </button>
+        
+        <!-- RIGHT ARROW (Disabled at end) -->
+        <button class="nav-btn" 
+                (click)="next(category)" 
+                [disabled]="!canMoveForward(category)">
+          <span class="icon">❯</span>
+        </button>
+      </div>
     </div>
 
-    <!-- RIGHT CARDS -->
-    <div class="news-content">
-
-      <div class="cards-wrapper">
-
-        <div class="news-card"
-             *ngFor="let item of getVisibleItems(category)">
-
-          <img [src]="item.image">
-          <h4>{{item.title}}</h4>
-
+    <!-- VIEWPORT -->
+    <div class="slider-viewport">
+      <div class="cards-track" 
+           [style.transform]="'translateX(-' + (categoryStep[category] * 100) + '%)'">
+        
+        <!-- BLOG CARD -->
+        <div class="news-card" *ngFor="let item of newsData[category]">
+          <div class="image-box">
+            <img [src]="item.image" alt="news">
+            <div class="date-badge">{{item.date}}</div>
+          </div>
+          <div class="content-box">
+            <span class="category-tag">Finance</span>
+            <h4>{{item.title}}</h4>
+            <a class="read-more">Read Article <span>→</span></a>
+          </div>
         </div>
 
       </div>
-
-      <!-- ARROW -->
-      <button class="arrow-btn" (click)="nextBatch(category)">
-        ❯
-      </button>
-
     </div>
-
   </div>
-
-</div>
+</section>
