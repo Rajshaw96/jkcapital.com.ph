@@ -1,0 +1,24 @@
+<section class="blog-container" *ngIf="blog">
+
+  <div class="blog-header">
+
+    <h1 class="blog-title">
+      {{blog.title}}
+    </h1>
+
+    <div class="blog-meta">
+      <span class="blog-category">{{blog.category}}</span>
+      <span class="blog-date">{{blog.date | date}}</span>
+    </div>
+
+  </div>
+  
+  <div class="blog-image" *ngIf="blog?.image">
+    <img [src]="blog.image" [alt]="blog.title">
+  </div>
+
+  <div class="blog-content"
+       [innerHTML]="blog.content">
+  </div>
+
+</section>

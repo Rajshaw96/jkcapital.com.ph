@@ -37,9 +37,10 @@
         <div class="news-card"
              *ngFor="let item of newsData[category]">
 
+          <!-- BLOG IMAGE -->
           <div class="image-box">
 
-            <img [src]="item.image || 'assets/default-blog.jpg'">
+           <img [src]="item.image || 'assets/default-blog.jpg'" [alt]="item.title">
 
             <div class="date-badge">
               {{item.date | date}}
@@ -47,6 +48,7 @@
 
           </div>
 
+          <!-- CONTENT -->
           <div class="content-box">
 
             <span class="category-tag">

@@ -37,6 +37,7 @@ import { SearchResultComponent } from './pages/search-result/search-result.compo
 import { JkLandingComponent } from './pages/jk-landing/jk-landing.component';
 import { KnowledgeHubComponent } from './pages/knowledge-hub/knowledge-hub.component';
 import { TechnologyComponent } from './pages/industries/technology/technology.component';
+import { BlogDetailsComponent } from './pages/knowledge-hub/blog-details/blog-details.component';
 
 
 const routes: Routes = [
@@ -82,6 +83,7 @@ const routes: Routes = [
       { path: 'search', component: SearchResultComponent },
       { path: 'jk-landing', component: JkLandingComponent },
       { path: 'knowledge-hub', component: KnowledgeHubComponent },
+      { path: 'blog/:slug', component: BlogDetailsComponent },
 
 
 

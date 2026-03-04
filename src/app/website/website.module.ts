@@ -49,6 +49,7 @@ import { JkLandingLoanApplicationComponent } from './pages/jk-landing/jk-landing
 import { KnowledgeHubComponent } from './pages/knowledge-hub/knowledge-hub.component';
 import { TechnologyComponent } from './pages/industries/technology/technology.component';
 import { NewsSectionComponent } from './pages/knowledge-hub/news-section/news-section.component';
+import { BlogDetailsComponent } from './pages/knowledge-hub/blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { NewsSectionComponent } from './pages/knowledge-hub/news-section/news-se
     KnowledgeHubComponent,
     TechnologyComponent,
     NewsSectionComponent,
+    BlogDetailsComponent
   ],
   imports: [
     CommonModule,
