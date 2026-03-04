@@ -10,6 +10,13 @@
   gap: 32px;
 }
 
+.section-header {
+  text-align: center;
+  width: 1050px;
+  margin: auto;
+  margin-bottom: 40px !important;
+}
+
 /* CARD */
 .structure-card {
   background: #fff;
