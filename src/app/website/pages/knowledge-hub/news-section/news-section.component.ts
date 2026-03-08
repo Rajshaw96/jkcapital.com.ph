@@ -25,19 +25,27 @@ export class NewsSectionComponent implements OnInit {
 
   ngOnInit(): void {
     this.blogService.getBlogs().subscribe((data: Blog[]) => {
-      
-      // 1. Process data: Trim whitespace and Sanitize the Image URL
-      this.blogs = data.map(blog => {
-        const imageUrl = blog.image ? blog.image.trim() : '';
-        return {
-          ...blog,
-          image: imageUrl,
-          // This tells Angular the external WordPress URL is safe to load
-          safeImageUrl: imageUrl ? this.sanitizer.bypassSecurityTrustUrl(imageUrl) : ''
-        };
-      });
 
-      // 2. Sort blogs by date (latest first)
+      const blockedCategories = [
+        'business loan philippines',
+        'business loan vs consumer loan'
+      ];
+
+      // 1. Process data + remove unwanted categories
+      this.blogs = data
+        .map(blog => {
+          const imageUrl = blog.image ? blog.image.trim() : '';
+          return {
+            ...blog,
+            image: imageUrl,
+            safeImageUrl: imageUrl
+              ? this.sanitizer.bypassSecurityTrustUrl(imageUrl)
+              : ''
+          };
+        })
+        .filter(blog => !blockedCategories.includes((blog.category || '').toLowerCase()));
+
+      // 2. Sort blogs by date
       this.blogs.sort((a, b) =>
         new Date(b.date).getTime() - new Date(a.date).getTime()
       );
