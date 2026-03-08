@@ -1,9 +1,3 @@
-.blog-container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-  font-family: 'Inter', sans-serif;
-}
 
 .blog-header {
   margin-bottom: 30px;
@@ -39,6 +33,7 @@
   font-size: 18px;
   line-height: 1.8;
   color: #1a1c1e;
+  text-align: justify;
 }
 
 .blog-content p {

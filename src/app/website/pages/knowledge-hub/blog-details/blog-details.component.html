@@ -1,5 +1,6 @@
-<section class="blog-container" *ngIf="blog">
+<section class="section" *ngIf="blog">
 
+  <div class="container">
   <div class="blog-header">
 
     <h1 class="blog-title">
@@ -20,5 +21,5 @@
   <div class="blog-content"
        [innerHTML]="blog.content">
   </div>
-
+  </div>
 </section>

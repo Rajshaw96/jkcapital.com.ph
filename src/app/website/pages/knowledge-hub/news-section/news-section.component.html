@@ -34,19 +34,16 @@
       <div class="cards-track"
            [style.transform]="'translateX(-' + (categoryStep[category] * 100) + '%)'">
 
-        <div class="news-card"
-             *ngFor="let item of newsData[category]">
+        <div class="news-card" *ngFor="let item of newsData[category]">
 
           <!-- BLOG IMAGE -->
-          <div class="image-box">
+        <div class="image-box">
+          <img [src]="item.image" [alt]="item.title">
 
-           <img [src]="item.image || 'assets/default-blog.jpg'" [alt]="item.title">
-
-            <div class="date-badge">
-              {{item.date | date}}
-            </div>
-
+          <div class="date-badge">
+            {{item.date | date}}
           </div>
+        </div>
 
           <!-- CONTENT -->
           <div class="content-box">
