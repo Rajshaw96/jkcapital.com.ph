@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
 
 /* ❌ Disposable email domains */
@@ -13,7 +14,7 @@ const blockedDomains = [
 
 /* ✅ Strict Email Validator */
 function strictEmailValidator(control: AbstractControl): ValidationErrors | null {
-  
+
   if (!control.value) return null;
 
   const email = control.value.toLowerCase();
@@ -31,15 +32,12 @@ function strictEmailValidator(control: AbstractControl): ValidationErrors | null
   return null;
 }
 
-
-
 /* ✅ Philippines Mobile Validator */
 function philippinesPhoneValidator(control: AbstractControl): ValidationErrors | null {
   if (!control.value) return null;
 
   const value = control.value.replace(/\D/g, '');
 
-  // PH numbers: 09XXXXXXXXX or 639XXXXXXXXX
   const phRegex = /^(09\d{9}|639\d{9})$/;
 
   return phRegex.test(value) ? null : { invalidPHPhone: true };
@@ -54,10 +52,13 @@ export class ConsultationPopupComponent implements OnInit {
 
   @Output() closed = new EventEmitter<void>();
 
-  hours = Array.from({ length: 10 }, (_, i) => i + 9); // 9 AM – 6 PM
+  hours = Array.from({ length: 10 }, (_, i) => i + 9);
   minutes = [0, 15, 30, 45];
 
   minDate!: string;
+
+  // ✅ API URL
+  private apiUrl = 'http://localhost:5000/api/consultations';
 
   consultationForm = this.fb.group({
     name: ['', Validators.required],
@@ -68,13 +69,17 @@ export class ConsultationPopupComponent implements OnInit {
     minute: ['0', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
-    // 🇵🇭 Philippines current date (Asia/Manila)
+
     const manilaNow = new Date(
       new Date().toLocaleString('en-US', { timeZone: 'Asia/Manila' })
     );
+
     this.minDate = manilaNow.toISOString().split('T')[0];
 
     this.consultationForm.get('mobile')?.valueChanges.subscribe(value => {
@@ -108,12 +113,8 @@ export class ConsultationPopupComponent implements OnInit {
   allowNumbersOnly(event: KeyboardEvent) {
     const charCode = event.which ? event.which : event.keyCode;
 
-    // Allow backspace, delete, arrows, tab
-    if ([8, 9, 37, 39, 46].includes(charCode)) {
-      return;
-    }
+    if ([8, 9, 37, 39, 46].includes(charCode)) return;
 
-    // Block non-numeric
     if (charCode < 48 || charCode > 57) {
       event.preventDefault();
     }
@@ -150,13 +151,48 @@ export class ConsultationPopupComponent implements OnInit {
       return;
     }
 
+    const payload = {
+      ...this.consultationForm.value,
+      submittedAt: new Date().toISOString(),
+      source: 'consultation-popup'
+    };
+
     Swal.fire({
-      icon: 'success',
-      title: 'Consultation Booked',
-      text: 'Our loan expert will contact you shortly.',
-      confirmButtonColor: '#1f5fd6'
+      title: 'Booking Consultation...',
+      allowOutsideClick: false,
+      didOpen: () => Swal.showLoading()
     });
-    this.close();
-    this.consultationForm.reset();
+
+    // ✅ API CALL
+    this.http.post(this.apiUrl, payload).subscribe({
+
+      next: () => {
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Consultation Booked',
+          text: 'Our loan expert will contact you shortly.',
+          confirmButtonColor: '#1f5fd6'
+        });
+
+        this.close();
+        this.consultationForm.reset();
+
+      },
+
+      error: () => {
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Submission Failed',
+          text: 'Something went wrong. Please try again later.',
+          confirmButtonColor: '#1f5fd6'
+        });
+
+      }
+
+    });
+
   }
+
 }
