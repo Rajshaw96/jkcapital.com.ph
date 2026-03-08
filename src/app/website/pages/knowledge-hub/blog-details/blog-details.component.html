@@ -15,11 +15,10 @@
   </div>
   
   <div class="blog-image" *ngIf="blog?.image">
-    <img [src]="blog.image" [alt]="blog.title">
+    <img [src]="blog.image" [alt]="blog.title" referrerpolicy="no-referrer">
   </div>
 
-  <div class="blog-content"
-       [innerHTML]="blog.content">
+  <div class="blog-content" [innerHTML]="safeContent">
   </div>
   </div>
 </section>

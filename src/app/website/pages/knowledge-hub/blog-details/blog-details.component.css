@@ -46,3 +46,19 @@
   margin-bottom: 15px;
   color: #0c2d48;
 }
+
+/* This forces all images inside the blog content to be visible and fit the screen */
+.blog-content ::ng-deep img {
+    display: block !important;
+    max-width: 100% !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* WordPress often uses figures, ensure they don't have 0 height */
+.blog-content ::ng-deep figure {
+    margin: 0 0 1rem 0;
+    max-width: 100%;
+    display: block !important;
+}
