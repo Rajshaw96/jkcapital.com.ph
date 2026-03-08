@@ -26,7 +26,7 @@
 
     <!-- Responsive Grid -->
     <div class="services-grid">
-      <a *ngFor="let item of services" [href]="item.link" class="service-card">
+      <a *ngFor="let item of services" [routerLink]="item.link" class="service-card">
         {{ item.title }}
         <span class="arrow-icon">→</span>
       </a>

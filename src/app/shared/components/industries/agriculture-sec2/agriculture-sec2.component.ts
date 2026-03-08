@@ -14,12 +14,12 @@ interface ServiceItem {
 export class AgricultureSec2Component {
   
   services: ServiceItem[] = [
-    { title: 'Business Loans', link: 'products/business-loans' },
-    { title: 'Working Capital', link: 'products/working-capital-loan' },
-    { title: 'Project Financing', link: 'products/project-financing' },
-    { title: 'Line of Credit', link: 'products/credit-line' },
-    { title: 'Invoice & Receivables Financing', link: 'products/receivables-financing' },
-    { title: 'Check Rediscounting', link: 'products/check-rediscounting' }
+    { title: 'Business Loans', link: '/products/business-loans' },
+    { title: 'Working Capital', link: '/products/working-capital-loan' },
+    { title: 'Project Financing', link: '/products/project-financing' },
+    { title: 'Line of Credit', link: '/products/credit-line' },
+    { title: 'Invoice & Receivables Financing', link: '/products/receivables-financing' },
+    { title: 'Check Rediscounting', link: '/products/check-rediscounting' }
   ];
 
   onPlayVideo() {
