@@ -1,77 +1,59 @@
 <section class="news-wrapper">
-
+  <!-- Loop through categories -->
   <div class="news-row" *ngFor="let category of categories">
 
-    <!-- HEADER -->
+    <!-- UPDATED HEADER: Perfectly Aligned -->
     <div class="row-header">
-
       <div class="title-group">
         <h2 class="category-heading">{{category}}</h2>
-        <div class="accent-line"></div>
       </div>
 
       <div class="nav-controls">
-
-        <button class="nav-btn"
-                (click)="prev(category)"
+        <button class="nav-btn" 
+                (click)="prev(category)" 
                 [disabled]="categoryStep[category] === 0">
-          ❮
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M15 18l-6-6 6-6"/></svg>
         </button>
-
-        <button class="nav-btn"
-                (click)="next(category)"
+        <button class="nav-btn" 
+                (click)="next(category)" 
                 [disabled]="!canMoveForward(category)">
-          ❯
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"/></svg>
         </button>
-
       </div>
-
     </div>
 
-    <!-- SLIDER -->
+    <!-- SLIDER VIEWPORT -->
     <div class="slider-viewport">
-
-      <div class="cards-track"
+      <div class="cards-track" 
            [style.transform]="'translateX(-' + (categoryStep[category] * 100) + '%)'">
 
+        <!-- INDIVIDUAL CARD -->
         <div class="news-card" *ngFor="let item of newsData[category]">
-
-          <!-- BLOG IMAGE -->
+          
           <div class="image-box">
-            <img [src]="item.image" 
-                [alt]="item.title" 
-                class="blog-image"
-                referrerpolicy="no-referrer"/>
-
+            <img [src]="item.image" [alt]="item.title" class="blog-image" referrerpolicy="no-referrer"/>
             <div class="date-badge">
-              {{item.date | date}}
+              {{item.date | date:'MMM d, y'}}
             </div>
           </div>
 
-          <!-- CONTENT -->
           <div class="content-box">
+            <span class="category-tag">{{item.category}}</span>
+            
+            <h4 (click)="openBlog(item)" class="card-title">{{item.title}}</h4>
 
-            <span class="category-tag">
-              {{item.category}}
-            </span>
-
-            <h4>
-              {{item.title}}
-            </h4>
-
-            <a class="read-more"
-               (click)="openBlog(item)">
-               Read Article →
-            </a>
-
+            <div class="card-footer">
+              <a class="read-more" (click)="openBlog(item)">
+                Read Article 
+                <span class="arrow-icon">→</span>
+              </a>
+            </div>
           </div>
 
-        </div>
+        </div> <!-- End Card -->
 
       </div>
-
     </div>
 
   </div>
-
 </section>
