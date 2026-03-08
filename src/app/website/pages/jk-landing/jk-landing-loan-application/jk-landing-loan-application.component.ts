@@ -20,8 +20,6 @@ export class JkLandingLoanApplicationComponent implements OnInit {
 
   ngOnInit(): void {
     this.initializeForm();
-    this.loadSavedData();
-    this.autoSaveToLocalStorage();
   }
 
   initializeForm() {
@@ -45,7 +43,6 @@ export class JkLandingLoanApplicationComponent implements OnInit {
     this.loanForm.get('mobileNumber')?.setValue(input, { emitEvent: false });
   }
 
-  // Submit Method
   onSubmit() {
 
     if (this.loanForm.invalid) {
@@ -68,7 +65,6 @@ export class JkLandingLoanApplicationComponent implements OnInit {
             confirmButtonColor: '#003366'
           });
 
-          localStorage.removeItem('loanFormData');
           this.loanForm.reset();
         },
         error: () => {
@@ -84,23 +80,8 @@ export class JkLandingLoanApplicationComponent implements OnInit {
       });
   }
 
-  // Auto Save to Local Storage
-  autoSaveToLocalStorage() {
-    this.loanForm.valueChanges.subscribe(value => {
-      localStorage.setItem('loanFormData', JSON.stringify(value));
-    });
-  }
-
-  // Load Saved Data
-  loadSavedData() {
-    const savedData = localStorage.getItem('loanFormData');
-    if (savedData) {
-      this.loanForm.patchValue(JSON.parse(savedData));
-    }
-  }
-
-  // Helper for Template
   get f() {
     return this.loanForm.controls;
   }
+
 }

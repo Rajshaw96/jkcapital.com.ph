@@ -49,14 +49,16 @@
         <!-- First & Last Name -->
         <div class="form-row">
           <div>
-            <input type="text" placeholder="First Name *" formControlName="firstName" autocomplete="off">
+            <label>First Name <span class="required">*</span></label>
+            <input type="text" placeholder="First Name" formControlName="firstName" autocomplete="off">
             <p class="error-text" *ngIf="isInvalid('firstName')">
               First name is required (min 2 characters)
             </p>
           </div>
 
           <div>
-            <input type="text" placeholder="Last Name *" formControlName="lastName" autocomplete="off">
+            <label>Last Name <span class="required">*</span></label>
+            <input type="text" placeholder="Last Name" formControlName="lastName" autocomplete="off">
             <p class="error-text" *ngIf="isInvalid('lastName')">
               Last name is required (min 2 characters)
             </p>
@@ -66,15 +68,16 @@
         <!-- Email & Phone -->
         <div class="form-row">
           <div>
-            <input type="email" placeholder="Email Address *" formControlName="email" autocomplete="off">
-            <p class="error-text"
-              *ngIf="isInvalid('email') || emailDomainInvalid">
+            <label>Email Address <span class="required">*</span></label>
+            <input type="email" placeholder="Email Address" formControlName="email" autocomplete="off">
+            <p class="error-text" *ngIf="isInvalid('email') || emailDomainInvalid">
               Please enter a valid email address (temporary emails are not allowed)
             </p>
           </div>
 
           <div>
-            <input type="tel" placeholder="Phone Number *" formControlName="phone" autocomplete="off">
+            <label>Phone Number <span class="required">*</span></label>
+            <input type="tel" placeholder="Phone Number" formControlName="phone" autocomplete="off">
             <p class="error-text" *ngIf="isInvalid('phone')">
               Please enter a valid phone number
             </p>
@@ -82,38 +85,41 @@
         </div>
 
         <!-- Address -->
-        <input type="text" placeholder="Current Address" formControlName="address" autocomplete="off">
+        <div>
+          <label>Current Address</label>
+          <input type="text" placeholder="Current Address" formControlName="address" autocomplete="off">
+        </div>
 
         <!-- Loan Type -->
-        <select formControlName="loanType">
-          <option value="">Select an option *</option>
-          <option value="Business Loan">Business Loan</option>
-          <option value="Personal Loan">Personal Loan</option>
-        </select>
-        <p class="error-text" *ngIf="isInvalid('loanType')">
-          Please select a loan type
-        </p>
+        <div>
+          <label>Loan Type <span class="required">*</span></label>
+          <select formControlName="loanType">
+            <option value="">Select an option</option>
+            <option value="Business Loan">Business Loan</option>
+            <option value="Personal Loan">Personal Loan</option>
+          </select>
+          <p class="error-text" *ngIf="isInvalid('loanType')">
+            Please select a loan type
+          </p>
+        </div>
 
         <!-- Message -->
-        <textarea
-          rows="4"
-          placeholder="Inquiry / Comment *"
-          formControlName="message" autocomplete="off">
-        </textarea>
-        <p class="error-text" *ngIf="isInvalid('message')">
-          Message must be at least 10 characters
-        </p>
+        <div>
+          <label>Inquiry / Comment <span class="required">*</span></label>
+          <textarea rows="4" placeholder="Inquiry / Comment" formControlName="message" autocomplete="off"></textarea>
+          <p class="error-text" *ngIf="isInvalid('message')">
+            Message must be at least 10 characters
+          </p>
+        </div>
 
         <!-- Business Name -->
-        <input type="text" placeholder="Business Name" formControlName="businessName">
+        <div>
+          <label>Business Name</label>
+          <input type="text" placeholder="Business Name" formControlName="businessName">
+        </div>
 
-        <!-- 🛑 Honeypot (anti-bot, hidden) -->
-        <input
-          type="text"
-          formControlName="company"
-          class="hidden-field"
-          autocomplete="off"
-        >
+        <!-- Honeypot -->
+        <input type="text" formControlName="company" class="hidden-field" autocomplete="off">
 
         <!-- Submit -->
         <button type="submit" [disabled]="loading">

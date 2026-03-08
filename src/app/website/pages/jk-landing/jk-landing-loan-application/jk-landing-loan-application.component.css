@@ -46,7 +46,7 @@ input.invalid {
 .form-wrapper {
   max-width: 850px;
   margin: 0 auto;
-  background: #fafafa;
+  background: #E7F0FF;
   padding: 40px;
 }
 
@@ -87,7 +87,7 @@ input.invalid {
 
 /* Labels & Inputs */
 label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -98,10 +98,10 @@ label {
 }
 
 input, select {
-  height: 48px;
-  padding: 0 16px;
+  height: 40px;
+  padding: 0 14px;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 14px;
   color: #333;
   outline: none;
