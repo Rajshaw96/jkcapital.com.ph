@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../services/blog.service';
 import { Blog } from '../models/blog.model';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser'; // Import these
+import { DomSanitizer, SafeHtml, SafeUrl } from '@angular/platform-browser'; // Import these
 
 @Component({
   selector: 'app-blog-details',
@@ -12,6 +12,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser'; // Import th
 export class BlogDetailsComponent implements OnInit {
   blog: Blog | undefined;
   safeContent: SafeHtml | undefined;
+  safeMainImage: SafeUrl | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +28,10 @@ export class BlogDetailsComponent implements OnInit {
 
         if (foundBlog) {
           this.blog = foundBlog;
+          if (this.blog.image) {
+            this.safeMainImage = this.sanitizer.bypassSecurityTrustUrl(this.blog.image);
+          }
+
           if (this.blog.content) {
             this.safeContent = this.sanitizer.bypassSecurityTrustHtml(this.blog.content);
             setTimeout(() => {
