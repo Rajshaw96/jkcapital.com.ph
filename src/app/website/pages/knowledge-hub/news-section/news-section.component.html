@@ -37,13 +37,16 @@
         <div class="news-card" *ngFor="let item of newsData[category]">
 
           <!-- BLOG IMAGE -->
-        <div class="image-box">
-          <img [src]="item.image" [alt]="item.title">
+          <div class="image-box">
+            <img [src]="item.image" 
+                [alt]="item.title" 
+                class="blog-image"
+                referrerpolicy="no-referrer"/>
 
-          <div class="date-badge">
-            {{item.date | date}}
+            <div class="date-badge">
+              {{item.date | date}}
+            </div>
           </div>
-        </div>
 
           <!-- CONTENT -->
           <div class="content-box">
