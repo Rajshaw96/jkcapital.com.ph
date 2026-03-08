@@ -24,56 +24,113 @@ export class AffiliateReferrerNowComponent {
   referForm = this.fb.group({
     yourFirstName: ['', [Validators.required, Validators.minLength(2)]],
     yourLastName: ['', [Validators.required, Validators.minLength(2)]],
-    yourPhone: ['', [Validators.required, Validators.pattern('^[0-9+ ]{7,15}$')]],
-    yourEmail: ['', [Validators.required, Validators.email]],
+
+    yourPhone: ['', [
+      Validators.required,
+      Validators.pattern('^[0-9+ ]{7,15}$')
+    ]],
+
+    yourEmail: ['', [
+      Validators.required,
+      Validators.email
+    ]],
+
     referrerCode: ['', Validators.required],
 
     refFirstName: ['', Validators.required],
     refLastName: ['', Validators.required],
-    refPhone: ['', [Validators.required, Validators.pattern('^[0-9+ ]{7,15}$')]],
-    refEmail: ['', [Validators.required, Validators.email]],
+
+    refPhone: ['', [
+      Validators.required,
+      Validators.pattern('^[0-9+ ]{7,15}$')
+    ]],
+
+    refEmail: ['', [
+      Validators.required,
+      Validators.email
+    ]],
+
     businessName: ['', Validators.required],
     businessType: ['', Validators.required],
 
     company: [''] // honeypot
   });
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient
+  ) {}
+
+  /* =========================
+      FIELD ERROR HELPER
+  ========================== */
 
   isInvalid(name: string): boolean {
-    const c = this.referForm.get(name);
-    return !!(c && c.invalid && (c.touched || this.formSubmitted));
+
+    const control = this.referForm.get(name);
+
+    return !!(
+      control &&
+      control.invalid &&
+      (control.touched || this.formSubmitted)
+    );
+
   }
 
+  /* =========================
+      EMAIL DOMAIN VALIDATION
+  ========================== */
+
   isEmailAllowed(email: string | null | undefined): boolean {
+
     if (!email) return false;
 
     const domain = email.split('@')[1]?.toLowerCase();
+
     if (!domain) return false;
 
     return !this.blockedEmailDomains.includes(domain);
+
   }
 
+  /* =========================
+      FORM SUBMIT
+  ========================== */
+
   submitReferral(): void {
-    debugger;
+
     this.formSubmitted = true;
 
     if (this.referForm.invalid) {
+
       this.referForm.markAllAsTouched();
-      Swal.fire('Incomplete Form', 'Please correct highlighted fields.', 'error');
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Incomplete Form',
+        text: 'Please correct highlighted fields.'
+      });
+
       return;
     }
 
-    // Honeypot
+    // Honeypot protection
     if (this.referForm.value.company) return;
 
-    // Email domain check (both emails)
+    // Email validation
     if (
       !this.isEmailAllowed(this.referForm.value.yourEmail!) ||
       !this.isEmailAllowed(this.referForm.value.refEmail!)
     ) {
-      Swal.fire('Invalid Email', 'Temporary email addresses are not allowed.', 'error');
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Email',
+        text: 'Temporary email addresses are not allowed.'
+      });
+
       return;
+
     }
 
     this.loading = true;
@@ -84,27 +141,39 @@ export class AffiliateReferrerNowComponent {
       timestamp: new Date().toISOString()
     };
 
-    this.http.post('https://api.yoursite.com/refer', payload).subscribe({
-      next: () => {
-        this.loading = false;
-        this.formSubmitted = false;
-        this.referForm.reset();
+    // ✅ API CALL
+    this.http.post('http://localhost:5000/api/affiliate-referrals', payload)
+      .subscribe({
 
-        Swal.fire(
-          'Referral Submitted',
-          'Thank you! Your referral has been sent successfully.',
-          'success'
-        );
-      },
-      error: () => {
-        this.loading = false;
-        Swal.fire(
-          'Submission Failed',
-          'Something went wrong. Please try again later.',
-          'error'
-        );
-      }
-    });
+        next: () => {
+
+          this.loading = false;
+          this.formSubmitted = false;
+
+          this.referForm.reset();
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Referral Submitted',
+            text: 'Thank you! Your referral has been sent successfully.'
+          });
+
+        },
+
+        error: () => {
+
+          this.loading = false;
+
+          Swal.fire({
+            icon: 'error',
+            title: 'Submission Failed',
+            text: 'Something went wrong. Please try again later.'
+          });
+
+        }
+
+      });
+
   }
-}
 
+}

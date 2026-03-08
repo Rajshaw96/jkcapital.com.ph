@@ -26,19 +26,26 @@ export class AffiliateSignupComponent implements OnInit {
   affiliateForm = this.fb.group({
     firstName: ['', [Validators.required, Validators.minLength(2)]],
     lastName: ['', [Validators.required, Validators.minLength(2)]],
-    email: ['', [Validators.required, Validators.email]],
+
+    email: ['', [
+      Validators.required,
+      Validators.email
+    ]],
 
     street1: ['', Validators.required],
     street2: [''],
+
     city: ['', Validators.required],
     region: ['', Validators.required],
+
     postalCode: ['', Validators.required],
     country: ['', Validators.required],
 
     socialUrl: ['', Validators.required],
+
     commissionType: ['', Validators.required],
 
-    company: [''] // 🛑 honeypot
+    company: [''] // honeypot bot protection
   });
 
   constructor(
@@ -49,47 +56,77 @@ export class AffiliateSignupComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+
+    // Get referral ID from URL
     this.referralId = this.route.snapshot.queryParamMap.get('ref');
 
-    const draft = localStorage.getItem('affiliateDraft');
-    if (draft) {
-      this.affiliateForm.patchValue(JSON.parse(draft));
-    }
-
-    this.affiliateForm.valueChanges.subscribe(value => {
-      localStorage.setItem('affiliateDraft', JSON.stringify(value));
-    });
   }
+
+  /* =========================
+      FIELD ERROR HELPER
+  ========================== */
 
   isInvalid(name: string): boolean {
+
     const control = this.affiliateForm.get(name);
-    return !!(control && control.invalid && (control.touched || this.formSubmitted));
+
+    return !!(
+      control &&
+      control.invalid &&
+      (control.touched || this.formSubmitted)
+    );
+
   }
+
+  /* =========================
+      EMAIL DOMAIN CHECK
+  ========================== */
 
   isEmailAllowed(email: string | null | undefined): boolean {
+
     if (!email) return false;
+
     const domain = email.split('@')[1]?.toLowerCase();
+
     return !this.blockedEmailDomains.includes(domain || '');
+
   }
 
+  /* =========================
+      FORM SUBMIT
+  ========================== */
+
   submitAffiliate(): void {
-    console.log('SUBMIT CLICKED');
+
     this.formSubmitted = true;
 
     if (this.affiliateForm.invalid) {
+
       this.affiliateForm.markAllAsTouched();
-      Swal.fire('Incomplete Form', 'Please fill all required fields.', 'error');
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Incomplete Form',
+        text: 'Please fill all required fields.'
+      });
+
       return;
     }
 
-    // 🛑 Honeypot protection
+    // Honeypot protection
     if (this.affiliateForm.value.company) {
       console.warn('Bot detected');
       return;
     }
 
     if (!this.isEmailAllowed(this.affiliateForm.value.email)) {
-      Swal.fire('Invalid Email', 'Disposable emails not allowed.', 'error');
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid Email',
+        text: 'Disposable emails are not allowed.'
+      });
+
       return;
     }
 
@@ -102,14 +139,13 @@ export class AffiliateSignupComponent implements OnInit {
       submittedAt: new Date().toISOString()
     };
 
-    console.log('PAYLOAD', payload);
-
-    // 🔥 Replace with real API
-    this.http.post('https://jsonplaceholder.typicode.com/posts', payload)
+    this.http.post('http://localhost:5000/api/affiliates-signup', payload)
       .subscribe({
+
         next: () => {
+
           this.loading = false;
-          localStorage.removeItem('affiliateDraft');
+
           this.affiliateForm.reset();
           this.formSubmitted = false;
 
@@ -119,16 +155,22 @@ export class AffiliateSignupComponent implements OnInit {
             timer: 2000,
             showConfirmButton: false
           });
-
-          setTimeout(() => {
-            this.router.navigate(['/thank-you']);
-          }, 2000);
         },
-        error: (err) => {
-          console.error(err);
+
+        error: () => {
+
           this.loading = false;
-          Swal.fire('Error', 'Submission failed.', 'error');
+
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Submission failed.'
+          });
+
         }
+
       });
+
   }
+
 }

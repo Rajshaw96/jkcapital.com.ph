@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent {
-  // 🚫 Disposable / fake email domains
+  // 🚫 Disposable email domains
   blockedEmailDomains = [
     'mailinator.com',
     'tempmail.com',
@@ -34,7 +34,7 @@ export class ContactUsComponent {
     message: ['', [Validators.required, Validators.minLength(10)]],
     businessName: [''],
 
-    // 🛑 Honeypot (anti-bot)
+    // Honeypot anti-bot
     company: ['']
   });
 
@@ -68,9 +68,9 @@ export class ContactUsComponent {
      FORM SUBMIT
   ====================== */
   submitForm(): void {
+
     this.formSubmitted = true;
 
-    // ❌ Validation failed
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
 
@@ -84,12 +84,11 @@ export class ContactUsComponent {
       return;
     }
 
-    // 🚫 Bot detection (honeypot)
+    // Honeypot bot detection
     if (this.contactForm.value.company) {
       return;
     }
 
-    // 🚫 Email domain verification
     const email = this.contactForm.value.email as string;
 
     if (!this.isEmailDomainValid(email)) {
@@ -111,10 +110,15 @@ export class ContactUsComponent {
     };
 
     this.emailDomainInvalid = !this.isEmailDomainValid(email);
-    if (this.emailDomainInvalid) return;
+    if (this.emailDomainInvalid) {
+      this.loading = false;
+      return;
+    }
 
-    this.http.post('https://api.yoursite.com/contact', payload).subscribe({
+    // ✅ API Integration
+    this.http.post('http://localhost:5000/api/inquiries', payload).subscribe({
       next: () => {
+
         this.loading = false;
         this.formSubmitted = false;
         this.contactForm.reset();
@@ -125,8 +129,10 @@ export class ContactUsComponent {
           text: 'Thank you! Our team will contact you shortly.',
           confirmButtonColor: '#0d6efd'
         });
+
       },
       error: () => {
+
         this.loading = false;
 
         Swal.fire({
@@ -135,7 +141,10 @@ export class ContactUsComponent {
           text: 'Something went wrong. Please try again later.',
           confirmButtonColor: '#dc3545'
         });
+
       }
     });
+
   }
+
 }

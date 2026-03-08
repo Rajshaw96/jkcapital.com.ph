@@ -10,6 +10,21 @@
   margin: auto;
 }
 
+.required{
+  color:red;
+  margin-left:3px;
+}
+
+.error-text{
+  color:red;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.hidden-field {
+  display: none;
+}
+
 /* GRID */
 .refer-grid {
   display: grid;

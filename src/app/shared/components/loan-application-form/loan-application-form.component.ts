@@ -15,11 +15,10 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
   submitted = false;
   loading = false;
 
-  private draftKey = 'loanApplicationDraft';
   private formSub!: Subscription;
 
-  // 🔥 CHANGE TO YOUR REAL API
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+  // ✅ YOUR REAL API
+  private apiUrl = 'http://localhost:5000/api/main-loan-applications';
 
   constructor(
     private fb: FormBuilder,
@@ -29,8 +28,6 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.buildForm();
     this.handleConditionalFields();
-    this.restoreDraft();
-    this.autoSaveDraft();
   }
 
   ngOnDestroy(): void {
@@ -38,13 +35,16 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
   }
 
   /* ================= FORM BUILD ================= */
+
   private buildForm(): void {
+
     this.loanForm = this.fb.group({
 
       /* PERSONAL DETAILS */
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
+
       contactNumber: [
         '',
         [
@@ -71,6 +71,7 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
       /* LOAN DETAILS */
       loanProduct: ['', Validators.required],
       loanPurpose: ['', Validators.required],
+
       loanAmount: [
         '',
         [
@@ -78,19 +79,24 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
           Validators.pattern('^[0-9,]+$')
         ]
       ],
+
       loanTerm: ['', Validators.required],
       annualIncome: ['', Validators.required],
 
       /* COLLATERAL */
       provideCollateral: ['', Validators.required],
       collateralType: ['']
+
     });
+
   }
 
   /* ================= CONDITIONAL VALIDATION ================= */
+
   private handleConditionalFields(): void {
 
     this.loanForm.get('hasBankAccount')?.valueChanges.subscribe(value => {
+
       const bankAge = this.loanForm.get('bankAccountAge');
 
       if (value === 'yes') {
@@ -99,10 +105,13 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
         bankAge?.clearValidators();
         bankAge?.reset();
       }
+
       bankAge?.updateValueAndValidity();
+
     });
 
     this.loanForm.get('provideCollateral')?.valueChanges.subscribe(value => {
+
       const collateral = this.loanForm.get('collateralType');
 
       if (value === 'yes') {
@@ -111,35 +120,35 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
         collateral?.clearValidators();
         collateral?.reset();
       }
+
       collateral?.updateValueAndValidity();
-    });
-  }
 
-  /* ================= LOCAL STORAGE ================= */
-  private restoreDraft(): void {
-    const draft = localStorage.getItem(this.draftKey);
-    if (draft) {
-      this.loanForm.patchValue(JSON.parse(draft));
-    }
-  }
-
-  private autoSaveDraft(): void {
-    this.formSub = this.loanForm.valueChanges.subscribe(value => {
-      localStorage.setItem(this.draftKey, JSON.stringify(value));
     });
+
   }
 
   /* ================= VALIDATION HELPER ================= */
+
   isInvalid(controlName: string): boolean {
+
     const control = this.loanForm.get(controlName);
-    return !!(control && control.invalid && (control.touched || this.submitted));
+
+    return !!(
+      control &&
+      control.invalid &&
+      (control.touched || this.submitted)
+    );
+
   }
 
   /* ================= SUBMIT ================= */
+
   submit(): void {
+
     this.submitted = true;
 
     if (this.loanForm.invalid) {
+
       this.loanForm.markAllAsTouched();
 
       Swal.fire({
@@ -147,7 +156,9 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
         title: 'Incomplete Form',
         text: 'Please correct the highlighted fields before submitting.'
       });
+
       return;
+
     }
 
     this.loading = true;
@@ -165,15 +176,21 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
     };
 
     this.http.post(this.apiUrl, payload).subscribe({
+
       next: () => this.handleSuccess(),
+
       error: () => this.handleError()
+
     });
+
   }
 
-  /* ================= SWEET ALERT HANDLERS ================= */
+  /* ================= SUCCESS ================= */
+
   private handleSuccess(): void {
+
     this.loading = false;
-    localStorage.removeItem(this.draftKey);
+
     this.loanForm.reset();
     this.submitted = false;
 
@@ -184,9 +201,13 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
       timer: 2500,
       showConfirmButton: false
     });
+
   }
 
+  /* ================= ERROR ================= */
+
   private handleError(): void {
+
     this.loading = false;
 
     Swal.fire({
@@ -194,5 +215,7 @@ export class LoanApplicationFormComponent implements OnInit, OnDestroy {
       title: 'Submission Failed',
       text: 'Something went wrong. Please try again later.'
     });
+
   }
+
 }
