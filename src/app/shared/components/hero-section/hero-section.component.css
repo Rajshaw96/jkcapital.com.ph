@@ -119,6 +119,6 @@
 
   .hero-image {
     clip-path: none;
-    height: 240px;
+    height: 100%;
   }
 }
