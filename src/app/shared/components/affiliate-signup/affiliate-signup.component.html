@@ -113,11 +113,12 @@
               formControlName="postalCode"
               placeholder="Postal / Zip Code"
             />
-            <select formControlName="country">
-              <option value="">Country</option>
-              <option value="Philippines">Philippines</option>
-              <option value="India">India</option>
-            </select>
+          <select formControlName="country">
+            <option value="">Country</option>
+            <option *ngFor="let country of countries" [value]="country">
+              {{country}}
+            </option>
+          </select>
           </div>
         </div>
 
@@ -140,8 +141,7 @@
           <select formControlName="commissionType">
             <option value="">How would you like to be paid? Choose from options.</option>
             <option value="Bank Transfer">Bank Transfer</option>
-            <option value="PayPal">PayPal</option>
-            <option value="GCash">GCash</option>
+            <option value="Office Pick Up">Office Pick Up</option>
           </select>
         </div>
 

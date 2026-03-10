@@ -170,9 +170,9 @@
 
             <select formControlName="referralBusinessType">
               <option value="">Select business type</option>
-              <option value="Retail">Retail</option>
-              <option value="Manufacturing">Manufacturing</option>
-              <option value="Services">Services</option>
+              <option *ngFor="let type of businessTypes" [value]="type">
+                {{ type }}
+              </option>
             </select>
 
             <p class="error-text" *ngIf="isInvalid('referralBusinessType')">

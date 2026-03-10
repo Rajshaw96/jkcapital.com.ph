@@ -13,6 +13,19 @@ export class StarterReferrerComponent {
   loading = false;
   formSubmitted = false;
 
+  businessTypes = [
+    'Agriculture',
+    'Construction & Building',
+    'Distribution & Wholesale Solutions',
+    'Infrastructure & Industrial',
+    'Manufacturing & Production',
+    'Pharmaceutical & Medical',
+    'Renewable Energy',
+    'Professional Services',
+    'Retail',
+    'Technology'
+  ];
+
   // Block disposable email domains
   blockedEmailDomains = [
     'mailinator.com',

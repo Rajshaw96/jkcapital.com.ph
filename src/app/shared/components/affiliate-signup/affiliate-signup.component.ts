@@ -23,6 +23,20 @@ export class AffiliateSignupComponent implements OnInit {
     'yopmail.com'
   ];
 
+  countries = [
+    'Philippines','Afghanistan','Albania','Algeria','Andorra','Angola','Argentina','Armenia','Australia','Austria',
+    'Azerbaijan','Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin',
+    'Bhutan','Bolivia','Bosnia and Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina Faso',
+    'Burundi','Cambodia','Cameroon','Canada','Chile','China','Colombia','Costa Rica','Croatia','Cuba',
+    'Cyprus','Czech Republic','Denmark','Dominican Republic','Ecuador','Egypt','El Salvador','Estonia',
+    'Ethiopia','Finland','France','Germany','Ghana','Greece','Hungary','Iceland','India','Indonesia',
+    'Iran','Iraq','Ireland','Israel','Italy','Japan','Jordan','Kenya','Kuwait','Malaysia','Maldives',
+    'Mexico','Nepal','Netherlands','New Zealand','Nigeria','Norway','Oman','Pakistan','Panama','Peru',
+    ,'Poland','Portugal','Qatar','Romania','Russia','Saudi Arabia','Singapore','South Africa',
+    'South Korea','Spain','Sri Lanka','Sweden','Switzerland','Thailand','Turkey','Ukraine',
+    'United Arab Emirates','United Kingdom','United States','Vietnam'
+  ];
+
   affiliateForm = this.fb.group({
     firstName: ['', [Validators.required, Validators.minLength(2)]],
     lastName: ['', [Validators.required, Validators.minLength(2)]],
@@ -41,7 +55,7 @@ export class AffiliateSignupComponent implements OnInit {
     postalCode: ['', Validators.required],
     country: ['', Validators.required],
 
-    socialUrl: ['', Validators.required],
+    socialUrl: [''],
 
     commissionType: ['', Validators.required],
 
