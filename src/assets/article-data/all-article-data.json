@@ -1,0 +1,53 @@
+[
+  {
+    "categoryName": "Our Story and News",
+    "articles": [
+      {
+        "id": 1,
+        "title": "JK Capital Finance Locks in P300-million credit guarantee",
+        "slug": "jk-capital-finance-locks-in-p300-million-credit-guarantee",
+        "category": "Our Story and News",
+        "author": "admin",
+        "date": "2024-12-30",
+        "image": "assets/article-data/images/JK-Capital-Finance-p300.png",
+        "excerpt": "JK Capital Finance secures a P300-million credit guarantee to strengthen SME financing in the Philippines.",
+        "extlink": "https://business.inquirer.net/489400/jk-capital-finance-locks-in-p300-million-credit-guarante"
+      }
+    ]
+  },
+  {
+    "categoryName": "Our Client Success",
+    "articles": [
+      {
+        "id": 1,
+        "title": "Daddy’s Best Nature Farm Scales Agriculture Operations With JK Capital Finance",
+        "slug": "daddy-s-best-nature-farm-scales-agriculture-operations-with-jk-capital-finance",
+        "category": "Our Client Success",
+        "author": "admin",
+        "date": "2026-01-29",
+        "image": "assets/article-data/images/Best-Nature-Farm-Scales-Agriculture-Operation.jpeg",
+        "excerpt": "Daddy’s Best Nature Farm is revolutionizing sustainable farming practices in the Philippines. Set on a lush 17-hectare property in San Clemente, Tarlac, the farm marries regenerative agricultural techniques with a strong commitment to social impact."
+      },
+      {
+        "id": 2,
+        "title": "Excelucent Equipment Corporation Secures Growth Funding from JK Capital Finance",
+        "slug": "excelucent-equipment-corporation-secures-growth-funding-from-jk-capital-finance",
+        "category": "Our Client Success",
+        "author": "admin",
+        "date": "2026-01-19",
+        "image": "assets/article-data/images/excelucent-equipment-corporation.png",
+        "excerpt": "Excelucent Equipment Corporation (EEC), a key player in construction machinery distribution and rentals, has successfully renewed its partnership with JK Capital Finance to secure funding for enhanced operational capabilities."
+      },
+      {
+        "id": 3,
+        "title": "JK Capital and INVENIC Strengthen Partnership to Accelerate Solar and Renewable Energy Projects in the Philippines",
+        "slug": "jk-capital-and-invenic-strengthen-partnership-to-accelerate-solar-and-renewable-energy-projects-in-the-philippines",
+        "category": "Our Client Success",
+        "author": "admin",
+        "date": "2025-12-04",
+        "image": "assets/article-data/images/shared-image.jpg",
+        "excerpt": "JK Capital Finance, Inc., a leading provider of business loans and structured financing solutions for SMEs, has renewed its partnership with INVENIC, one of the country’s foremost EPC companies for solar and environmental systems."
+      }
+    ]
+  }
+]

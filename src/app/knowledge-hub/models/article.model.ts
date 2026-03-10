@@ -1,6 +1,7 @@
 export interface Article {
   id: number;
   title: string;
+  category: string;
   slug: string;
   excerpt: string;
   content: string;
@@ -9,4 +10,5 @@ export interface Article {
   createdAt: string;
   likes: number;
   comments: number;
+  extlink?: string;
 }

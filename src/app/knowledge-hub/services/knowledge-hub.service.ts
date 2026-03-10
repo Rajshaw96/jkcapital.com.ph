@@ -1,21 +1,19 @@
-import { HttpClient } from "@angular/common/http";
-import { Article } from "../models/article.model";
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Article } from '../models/article.model';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class KnowledgeHubService {
+
+  private jsonUrl = 'assets/article-data/all-article-data.json';
 
   constructor(private http: HttpClient) {}
 
-  getArticles(params?: any) {
-    return this.http.get<Article[]>('/api/articles', { params });
+  getArticles(): Observable<Article[]> {
+    return this.http.get<Article[]>(this.jsonUrl);
   }
 
-  getArticle(slug: string) {
-    return this.http.get<Article>(`/api/articles/${slug}`);
-  }
-
-  likeArticle(id: number) {
-    return this.http.post(`/api/articles/${id}/like`, {});
-  }
 }
