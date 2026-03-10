@@ -35,7 +35,7 @@
     </div>
 
     <!-- TABS -->
-    <div class="faq-tabs">
+    <!-- <div class="faq-tabs">
       <button
         *ngFor="let tab of tabs"
         (click)="setActiveTab(tab)"
@@ -43,7 +43,40 @@
       >
         {{ tab }}
       </button>
-    </div>
+    </div> -->
+
+<div class="faq-tabs-wrapper">
+
+  <!-- Left Arrow -->
+  <button
+    class="scroll-btn left"
+    (click)="scrollTabs('left')"
+    [disabled]="isLeftDisabled"
+  >
+    &#10094;
+  </button>
+
+  <!-- Tabs -->
+  <div class="faq-tabs" #tabsContainer (scroll)="checkScroll()">
+    <button
+      *ngFor="let tab of tabs"
+      (click)="setActiveTab(tab)"
+      [class.active]="activeTab === tab"
+    >
+      {{ tab }}
+    </button>
+  </div>
+
+  <!-- Right Arrow -->
+  <button
+    class="scroll-btn right"
+    (click)="scrollTabs('right')"
+    [disabled]="isRightDisabled"
+  >
+    &#10095;
+  </button>
+
+</div>
 
     <!-- FAQ LIST -->
     <div class="faq-list">

@@ -82,6 +82,50 @@
   }
 }
 
+.faq-tabs-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.faq-tabs {
+  display: flex;
+  gap: 18px;
+  margin: 32px 0 32px;
+  border-bottom: 1px solid #ddd;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+/* Arrow Buttons */
+.scroll-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 16px;
+}
+
+.scroll-btn.left {
+  margin-right: 10px;
+}
+
+.scroll-btn.right {
+  margin-left: 10px;
+}
+
+.scroll-btn.right :hover{
+  border-color: #0166cc;
+}
+
+.scroll-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 
 /* TABS */
 .faq-tabs {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 interface FaqItem {
   question: string;
@@ -18,6 +18,41 @@ export class FaqComponent {
   visibleCount = 3;
   showAll = false;
   activeTab = 'General Information';
+
+  @ViewChild('tabsContainer') tabsContainer!: ElementRef;
+
+  isLeftDisabled = true;
+  isRightDisabled = false;
+
+  ngAfterViewInit() {
+    this.checkScroll();
+  }
+
+  scrollTabs(direction: string) {
+    const scrollAmount = 200;
+
+    if (direction === 'left') {
+      this.tabsContainer.nativeElement.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    } else {
+      this.tabsContainer.nativeElement.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    setTimeout(() => this.checkScroll(), 300);
+  }
+
+  checkScroll() {
+    const el = this.tabsContainer.nativeElement;
+
+    this.isLeftDisabled = el.scrollLeft <= 0;
+    this.isRightDisabled =
+      el.scrollLeft + el.clientWidth >= el.scrollWidth - 1;
+  }
 
   tabs: string[] = [
     'General Information',
