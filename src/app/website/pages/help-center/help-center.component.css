@@ -94,8 +94,7 @@
 .map img {
   top: 0;
   max-width: 72%;
-  /* width: 850px;
-  height: 500px; */
+  margin-left: 40px;
 }
 
 /* ================= MOBILE ================= */
