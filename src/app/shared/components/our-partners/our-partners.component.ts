@@ -10,8 +10,8 @@ export class OurPartnersComponent implements OnInit, OnDestroy {
   @ViewChild('carousel', { static: false }) carousel!: ElementRef;
 
   partners = [
-    { logo: 'assets/img/partners/cmapi.png', name: 'CMAP' },
-    { logo: 'assets/img/partners/bulacan-chamber.png', name: 'Bulacan Chamber' },
+    { logo: 'assets/img/partners/CMAP.webp', name: 'CMAP' },
+    { logo: 'assets/img/partners/BCCI.png', name: 'Bulacan Chamber' },
     { logo: 'assets/img/partners/transunion.png', name: 'TransUnion' },
     { logo: 'assets/img/partners/sec.png', name: 'SEC Philippines' }
   ];
