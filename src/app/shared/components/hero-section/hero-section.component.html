@@ -3,7 +3,7 @@
 
     <!-- LEFT CONTENT -->
     <div class="hero-content">
-      <h1>{{ title }}</h1>
+      <h1 [innerHTML]="title">{{ title }}</h1>
       <p [innerHTML]="subtitle">{{ subtitle }}</p>
 
       <a *ngIf="buttonText?.trim()" (click)="openConsultationPopup()" class="hero-btn">
