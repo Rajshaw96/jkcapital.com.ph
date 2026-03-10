@@ -4,18 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { KnowledgeHubRoutingModule } from './knowledge-hub-routing.module';
 
-import { ArticleListComponent } from './pages/article-list/article-list.component';
-import { ArticleDetailComponent } from './pages/article-detail/article-detail.component';
+
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { AllArticleListComponent } from './layout/all-article-list/all-article-list.component';
+import { ArticleDetailsComponent } from './layout/article-details/article-details.component';
 
 
 const SHARED_COMPONENTS = [
-    ArticleListComponent,
-    ArticleDetailComponent,
+  AllArticleListComponent,
+  ArticleDetailsComponent,
 ];
 @NgModule({
-  declarations: [...SHARED_COMPONENTS],
+  declarations: [...SHARED_COMPONENTS, ArticleDetailsComponent],
   imports: [
     CommonModule,
     FormsModule,

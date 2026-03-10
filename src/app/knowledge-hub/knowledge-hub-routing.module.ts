@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ArticleListComponent } from './pages/article-list/article-list.component';
-import { ArticleDetailComponent } from './pages/article-detail/article-detail.component';
+import { AllArticleListComponent } from './layout/all-article-list/all-article-list.component';
+import { ArticleDetailsComponent } from './layout/article-details/article-details.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: ArticleListComponent
+    component: AllArticleListComponent
   },
-  { path: 'artical', component: ArticleListComponent },
-  { path: ':slug', component: ArticleDetailComponent }
+  { path: 'all-articles', component: AllArticleListComponent },
+  { path: ':slug', component: ArticleDetailsComponent }
+
+  
 ];
 
 @NgModule({
