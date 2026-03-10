@@ -35,13 +35,22 @@ export class OfficeLocatorComponent implements OnInit {
     }
 
     this.isLoading = true;
+
     this.searchTimeout = setTimeout(() => {
+
+      const normalize = (text: string) =>
+        text.toLowerCase().replace(/[^a-z0-9 ]/g, '').trim();
+
       this.selectedOffice = this.offices.find(office =>
-        office.cities.some((c: string) => c.toLowerCase().includes(city))
+        office.cities.some((c: string) =>
+          normalize(c).includes(normalize(city))
+        )
       );
+
       this.isLoading = false;
       this.hasSearched = true;
-    }, 400); // Slight delay feels more "real"
+
+    }, 400);
   }
 
   clearSearch() {

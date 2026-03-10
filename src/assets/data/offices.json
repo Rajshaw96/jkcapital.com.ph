@@ -13,91 +13,110 @@
       "Caloocan","Las Piñas","Makati","Malabon","Mandaluyong","Manila",
       "Marikina","Muntinlupa","Navotas","Parañaque","Pasay","Pasig",
       "Quezon City","San Juan","Taguig","Valenzuela",
-      "Antipolo (Rizal)","Bacoor (Cavite)","Biñan (Laguna)",
-      "Batangas City (Batangas)","Cabuyao (Laguna)","Calamba (Laguna)",
-      "Cavite City (Cavite)","Dasmariñas (Cavite)","General Trias (Cavite)",
-      "Imus (Cavite)","Lipa (Batangas)","San Pablo (Laguna)",
-      "San Pedro (Laguna)","Santa Rosa (Laguna)",
-      "Santo Tomas (Batangas)","Tagaytay (Cavite)",
-      "Tayabas (Quezon)","Trece Martires (Cavite)",
-      "Calapan (Oriental Mindoro)","Tanauan (Batangas)",
+
+      "Antipolo (Rizal)",
+      "Bacoor (Cavite)","Cavite City (Cavite)","Dasmariñas (Cavite)",
+      "General Trias (Cavite)","Imus (Cavite)","Tagaytay (Cavite)",
+      "Trece Martires (Cavite)",
+
+      "Biñan (Laguna)","Cabuyao (Laguna)","Calamba (Laguna)",
+      "San Pablo (Laguna)","San Pedro (Laguna)","Santa Rosa (Laguna)",
+
+      "Batangas City (Batangas)","Lipa (Batangas)",
+      "Santo Tomas (Batangas)","Tanauan (Batangas)",
+
+      "Tayabas (Quezon)","Lucena (Quezon)",
+
+      "Calapan (Oriental Mindoro)",
+
       "Legazpi (Albay)","Naga (Camarines Sur)",
-      "Iriga (Camarines Sur)","Masbate City (Masbate)"
+      "Iriga (Camarines Sur)","Masbate City (Masbate)",
+      "Tabaco (Albay)","Ligao (Albay)",
+      "Sorsogon City (Sorsogon)"
     ]
   },
+
   {
     "office": "Malolos Branch",
     "baseCity": "Malolos, Bulacan",
     "address": "Unit E1, Al bldg., KM 38 McArthur Highway, Zone 5, San Pablo, Malolos City, Bulacan",
-    "phone": "09985514189",
-    "cities": [
-      "Malolos (Bulacan)","Meycauayan (Bulacan)",
-      "San Jose del Monte (Bulacan)","Balagtas (Bulacan)",
-      "Bocaue (Bulacan)","Guiguinto (Bulacan)",
-      "Calumpit (Bulacan)","Dagupan","Alaminos",
-      "Urdaneta","San Carlos (Pangasinan)",
-      "Tarlac City","Mabalacat",
-      "San Fernando (Pampanga)","Angeles (Pampanga)",
-      "Olongapo (Zambales)","Tuguegarao (Cagayan)",
-      "Santiago (Isabela)","Ilagan (Isabela)",
-      "Laoag (Ilocos Norte)","Batac (Ilocos Norte)",
-      "San Fernando (La Union)","Candon (Ilocos Sur)"
-    ]
-  },
-  {
-    "office": "Cabanatuan Branch",
-    "baseCity": "Cabanatuan, Nueva Ecija",
-    "address": "Purok 5, Burgos, Sto. Domingo, Nueva Ecija",
     "phone": "(044) 7910241",
     "mobile": "0916-3150874 (Globe) | 0998-9632461 (Smart)",
     "cities": [
-      "Cabanatuan / Cabanatuan City",
-      "Palayan","San Jose","Muñoz","Gapan (Nueva Ecija)",
+      "Malolos (Bulacan)","Meycauayan (Bulacan)",
+      "San Jose del Monte (Bulacan)",
 
-      "Bagong Baluarte","Bagong Sikat","Bagong Silang",
-      "Balaring","Balincarin","Bangad","Banged",
-      "Barrio Bangad","Belen","Cabu","Kawayan",
-      "Magasawang","Magasawang Pulo","Magasawang Sampaloc",
-      "Malacanan / Malacanang",
-      "Mataas Na Kahey / Mataas na Kahoy / Mataas na Pangpang",
-      "Miller","Pagas","Panacsac","Panaksak","Pangatian",
-      "Pipas","Plainfield","Platero / Plateros","Populon",
-      "Pulungkamun","Samon",
-      "San Jose / San Josef / San Joseph",
-      "Sangitan","Sapang Kawayan","Sumacab",
-      "Talabutab Norte / Talabutab Sur",
-      "Talipapa",
+      "Cabanatuan (Nueva Ecija)","Palayan (Nueva Ecija)",
+      "San Jose (Nueva Ecija)","Muñoz (Nueva Ecija)",
+      "Gapan (Nueva Ecija)",
 
-      "Aliaga","Bongabon","Cabiao","Carranglan",
-      "Cuyapo","General Mamerto Natividad","Gen. Tinio",
-      "Guimba","Jaen","Laur","Licab","Llanera",
-      "Lupao","Nampicuan","Pantabangan","Peñaranda",
-      "Quezon","Rizal","San Antonio","San Isidro",
-      "San Leonardo","Santa Rosa","Santo Domingo",
-      "Talavera","Talugtug","Zaragoza"
+      "Dagupan (Pangasinan)","Alaminos (Pangasinan)",
+      "Urdaneta (Pangasinan)","San Carlos (Pangasinan)",
+
+      "Tarlac City (Tarlac)",
+
+      "Mabalacat (Pampanga)","San Fernando (Pampanga)",
+      "Angeles (Pampanga)",
+
+      "Olongapo (Zambales)",
+
+      "Tuguegarao (Cagayan)",
+
+      "Santiago (Isabela)","Ilagan (Isabela)","Cauayan (Isabela)",
+
+      "Laoag (Ilocos Norte)","Batac (Ilocos Norte)",
+
+      "San Fernando (La Union)",
+
+      "Candon (Ilocos Sur)","Vigan (Ilocos Sur)",
+
+      "Baguio (Benguet)",
+
+      "San Jose (Occidental Mindoro)",
+
+      "Balanga (Bataan)",
+
+      "Tabuk (Kalinga)"
     ]
   },
+
   {
     "office": "Cebu Branch",
     "baseCity": "Cebu City",
     "address": "Room 207, Manros Plaza bldg. General Maxilom Avenue Cebu City",
     "mobile": "0919-6571035 (Smart) | 0966-2188379 (Globe)",
     "cities": [
-      "Cebu City","Lapu-Lapu","Mandaue","Danao","Carcar",
-      "Talisay (Cebu)","Toledo","Bogo","Naga (Cebu)",
+      "Cebu City (Cebu)","Lapu-Lapu (Cebu)","Mandaue (Cebu)",
+      "Danao (Cebu)","Carcar (Cebu)","Talisay (Cebu)",
+      "Toledo (Cebu)","Bogo (Cebu)","Naga (Cebu)",
 
-      "Bacolod","Bago","Cadiz","Escalante",
-      "Himamaylan","Kabankalan","La Carlota","Silay",
-      "Sagay","San Carlos (Negros Occidental)",
-      "Talisay (Negros Occidental)","Bayawan","Bais",
-      "Canlaon","Dumaguete","Guihulngan","Tanjay",
-      "Passi","Victorias","Sipalay",
+      "Bacolod (Negros Occidental)","Bago (Negros Occidental)",
+      "Cadiz (Negros Occidental)","Escalante (Negros Occidental)",
+      "Himamaylan (Negros Occidental)","Kabankalan (Negros Occidental)",
+      "La Carlota (Negros Occidental)","Silay (Negros Occidental)",
+      "Sagay (Negros Occidental)","San Carlos (Negros Occidental)",
+      "Talisay (Negros Occidental)","Victorias (Negros Occidental)",
+      "Sipalay (Negros Occidental)",
 
-      "Ormoc","Baybay","Tacloban","Borongan",
-      "Catbalogan","Calbayog","Maasin","Tagbilaran",
-      "Puerto Princesa"
+      "Bayawan (Negros Oriental)","Bais (Negros Oriental)",
+      "Canlaon (Negros Oriental)","Dumaguete (Negros Oriental)",
+      "Guihulngan (Negros Oriental)","Tanjay (Negros Oriental)",
+
+      "Passi (Iloilo)","Iloilo City (Iloilo)","Roxas (Capiz)",
+
+      "Ormoc (Leyte)","Baybay (Leyte)","Tacloban (Leyte)",
+
+      "Borongan (Eastern Samar)",
+      "Catbalogan (Samar)","Calbayog (Samar)",
+
+      "Maasin (Southern Leyte)",
+
+      "Tagbilaran (Bohol)",
+
+      "Puerto Princesa (Palawan)"
     ]
   },
+
   {
     "office": "Davao Branch",
     "baseCity": "Davao City",
@@ -105,14 +124,46 @@
     "phone": "(082) 236-9097",
     "mobile": "09352020568",
     "cities": [
-      "Davao City","Digos","Panabo","Tagum","Mati","Samal",
-      "Cotabato City","Kidapawan","Koronadal",
-      "General Santos","Tacurong","Surigao City",
-      "Bislig","Bayugan","Butuan","Cabadbaran",
-      "Iligan","Marawi","Dipolog","Dapitan",
-      "Ozamiz","Oroquieta","Zamboanga City",
-      "Pagadian","Valencia","Lamitan",
-      "Isabela City","Malaybalay","Iligan"
+      "Davao City (Davao del Sur)","Digos (Davao del Sur)",
+
+      "Panabo (Davao del Norte)","Tagum (Davao del Norte)",
+      "Island Garden City of Samal (Davao del Norte)",
+
+      "Mati (Davao Oriental)",
+
+      "Cotabato City (Maguindanao)",
+
+      "Kidapawan (North Cotabato)",
+
+      "Koronadal (South Cotabato)","General Santos (South Cotabato)",
+
+      "Tacurong (Sultan Kudarat)",
+
+      "Surigao City (Surigao del Norte)",
+
+      "Bislig (Surigao del Sur)","Tandag (Surigao del Sur)",
+
+      "Bayugan (Agusan del Sur)",
+
+      "Butuan (Agusan del Norte)","Cabadbaran (Agusan del Norte)",
+
+      "Iligan (Lanao del Norte)",
+
+      "Marawi (Lanao del Sur)",
+
+      "Dipolog (Zamboanga del Norte)","Dapitan (Zamboanga del Norte)",
+
+      "Ozamiz (Misamis Occidental)","Oroquieta (Misamis Occidental)",
+
+      "Zamboanga City (Zamboanga del Sur)","Pagadian (Zamboanga del Sur)",
+
+      "Valencia (Bukidnon)","Malaybalay (Bukidnon)",
+
+      "Lamitan (Basilan)","Isabela City (Basilan)",
+
+      "Cagayan de Oro (Misamis Oriental)",
+      "Gingoog (Misamis Oriental)",
+      "El Salvador (Misamis Oriental)"
     ]
   }
 ]
