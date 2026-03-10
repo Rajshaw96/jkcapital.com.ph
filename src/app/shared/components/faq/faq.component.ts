@@ -403,6 +403,7 @@ export class FaqComponent {
     if (this.submittedSearchText) {
 
       const keyword = this.submittedSearchText.toLowerCase();
+      let results: FaqItem[] = [];
 
       for (const tab of this.tabs) {
 
@@ -419,14 +420,12 @@ export class FaqComponent {
           );
         });
 
-        if (matches.length > 0) {
-          this.activeTab = tab;
-          this.showAll = true;
-          return matches;
-        }
+        results = results.concat(matches); // ✅ collect from all tabs
       }
 
-      return [];
+      this.showAll = true;
+
+      return results;
     }
 
     // 📌 NORMAL MODE
