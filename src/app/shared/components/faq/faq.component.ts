@@ -12,6 +12,7 @@ interface FaqItem {
   styleUrls: ['./faq.component.css']
 })
 export class FaqComponent {
+  searchTab = 'Search Results';
   searchText: string = '';
   submittedSearchText: string = '';
   visibleCount = 3;
@@ -376,21 +377,29 @@ export class FaqComponent {
 
   onSearch(): void {
     const value = this.searchText.trim();
-    // 🔄 If search is empty → reset everything
     if (!value) {
       this.resetToDefault();
       return;
     }
+
     this.submittedSearchText = value;
+    if (!this.tabs.includes(this.searchTab)) {
+      this.tabs.unshift(this.searchTab); // add first
+    }
+
+    this.activeTab = this.searchTab;
   }
 
   resetToDefault(): void {
     this.submittedSearchText = '';
     this.searchText = '';
-    this.activeTab = 'General Information'; // default tab
     this.showAll = false;
 
-    // close all accordions
+    // remove search tab
+    this.tabs = this.tabs.filter(tab => tab !== this.searchTab);
+
+    this.activeTab = 'General Information';
+
     Object.keys(this.faqs).forEach(tab => {
       this.faqs[tab]?.forEach(faq => faq.open = false);
     });
@@ -399,13 +408,12 @@ export class FaqComponent {
   /** SEARCH FILTER (handles string + list) */
   get filteredFaqs(): FaqItem[] {
 
-    // 🔍 SEARCH MODE
-    if (this.submittedSearchText) {
+    if (this.activeTab === this.searchTab && this.submittedSearchText) {
 
       const keyword = this.submittedSearchText.toLowerCase();
       let results: FaqItem[] = [];
 
-      for (const tab of this.tabs) {
+      for (const tab of Object.keys(this.faqs)) {
 
         const list = this.faqs[tab] || [];
 
@@ -420,15 +428,13 @@ export class FaqComponent {
           );
         });
 
-        results = results.concat(matches); // ✅ collect from all tabs
+        results = results.concat(matches);
       }
 
       this.showAll = true;
-
       return results;
     }
 
-    // 📌 NORMAL MODE
     const list = this.faqs[this.activeTab] || [];
     return this.showAll ? list : list.slice(0, this.visibleCount);
   }
