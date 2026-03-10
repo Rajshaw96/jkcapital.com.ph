@@ -5,7 +5,7 @@
 
 .locator-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin: 0 auto;
 }
@@ -184,4 +184,78 @@ label {
   .card {
     padding: 24px;
   }
+}
+
+/* ===== LARGE TABLET / SMALL LAPTOP ===== */
+@media (max-width: 1024px) {
+
+  .locator-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+
+  .locator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 250px;
+  }
+
+  .state-container p {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+
+  .locator-container {
+    min-height: auto;
+  }
+
+  .locator-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .search-field input {
+    padding: 14px 42px;
+    font-size: 15px;
+  }
+
+  .state-container p {
+    font-size: 14px;
+    padding: 18px;
+  }
+
+  .detail-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ===== VERY SMALL MOBILE ===== */
+@media (max-width: 360px) {
+
+  .locator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-field input {
+    padding: 12px 40px;
+    font-size: 14px;
+  }
+
 }

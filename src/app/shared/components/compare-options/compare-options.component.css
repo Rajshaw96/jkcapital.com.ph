@@ -1,3 +1,89 @@
 .card-cell:first-child {
   border-right: 1px solid #D3D3D3;
 }
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+
+  .comparison-container {
+    display: block;
+  }
+
+  .feature-sidebar {
+    display: none;
+  }
+
+  .data-card {
+    width: 100%;
+  }
+
+  .card-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-cell {
+    padding: 16px;
+  }
+
+  .item-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .item-wrap p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+
+  .comparison-container {
+    display: block;
+  }
+
+  .feature-sidebar {
+    display: none;
+  }
+
+  .data-card {
+    width: 100%;
+  }
+
+  .card-row {
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid #eee;
+  }
+
+  .card-cell {
+    padding: 14px 12px;
+  }
+
+  .table-header {
+    grid-template-columns: 1fr 1fr;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .item-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item-wrap svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .item-wrap p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+}

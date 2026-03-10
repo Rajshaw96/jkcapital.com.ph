@@ -544,6 +544,7 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
     font-weight: 700;
     line-height: normal;
     margin: 0px;
+    padding-bottom: 15px;
   }
 
 }
@@ -647,6 +648,66 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
   .top-links a {
     color: var(--White, #FFF);
     margin-left: 0px;
+  }
+
+}
+
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+
+  .comparison-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .data-card {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .card-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* keep two columns */
+  }
+
+  .card-cell {
+    padding: 16px 14px;
+  }
+
+  .item-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item-wrap svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .item-wrap p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+
+  .data-card {
+    max-width: 100%;
+  }
+
+  .card-cell {
+    padding: 12px;
+  }
+
+  .item-wrap p {
+    font-size: 13px;
   }
 
 }
