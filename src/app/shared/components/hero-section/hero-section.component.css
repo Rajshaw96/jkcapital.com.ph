@@ -73,7 +73,7 @@
 .hero-image {
   position: relative;
   overflow: hidden;
-
+  margin-right: -2px !important;
   /* Bottom-left diagonal cut */
   clip-path: polygon(
     0 0,          /* top-left */
@@ -118,7 +118,6 @@
   }
 
   .hero-image {
-    clip-path: none;
     height: 100%;
   }
 }
