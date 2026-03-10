@@ -1,18 +1,7 @@
-<article class="detail">
-
-  <h1>{{ article.title }}</h1>
-
-  <div class="meta">
-    {{ article.author }} • {{ article.createdAt | date }}
-  </div>
-
-  <img [src]="article.image" />
-
-  <div class="content" [innerHTML]="article.content"></div>
-
-  <div class="actions">
-    <button (click)="like()">👍 {{ article.likes }}</button>
-    <button>🔗 Share</button>
-  </div>
-
-</article>
+<app-hero-section
+  title="Insights to Grow Your Business"
+  subtitle="Expert knowledge on financing, growth strategies, and success stories from Filipino entrepreneurs​"
+  buttonText=""
+  buttonLink="/apply"
+  image="assets/img/knowledge-hub/knowledge-hub-hero.jpg">
+</app-hero-section>
