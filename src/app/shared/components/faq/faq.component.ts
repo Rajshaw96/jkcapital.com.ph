@@ -144,7 +144,7 @@ export class FaqComponent {
       },
       {
         question: 'Why partner with JK Capital for short-term financing?',
-        answer: 'We go beyond capital. We structure financing around how your business actually operates combining cash flow insights, practical timelines, and responsible lending—to help you grow without unnecessary pressure.'
+        answer: 'We go beyond capital. We structure financing around how your business actually operates—combining cash flow insights, practical timelines, and responsible lending—to help you grow without unnecessary pressure.'
       }
     ],
 
