@@ -18,16 +18,19 @@
         
         <!-- Active / Center Card Layout -->
         <div class="image-box" *ngIf="getPosition(i) === 'active'">
-          <img [src]="item.image" [alt]="item.headline" />
+          <!-- <img [src]="item.image" [alt]="item.headline" /> -->
+
+          <div id="activeVideoPlayer"></div>
+
           
-          <div class="overlay-text">
+          <!-- <div class="overlay-text">
             <h4>{{ item.headline }}</h4>
             <p>{{ item.subheadLine }}</p>
-          </div>
+          </div> -->
 
-          <button *ngIf="item.video" class="play-btn" (click)="openVideo(item.video)">
+          <!-- <button *ngIf="item.video" class="play-btn" (click)="openVideo(item.video)">
             <i class="fa-solid fa-play"></i>
-          </button>
+          </button> -->
         </div>
 
         <!-- Side Card Layout (Grey bottom text - hidden on mobile via CSS) -->
@@ -55,23 +58,3 @@
     </div>
   </div>
 </section>
-
-<!-- FIXED MODAL STRUCTURE -->
-<div class="video-modal" *ngIf="showVideo">
-  <div class="modal-backdrop" (click)="closeVideo()"></div>
-  
-  <div class="modal-content">
-    <button class="modal-close" (click)="closeVideo()">&times;</button>
-    
-    <div class="video-container">
-        <!-- The iframe will only render if activeVideoUrl exists -->
-        <iframe 
-            *ngIf="activeVideoUrl"
-            [src]="activeVideoUrl" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media; fullscreen" 
-            allowfullscreen>
-        </iframe>
-    </div>
-  </div>
-</div>

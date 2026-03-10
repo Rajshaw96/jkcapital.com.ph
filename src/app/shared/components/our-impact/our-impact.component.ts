@@ -1,106 +1,165 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+
+declare var YT: any;
 
 @Component({
   selector: 'app-our-impact',
   templateUrl: './our-impact.component.html',
   styleUrls: ['./our-impact.component.css']
 })
-export class OurImpactComponent implements OnInit, OnDestroy {
-  activeIndex = 1;
-  intervalId: any;
+export class OurImpactComponent implements OnInit, AfterViewInit {
+  activeIndex = 0;
+  player: any;
 
-  // Swipe gesture tracking
+  // swipe
   touchStartX = 0;
   touchEndX = 0;
-
-  // Modal control
-  showVideo = false;
-  activeVideoUrl: SafeResourceUrl | null = null;
 
   testimonials = [
     {
       headline: 'The Veteran Loan Consultant',
-      subheadLine: 'A closer look, Era Tapar, JK Capital’s loan consultant whose years of experience and client relationships continue to guide SMEs toward smarter financial decision.',
+      subheadLine: 'A closer look, Era Tapar, JK Capital’s loan consultant whose years of experience and client relationships continue to guide SMEs.',
       image: 'assets/img/pages/Our Impact/LC ERA TAPAR COVER.jpg',
-      video: 'https://www.youtube.com/embed/uV-lEbcPBUc?si=UIVYD6DuaqpBGP0d'
+      videoId: 'uV-lEbcPBUc'
     },
     {
-      headline: 'PHILSME 2025 ',
-      subheadLine: 'Highlights from PHILSME 2025, capturing conversations, connections, and shared insights among SME leaders.',
+      headline: 'PHILSME 2025',
+      subheadLine: 'Highlights from PHILSME 2025, capturing conversations and connections among SME leaders.',
       image: 'assets/img/testimonials/viber_image_2026-02-13_14-28-04-285.jpg',
-      video: 'https://www.youtube.com/embed/F6ZNV08y7MY?si=mer7VWkXhHlwvNSS'
+      videoId: 'F6ZNV08y7MY'
     },
     {
       headline: 'The Resilient Partner',
-      subheadLine: 'The story of Jeffrey Calpe, a loan consultant who adapted to change and continues to support growing businesses with resilience, trust, and long-term vision.',
+      subheadLine: 'The story of Jeffrey Calpe, a loan consultant who continues supporting growing businesses.',
       image: 'assets/img/testimonials/jeffrey-calpe.jpeg',
-      video: 'https://www.youtube.com/embed/Vq4QbAj4HDk?si=5nzjI4yOB0rPe5xR'
+      videoId: 'Vq4QbAj4HDk'
     }
   ];
 
-  constructor(private sanitizer: DomSanitizer) {}
-
   ngOnInit(): void {
-    this.startAutoSlide();
+    this.loadYoutubeAPI();
   }
 
-  ngOnDestroy(): void {
-    if (this.intervalId) clearInterval(this.intervalId);
+  ngAfterViewInit(): void {
+
+    (window as any).onYouTubeIframeAPIReady = () => {
+      this.createPlayer(this.testimonials[this.activeIndex].videoId);
+    };
+
   }
 
-  startAutoSlide(): void {
-    this.intervalId = setInterval(() => this.next(), 5000);
+  /* LOAD YOUTUBE API */
+
+  loadYoutubeAPI() {
+
+    if ((window as any).YT) return;
+
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
   }
 
-  resetAutoSlide(): void {
-    clearInterval(this.intervalId);
-    this.startAutoSlide();
+  /* CREATE PLAYER */
+
+  createPlayer(videoId: string) {
+
+    setTimeout(() => {
+
+      if (this.player) {
+        this.player.destroy();
+      }
+
+      this.player = new YT.Player('activeVideoPlayer', {
+
+        videoId: videoId,
+
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          controls: 1,
+          rel: 0
+        },
+
+        events: {
+
+          onStateChange: (event: any) => {
+
+            // 0 = video ended
+            if (event.data === 0) {
+
+              this.next();
+
+              setTimeout(() => {
+                this.createPlayer(
+                  this.testimonials[this.activeIndex].videoId
+                );
+              }, 500);
+
+            }
+
+          }
+
+        }
+
+      });
+
+    }, 200);
+
   }
 
-  prev(): void {
-    this.activeIndex = (this.activeIndex - 1 + this.testimonials.length) % this.testimonials.length;
-    this.resetAutoSlide();
+  /* SLIDER CONTROLS */
+
+  next() {
+    this.activeIndex =
+      (this.activeIndex + 1) % this.testimonials.length;
+
+    setTimeout(() => {
+      this.createPlayer(
+        this.testimonials[this.activeIndex].videoId
+      );
+    }, 200);
   }
 
-  next(): void {
-    this.activeIndex = (this.activeIndex + 1) % this.testimonials.length;
-    this.resetAutoSlide();
+  prev() {
+    this.activeIndex =
+      (this.activeIndex - 1 + this.testimonials.length) %
+      this.testimonials.length;
+
+    setTimeout(() => {
+      this.createPlayer(
+        this.testimonials[this.activeIndex].videoId
+      );
+    }, 200);
   }
 
   getPosition(index: number): string {
+
     if (index === this.activeIndex) return 'active';
-    if (index === (this.activeIndex - 1 + this.testimonials.length) % this.testimonials.length) return 'left';
-    if (index === (this.activeIndex + 1) % this.testimonials.length) return 'right';
+
+    if (index === (this.activeIndex - 1 + this.testimonials.length) % this.testimonials.length)
+      return 'left';
+
+    if (index === (this.activeIndex + 1) % this.testimonials.length)
+      return 'right';
+
     return 'hidden';
+
   }
 
-  // FIXED VIDEO LOGIC
-  openVideo(url: string) {
-    if (!url) {
-      console.error("No video URL provided!");
-      return;
-    }
-    // This allows Angular to trust the URL
-    this.activeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
-    this.showVideo = true;
-    clearInterval(this.intervalId); // Stop carousel when watching
-  }
+  /* SWIPE SUPPORT */
 
-  closeVideo() {
-    this.showVideo = false;
-    this.activeVideoUrl = null;
-    this.startAutoSlide();
-  }
-
-  /* Swipe Support */
   onTouchStart(event: TouchEvent): void {
     this.touchStartX = event.changedTouches[0].screenX;
   }
 
   onTouchEnd(event: TouchEvent): void {
+
     this.touchEndX = event.changedTouches[0].screenX;
+
     if (this.touchEndX < this.touchStartX - 50) this.next();
     if (this.touchEndX > this.touchStartX + 50) this.prev();
+
   }
+
 }

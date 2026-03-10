@@ -129,6 +129,10 @@ export class FaqComponent {
           'Phone No:- (044) 7910241',
           'Mobile No:- 0916-3150874 (Globe) | 0998-9632461 (Smart)',
 
+          'Cabanatuan:',
+          'Purok 5,Burgos,Sto.Domingo,Nueva Ecija​',
+          'Phone No:- 09985514189',
+
           'Cebu:',
           'Room 207, Manros Plaza bldg. General Maxilom Avenue Cebu City',
           'Mobile No:- 0919-6571035 (Smart) | 0966-2188379 (Globe)',
@@ -140,7 +144,7 @@ export class FaqComponent {
       },
       {
         question: 'Why partner with JK Capital for short-term financing?',
-        answer: 'We go beyond capital. We structure financing around how your business actually operates  —combining cash flow insights, practical timelines, and responsible lending—to help you grow without unnecessary pressure.'
+        answer: 'We go beyond capital. We structure financing around how your business actually operates combining cash flow insights, practical timelines, and responsible lending—to help you grow without unnecessary pressure.'
       }
     ],
 
