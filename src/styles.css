@@ -97,10 +97,9 @@ h6 { font-size: 16px; } */
   PAGE WRAPPER
 ================================ */
 .page-wrapper {
-  max-width: 1320px;
+  max-width: 1420px;
   margin: auto;
   background: var(--white);
-  min-height: 100vh;
 }
 
 /* ===============================
@@ -112,7 +111,7 @@ h6 { font-size: 16px; } */
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 1420px;
   margin: 0px;
 }
 
