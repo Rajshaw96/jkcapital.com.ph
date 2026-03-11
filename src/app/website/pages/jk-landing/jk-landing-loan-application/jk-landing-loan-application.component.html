@@ -168,15 +168,251 @@
 
       </section>
 
+      <!-- ================= ADDITIONAL DETAILS ================= -->
+      <section class="form-section" *ngIf="showFullForm">
+
+        <!-- Residence Address -->
+        <div class="form-group full-width">
+          <label>Residence Address</label>
+          <input
+            type="text"
+            formControlName="residenceAddress"
+            placeholder="Enter residence address">
+        </div>
+
+        <div class="row">
+
+          <!-- Business Classification -->
+          <div class="form-group">
+            <label>Business Classification <span class="required">*</span></label>
+
+            <select
+              formControlName="businessClassification"
+              [class.invalid]="f['businessClassification'].touched && f['businessClassification'].invalid">
+
+              <option value="">Select option</option>
+              <option value="Sole Proprietorship">Sole Proprietorship</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Corporation">Corporation</option>
+
+            </select>
+
+            <small class="error"
+            *ngIf="f['businessClassification'].touched && f['businessClassification'].errors?.['required']">
+            Required
+            </small>
+          </div>
+
+          <!-- Nature of Business -->
+          <div class="form-group">
+            <label>Nature of Business <span class="required">*</span></label>
+
+            <select
+              formControlName="natureOfBusiness"
+              [class.invalid]="f['natureOfBusiness'].touched && f['natureOfBusiness'].invalid">
+
+              <option value="">Select option</option>
+              <option value="Retail">Retail</option>
+              <option value="Manufacturing">Manufacturing</option>
+              <option value="Services">Services</option>
+
+            </select>
+
+            <small class="error"
+            *ngIf="f['natureOfBusiness'].touched && f['natureOfBusiness'].errors?.['required']">
+            Required
+            </small>
+          </div>
+
+        </div>
+
+        <!-- Product -->
+        <div class="form-group full-width">
+          <label>Product or Service <span class="required">*</span></label>
+
+          <input
+            type="text"
+            formControlName="productService"
+            placeholder="Enter product or service"
+            [class.invalid]="f['productService'].touched && f['productService'].invalid">
+
+          <small class="error"
+          *ngIf="f['productService'].touched && f['productService'].errors?.['required']">
+          Required
+          </small>
+        </div>
+
+        <div class="row">
+
+          <!-- Bank Account -->
+          <div class="form-group">
+            <label>Do you have a bank account? <span class="required">*</span></label>
+
+            <div class="radio-group">
+
+              <label>
+                <input type="radio" value="Yes" formControlName="bankAccount">
+                Yes
+              </label>
+
+              <label>
+                <input type="radio" value="No" formControlName="bankAccount">
+                No
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Bank Account Age -->
+          <div class="form-group">
+            <label>How old is your bank account?</label>
+
+            <select formControlName="bankAccountAge">
+              <option value="">Select option</option>
+              <option value="Less than 6 months">Less than 6 months</option>
+              <option value="6-12 months">6-12 months</option>
+              <option value="1-3 years">1-3 years</option>
+              <option value="3+ years">3+ years</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Average Daily Balance -->
+        <div class="form-group full-width">
+          <label>Average Daily Balance</label>
+
+          <select formControlName="averageDailyBalance">
+            <option value="">Select option</option>
+            <option value="Below 10k">Below 10k</option>
+            <option value="10k - 50k">10k - 50k</option>
+            <option value="50k - 100k">50k - 100k</option>
+            <option value="100k+">100k+</option>
+          </select>
+        </div>
+
+        <div class="row">
+
+          <!-- Loan Product -->
+          <div class="form-group">
+            <label>Loan Product <span class="required">*</span></label>
+
+            <select
+              formControlName="loanProduct"
+              [class.invalid]="f['loanProduct'].touched && f['loanProduct'].invalid">
+
+              <option value="">Select option</option>
+              <option value="Business Loan">Business Loan</option>
+              <option value="Working Capital">Working Capital</option>
+
+            </select>
+          </div>
+
+          <!-- Loan Purpose -->
+          <div class="form-group">
+            <label>Loan Purpose <span class="required">*</span></label>
+
+            <select formControlName="loanPurpose">
+              <option value="">Purpose for funding</option>
+              <option value="Business Expansion">Business Expansion</option>
+              <option value="Inventory Purchase">Inventory Purchase</option>
+              <option value="Working Capital">Working Capital</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <!-- Loan Amount -->
+          <div class="form-group">
+            <label>Loan Amount <span class="required">*</span></label>
+
+            <input
+              type="number"
+              formControlName="loanAmount"
+              placeholder="Enter amount">
+          </div>
+
+          <!-- Loan Term -->
+          <div class="form-group">
+            <label>Loan Term <span class="required">*</span></label>
+
+            <select formControlName="loanTerm">
+              <option value="">Select option</option>
+              <option value="6 months">6 months</option>
+              <option value="12 months">12 months</option>
+              <option value="24 months">24 months</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Annual Net Income -->
+        <div class="form-group full-width">
+          <label>Annual Net Income <span class="required">*</span></label>
+
+          <select formControlName="annualNetIncome">
+            <option value="">Select option</option>
+            <option value="Below 500k">Below 500k</option>
+            <option value="500k - 1M">500k - 1M</option>
+            <option value="1M+">1M+</option>
+          </select>
+        </div>
+
+        <div class="row">
+
+          <!-- Provide Collateral -->
+          <div class="form-group">
+            <label>Provide Collateral? <span class="required">*</span></label>
+
+            <div class="radio-group">
+
+              <label>
+                <input type="radio" value="Yes" formControlName="provideCollateral">
+                Yes
+              </label>
+
+              <label>
+                <input type="radio" value="No" formControlName="provideCollateral">
+                No
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Collateral Type -->
+          <div class="form-group">
+            <label>Collateral Type</label>
+
+            <select formControlName="collateralType">
+              <option value="">Select option</option>
+              <option value="Property">Property</option>
+              <option value="Vehicle">Vehicle</option>
+              <option value="Equipment">Equipment</option>
+            </select>
+          </div>
+
+        </div>
+
+      </section>
+
       <!-- Submit Button -->
-      <button 
+      <button
+        type="button"
+        class="submit-btn"
+        *ngIf="!showFullForm"
+        (click)="openFullForm()">
+        Open Full Form
+      </button>
+
+      <button
         type="submit"
         class="submit-btn"
+        *ngIf="showFullForm"
         [disabled]="loanForm.invalid || isLoading">
-
         <span *ngIf="!isLoading">Submit</span>
         <span *ngIf="isLoading">Submitting...</span>
-
       </button>
 
     </form>
