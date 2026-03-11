@@ -1,0 +1,83 @@
+.article-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 1024px) {
+      flex-direction: row; 
+    }
+  }
+}
+
+.main-content {
+  flex: 2; 
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 30px;
+    h1 { font-size: 2.5rem; color: #1a365d; margin: 15px 0; }
+    .meta { color: #718096; font-size: 0.9rem; span { margin: 0 10px; } }
+  }
+
+  .featured-image img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+
+  .article-body {
+    line-height: 1.8;
+    color: #4a5568;
+    ::ng-deep h2 { color: #2d3748; margin-top: 25px; }
+  }
+}
+
+.sidebar {
+  flex: 1;
+  
+  .widget {
+    margin-bottom: 40px;
+    h3 { font-size: 1.25rem; border-bottom: 2px solid #3182ce; padding-bottom: 10px; margin-bottom: 20px; }
+    
+    ul { list-style: none; padding: 0; 
+      li { padding: 8px 0; border-bottom: 1px solid #edf2f7; }
+    }
+  }
+
+  .search-group {
+    display: flex;
+    input { flex: 1; padding: 10px; border: 1px solid #cbd5e0; border-radius: 4px 0 0 4px; }
+    button { background: #3182ce; color: white; padding: 10px 20px; border: none; border-radius: 0 4px 4px 0; }
+  }
+
+  .recent-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    img { width: 80px; height: 60px; object-fit: cover; border-radius: 4px; }
+    .item-info a { display: block; font-weight: bold; color: #2d3748; text-decoration: none; font-size: 0.9rem; }
+    .item-info span { font-size: 0.8rem; color: #a0aec0; }
+  }
+
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    .tag { border: 1px solid #3182ce; color: #3182ce; padding: 5px 12px; border-radius: 4px; font-size: 0.85rem; }
+  }
+}
+.cta-box {
+  background: #3182ce;
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 40px;
+  .btn-cta { background: white; color: #3182ce; padding: 12px 25px; border-radius: 6px; border: none; font-weight: bold; margin-top: 20px; cursor: pointer; }
+}

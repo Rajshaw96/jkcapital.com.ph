@@ -11,4 +11,7 @@ export interface Article {
   likes: number;
   comments: number;
   extlink?: string;
+
+  recentNews?: Article[]; 
+  tags?: string[];
 }

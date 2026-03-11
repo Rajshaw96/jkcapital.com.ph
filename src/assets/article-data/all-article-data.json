@@ -16,6 +16,41 @@
     ]
   },
   {
+    "categoryName": "Business Loans",
+    "articles": [
+      {
+        "id": 1,
+        "title": "The Challenge: traditional bank loans take months. JK Capital solution: SME financing in 5-7 days.",
+        "slug": "the-challenge-traditional-bank-loans-take-months-jk-capital-solution-sme-financing-in-5-7-days",
+        "category": "Business Loans",
+        "author": "admin",
+        "date": "2025-12-19",
+        "image": "assets/article-data/images/the-challenge-traditional.jpg",
+        "excerpt": "Timing is everything for SMEs. A delayed loan can mean missed opportunities, stalled projects, or stretched operations. JK Capital provides fast, reliable SME financing in just 5–7 days"
+      },
+      {
+        "id": 2,
+        "title": "Beyond Capital: Powering SME Growth in 2025 with JK Capital Financing Solutions",
+        "slug": "beyond-capital-powering-sme-growth-in-2025-with-jk-capital-financing-solutions",
+        "category": "Business Loans",
+        "author": "admin",
+        "date": "2025-12-19",
+        "image": "assets/article-data/images/beyond-capital.jpg",
+        "excerpt": "The Philippines recorded its fastest growth in the second quarter of 2025, led by a rebound in the agriculture sector, which grew 7%, up from 2.2% in the previous quarter."
+      },
+      {
+        "id": 3,
+        "title": "Bridging Payment Gaps: Invoice Financing as a Tool for Business Continuity",
+        "slug": "bridging-payment-gaps-invoice-financing-as-a-tool-for-business-continuity",
+        "category": "Business Loans",
+        "author": "admin",
+        "date": "2025-10-10",
+        "image": "assets/article-data/images/bridging-payment-gaps.jpg",
+        "excerpt": "For SMEs, the biggest threat isn’t losing customers, it’s waiting to get paid. A business can deliver on a million-peso project, yet still find itself scrambling for payroll, supplier payments, or rent because clients settle invoices 30, 60, 90, or even 120 days later. "
+      }
+    ]
+  },
+  {
     "categoryName": "Our Client Success",
     "articles": [
       {
@@ -47,6 +82,31 @@
         "date": "2025-12-04",
         "image": "assets/article-data/images/shared-image.jpg",
         "excerpt": "JK Capital Finance, Inc., a leading provider of business loans and structured financing solutions for SMEs, has renewed its partnership with INVENIC, one of the country’s foremost EPC companies for solar and environmental systems."
+      }
+    ]
+  },
+  {
+    "categoryName": "Loan Consultant​",
+    "articles": [
+      {
+        "id": 1,
+        "title": "Real Estate Brokers vs Loan Consultants: What Do They Do?",
+        "slug": "real-estate-brokers-vs-loan-consultants-what-do-they-do",
+        "category": "Loan Consultant​",
+        "author": "admin",
+        "date": "2023-06-16",
+        "image": "assets/article-data/images/real-estate-brokers.jpeg",
+        "excerpt": "For starting business owners, navigating the overwhelming world of finance can be challenging. As such, you should understand the roles"
+      },
+      {
+        "id": 2,
+        "title": "Growing a Business as a Loan Consultant: What to Expect",
+        "slug": "growing-a-business-as-a-loan-consultant-what-to-expect",
+        "category": "Loan Consultant​",
+        "author": "admin",
+        "date": "2023-01-30",
+        "image": "assets/article-data/images/growing-a-business.png",
+        "excerpt": "If you’re a loan consultant and want to build your own consultancy business, you have numerous opportunities. You just have to take the first step."
       }
     ]
   }
